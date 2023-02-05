@@ -1,0 +1,60 @@
+@import '/src/variables.scss';
+
+footer {
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      margin: 0.5rem;
+      font-size: 2rem;
+      color: $secondary-link-color;
+
+      &:hover {
+        color: $secondary-link-hover-color;
+      }
+
+      &.spotify:focus {
+        color: $spotify-color;
+      }
+
+      &.twitter:focus {
+        color:$twitter-color;
+      }
+
+      &.bandcamp:focus {
+        color:$bandcamp-color;
+      }
+
+      &.facebook:focus {
+        color: $facebook-color;
+      }
+
+      &.instagram:focus {
+        color:$instagram-color;
+      }
+    }
+  }
+
+  .copyright {
+    color: $secondary-link-color;
+  }
+
+  .web-maker, .legal-advisories {
+    margin-top: 8px !important;
+
+    a {
+      color: $secondary-link-color;
+      font-size: 0.8rem !important;
+      &:hover {
+        color: $secondary-link-hover-color;
+      }
+
+      &:focus {
+        color: $secondary-link-focus-color;
+      }
+    }
+  }
+}

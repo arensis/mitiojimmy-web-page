@@ -1,0 +1,8 @@
+<div class="section-header" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')'}" [ngClass]="{ 'not-panoramic-picture': !isPanoramic }">
+  <span class="section-name">{{sectionName}}</span>
+</div>
+<div class="section-body">
+  <ng-content></ng-content>
+</div>
+
+

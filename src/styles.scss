@@ -1,1 +1,141 @@
-/* You can add global styles to this file, and also import other style files */
+@import './variables.scss';
+
+@font-face {
+  font-family: "Lexend Mega";
+  src: local("LexendMega"), url(./assets/fonts/LexendMega.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Monoton Regular";
+  src: local("MonotonRegular"), url(./assets/fonts/Monoton-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "PaytoneOne Regular";
+  src: local("PaytoneOne-Regular"), url(./assets/fonts/PaytoneOne-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Audiowide Regular";
+  src: local("Audiowide-Regular"), url(./assets/fonts/Audiowide-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "RussoOne Regular";
+  src: local("RussoOne-Regular"), url(./assets/fonts/RussoOne-Regular.ttf) format("truetype");
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+header {
+  position: relative;
+  z-index: 10;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  top: -65px;
+
+  div.container {
+    padding-top: 65px;
+    margin-bottom: -65px;
+    min-height: 75vh;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  border-top: 8px solid $border-color;
+}
+
+//Links
+a, button, button.mat-icon-button {
+  color: $primary-link-color;
+
+  &:hover {
+    color: $primary-link-hover-color;
+  }
+
+  &:focus {
+    color: $primary-link-focus-color;
+  }
+  text-decoration: none;
+}
+
+a.secondary, button.secondary, button.mat-icon-button.secondary {
+  color: $secondary-link-color;
+
+  &:hover {
+    color: $secondary-link-hover-color;
+  }
+
+  &:focus {
+    color: $secondary-link-focus-color;
+  }
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2rem !important;
+  color: $subtitle-primary-background;
+}
+
+
+// Sidenav
+.mat-drawer-container {
+  height: 100%;
+
+  div {
+    height: 100%;
+  }
+  background-color: $primary-background-color !important;
+  .mat-drawer {
+    background-color: $secondary-background-color !important;
+  }
+}
+
+// Landscapes phone or table orientation
+@media screen and (min-width: 500px) and (max-width: 980px) and (orientation: landscape) {
+  footer {
+    .social-icons a {
+      font-size: 1.5rem !important;
+
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mat-drawer-container .mat-drawer {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .mat-drawer-container .mat-drawer {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .mat-drawer-container .mat-drawer {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .mat-drawer-container .mat-drawer {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .mat-drawer-container .mat-drawer {
+    width: 40%;
+  }
+}

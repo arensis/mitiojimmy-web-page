@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mitiojimmy-web-page';
+  title = 'Mi tío Jimmy';
+  twitterIcon = faTwitter;
+  bandCampIcon = faBandcamp;
+  facebookIcon = faFacebook;
+  spotifyIcon = faSpotify;
+  instagramIcon = faInstagram;
+  closeIcon = faXmark;
+
+  sections = [
+    {name: 'Home', url: '/'},
+    {name: 'Biografía', url: 'bio'},
+    {name: 'Música', url: 'music'},
+    {name: 'Contacto', url: 'contact'}
+  ]
 }

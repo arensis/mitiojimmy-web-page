@@ -1,0 +1,94 @@
+.info {
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+
+  .media {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      display: block;
+      margin: auto;
+      width: 311px;
+      border: 2px solid #ffffffa3;
+      border-radius: 3%;
+    }
+
+    iframe {
+      width: 315px;
+      height: 200px;
+      margin: 1rem auto;
+    }
+  }
+
+  .track-list {
+    margin-left: 1rem;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      font-size: 3rem;
+      margin-top: 1rem;
+      margin-left: 1rem;font-size: 3rem;
+
+      .release-date {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding-inline-start: 1rem;
+
+      li {
+        margin-bottom: 4px;
+
+        fa-icon {
+          margin: 8px;
+          color: #fe4c72;
+        }
+
+        .song-title {
+          padding: 8px;
+        }
+
+        .song-time {
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 697px) {
+  .info {
+    flex-direction: column;
+
+    .track-list {
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 373px) and (orientation: portrait) {
+  .info {
+    flex-direction: column;
+
+    .track-list {
+      margin: auto;
+    }
+  }
+}
+
+// Small phones in portrait orientation
+@media screen and (min-width: 374px) and (max-width: 575px) and (orientation: portrait) {
+  .info {
+    flex-direction: column;
+
+    .track-list {
+      margin: auto;
+    }
+  }
+}

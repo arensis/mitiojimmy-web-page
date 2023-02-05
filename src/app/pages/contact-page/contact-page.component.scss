@@ -1,0 +1,29 @@
+@import '/src/variables.scss';
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      font-size: 0.9rem;
+      color: $subtitle-primary-background;
+    }
+  }
+
+  fa-icon {
+    font-size: 2.2rem;
+    padding: 0 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 0 0 6px !important;
+  }
+}

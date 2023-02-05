@@ -1,0 +1,17 @@
+<footer>
+  <div class="social-icons">
+    <a *ngFor="let socialNetwork of workinSocialNetworks" [href]="socialNetwork.link" target="_blank" rel="noopener noreferrer">
+      <fa-icon [icon]="socialNetwork.icon"></fa-icon>
+    </a>
+  </div>
+  <div class="copyright">
+    <span>© Estamos registrados, algo es algo.</span>
+  </div>
+  <div class="legal-advisories">
+    <a [routerLink]="['/legal-advisories']">Avisos legales</a>
+  </div>
+  <div class="web-maker">
+    <a href="https://github.com/arensis" target="_blank" rel="noopener noreferrer">Web by Alfonso Madrid</a>
+  </div>
+</footer>
+

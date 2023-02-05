@@ -1,0 +1,29 @@
+@import '/src/variables.scss';
+
+header {
+  mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    color: $primary-link-color;
+
+    span.title {
+      font-family: Lexend Mega, sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: -4px;
+      line-height: 1.1;
+      text-transform: none;
+    }
+
+    .menu-button {
+      background-color: #ffffffbf;
+    }
+
+    .mtj-logo {
+      display: block;
+      width: 4rem;
+      filter: invert(28%) sepia(48%) saturate(508%) hue-rotate(202deg) brightness(93%) contrast(92%) drop-shadow(2px 2px 1px rgba(255,255,255,0.9));
+    }
+  }
+}
