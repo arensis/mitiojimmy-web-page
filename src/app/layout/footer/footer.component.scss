@@ -12,28 +12,58 @@ footer {
       font-size: 2rem;
       color: $secondary-link-color;
 
-      &:hover {
-        color: $secondary-link-hover-color;
+      &.faSpotify:focus {
+        color: $spotify-color !important;
+        filter: brightness(60%);
       }
 
-      &.spotify:focus {
-        color: $spotify-color;
+      &.faTwitter:focus {
+        color: $twitter-color !important;
+        filter: brightness(60%);
       }
 
-      &.twitter:focus {
-        color:$twitter-color;
+      &.faBandcamp:focus {
+        color: $bandcamp-color !important;
+        filter: brightness(60%);
       }
 
-      &.bandcamp:focus {
-        color:$bandcamp-color;
+      &.faFacebook:focus {
+        color: $facebook-color !important;
+        filter: brightness(60%);
       }
 
-      &.facebook:focus {
-        color: $facebook-color;
+      &.faInstagram:focus {
+        color: $instagram-color !important;
+        filter: brightness(60%);
       }
 
-      &.instagram:focus {
-        color:$instagram-color;
+      &.faYoutube:focus {
+        color: $youtube-color  !important;
+        filter: brightness(60%);
+      }
+
+      &.faSpotify:hover {
+        color: $spotify-color !important;
+      }
+
+      &.faTwitter:hover {
+        color: $twitter-color !important;
+      }
+
+      &.faBandcamp:hover {
+        color: $bandcamp-color !important;
+      }
+
+      &.faFacebook:hover {
+        color: $facebook-color !important;
+      }
+
+      &.faInstagram:hover {
+        color: $instagram-color !important;
+      }
+
+      &.faYoutube:hover {
+        color: $youtube-color !important;
       }
     }
   }

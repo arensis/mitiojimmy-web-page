@@ -10,16 +10,16 @@ export class FooterComponent implements OnInit {
   workinSocialNetworks!: any[];
 
   socialNetworks = [
-    {icon: faSpotify, link: ''},
-    {icon: faBandcamp, link: 'https://mitiojimmy.bandcamp.com/'},
-    {icon: faItunes, link: ''},
-    {icon: faDeezer, link: ''},
-    {icon: faYoutube, link: 'https://youtube.com/channel/UCT5HFyG_6d5ysJBgxWpcgzg'},
-    {icon: faVimeo, link: ''},
-    {icon: faInstagram, link: 'https://www.instagram.com/mitiojimmy/'},
-    {icon: faTiktok, link: ''},
-    {icon: faFacebook, link: ''},
-    {icon: faTwitter, link: 'https://twitter.com/mitiojimmy'}
+    {class: 'faSpotify', icon: faSpotify, link: ''},
+    {class: 'faBandcamp', icon: faBandcamp, link: 'https://mitiojimmy.bandcamp.com/'},
+    {class: 'faItunes', icon: faItunes, link: ''},
+    {class: 'faDeezer', icon: faDeezer, link: ''},
+    {class: 'faYoutube', icon: faYoutube, link: 'https://youtube.com/channel/UCT5HFyG_6d5ysJBgxWpcgzg'},
+    {class: 'faVimeo', icon: faVimeo, link: ''},
+    {class: 'faInstagram', icon: faInstagram, link: 'https://www.instagram.com/mitiojimmy/'},
+    {class: 'faTiktok', icon: faTiktok, link: ''},
+    {class: 'faFacebook', icon: faFacebook, link: ''},
+    {class: 'faTwitter', icon: faTwitter, link: 'https://twitter.com/mitiojimmy'}
   ];
 
   ngOnInit(): void {

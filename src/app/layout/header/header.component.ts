@@ -10,7 +10,7 @@ export class HeaderComponent {
   onMenuClick = new EventEmitter<void>;
 
   title = 'Mi tío Jimmy';
-  showBandLogo = true;
+  showBandLogo = false;
 
   openMenu(): void {
     this.onMenuClick.emit();

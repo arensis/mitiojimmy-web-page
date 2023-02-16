@@ -1,10 +1,5 @@
 <header>
   <mat-toolbar>
-      <a routerLink="/" class="home-link">
-        <img *ngIf="showBandLogo" class="mtj-logo" alt="Mi tío Jimmy logo" src="assets/images/MTJ_logo.svg"/>
-      </a>
-
-      <span *ngIf="!showBandLogo" class="title">{{title}}</span>
       <button mat-icon-button  class="menu-button" (click)="openMenu()">
         <mat-icon aria-hidden="false" aria-label="Menu icon" fontIcon="menu"></mat-icon>
       </button>
