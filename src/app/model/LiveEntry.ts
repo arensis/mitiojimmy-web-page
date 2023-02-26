@@ -1,0 +1,10 @@
+import { Time } from "@angular/common";
+import { TicketLink } from "./TicketLink";
+
+export interface LiveEntry {
+  date: Date;
+  time: Time;
+  city: string;
+  concertHall: string;
+  ticketsLink: TicketLink[]
+}

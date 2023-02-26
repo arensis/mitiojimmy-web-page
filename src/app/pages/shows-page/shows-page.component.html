@@ -1,0 +1,42 @@
+<div class="container">
+  <app-section
+    [imageUrl]="'assets/images/tapia_atardecer.jpg'"
+    [sectionName]="'Conciertos'"
+    [isPanoramic]="false"
+  >
+    <div class="live-entry-container">
+      <ng-container *ngFor="let entry of liveEntries; let i = index; trackBy: trackByFn">
+
+        <div class="card">
+          <div class="card-header">
+            <div class="date">
+              # {{entry.date.toLocaleDateString()}}
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-left"></div>
+            <div class="card-body-right">
+              <div class="time">
+                {{entry.time.hours}}:{{entry.time.hours}}
+              </div>
+              <div class="concert-hall">
+                {{entry.concertHall}}
+              </div>
+              <div class="city">
+                {{entry.city}}
+              </div>
+              <div class="ticket-shops" style="display: flex; flex-direction: row;">
+                <span>Compra de entradas: </span>
+                <div class="shop-icons" style="display: flex; justify-content: space-evenly;">
+                  <a class="shop-button" [href]="shop.siteLink" *ngFor="let shop of entry.ticketsLink;let i = index; trackBy: trackByFn">
+                    <img [src]="shop.siteIcon" [style]="'width: 1rem;height: auto;'"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </app-section>
+</div>

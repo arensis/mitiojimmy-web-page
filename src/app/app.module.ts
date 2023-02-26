@@ -1,3 +1,4 @@
+import { ShowsPageModule } from './pages/shows-page/shows-page.module';
 import { LayoutModule } from './layout/layout.module';
 import { MaterialModule } from './material.module';
 import { NgModule } from '@angular/core';
@@ -23,7 +24,9 @@ import * as PageModules from './pages';
     PageModules.ContactPageModule,
     PageModules.HomePageModule,
     PageModules.MusicPageModule,
-    PageModules.LegalAdvisoriesPageModule
+    PageModules.LegalAdvisoriesPageModule,
+    PageModules.HomePageModule,
+    PageModules.ShowsPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

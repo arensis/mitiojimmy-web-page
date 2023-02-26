@@ -19,6 +19,7 @@ export class AppComponent {
   sections = [
     {name: 'Home', url: '/'},
     {name: 'Biografía', url: 'bio'},
+    {name: 'Conciertos', url: 'shows'},
     {name: 'Música', url: 'music'},
     {name: 'Contacto', url: 'contact'}
   ]

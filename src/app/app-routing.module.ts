@@ -26,7 +26,8 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
-  }
+  },
+  { path: 'shows', loadChildren: () => import('./pages/shows-page/shows-page.module').then(m => m.ShowsPageModule) }
 ];
 
 @NgModule({
