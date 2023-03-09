@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { AlbumPlayer } from '../album-player';
+import { AlbumPlayer } from '../album-player/album-player';
 
 @Component({
   selector: 'app-spotify-album-player',
   templateUrl: './spotify-album-player.component.html',
-  styleUrls: ['../album-player.scss']
+  styleUrls: ['../album-player/album-player.scss']
 })
 export class SpotifyAlbumPlayerComponent  extends AlbumPlayer {
   constructor(sanitizer: DomSanitizer) {

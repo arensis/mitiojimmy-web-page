@@ -1,6 +1,6 @@
-import { Album } from './../../../../model/Album';
-import { BandDiscography } from './../../../../model/BandDiscography';
 import { Component, Input } from '@angular/core';
+import { Album } from 'src/app/model/discography/Album';
+import { BandDiscography } from 'src/app/model/discography/BandDiscography';
 
 @Component({
   selector: 'app-band-discography',

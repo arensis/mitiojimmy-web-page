@@ -1,0 +1,9 @@
+<div class="band-videos">
+  <h1>{{bandVideos?.bandName}}</h1>
+  <div class="videos-container">
+    <app-video
+      *ngFor="let video of bandVideos?.videos; let i = index; trackBy: trackFn"
+      [video]="video"
+    ></app-video>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import { LiveEntry } from './../../../../model/LiveEntry';
+import { LiveEntry } from '../../../../model/shows/LiveEntry';
 import { Component, Input, OnInit } from '@angular/core';
 import * as moment from 'moment';
 

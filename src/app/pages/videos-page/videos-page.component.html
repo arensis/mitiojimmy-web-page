@@ -1,30 +1,8 @@
 <div class="container">
   <app-section [sectionName]="'Vídeos'">
-    <div class="band-videos">
-      <h1>Magnética</h1>
-      <div class="videos-container">
-        <div class="video-item">
-          <iframe src="https://www.youtube-nocookie.com/embed/M5cAVm4_V0Q" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-          <span class="date">Octubre 2013</span>
-        </div>
-        <div class="video-item">
-          <iframe src="https://www.youtube-nocookie.com/embed/RvDGUs_vFRA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-          <span class="date">Marzo 2013</span>
-        </div>
-        <div class="video-item">
-          <iframe src="https://www.youtube-nocookie.com/embed/Gg3N_jTHuLo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-          <span class="date">Septiembre 2012</span>
-        </div>
-        <div class="video-item">
-          <iframe src="https://www.youtube-nocookie.com/embed/cDM5mGgDjVg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-          <span class="date">Abril 2011</span>
-        </div>
-        <div class="video-item">
-          <iframe src="https://www.youtube-nocookie.com/embed/xbMjIZ9cx5g" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-          <span class="date">Marzo 2011</span>
-        </div>
-      </div>
-    </div>
-
+    <app-band-videos
+      *ngFor="let bandVideos of bands; let i = index; trackBy: trackFn"
+      [bandVideos]="bandVideos"
+    ></app-band-videos>
   </app-section>
 </div>

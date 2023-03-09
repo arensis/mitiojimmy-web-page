@@ -1,0 +1,31 @@
+.video-item {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+
+  .date {
+    font-weight: bold;
+    margin-top: 4px;
+  }
+}
+
+iframe {
+  border-radius: 7px;
+  border: 2px solid rgba(255, 255, 255, 0.6392156863);
+  width: 460px;
+  height: 260px;
+}
+
+@media screen and (min-width: 360px) and (max-width: 460px) and (orientation: portrait) {
+  iframe {
+    width: 310px;
+    height: 190px;
+  }
+}
+
+@media screen and (min-width: 460px) and (max-width: 1100px) {
+  iframe {
+    width: 360px;
+    height: 200px;
+  }
+}

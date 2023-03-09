@@ -1,3 +1,4 @@
+import { DataService } from './services/data.service';
 import { ShowsPageModule } from './pages/shows-page/shows-page.module';
 import { LayoutModule } from './layout/layout.module';
 import { MaterialModule } from './material.module';
@@ -8,6 +9,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import * as PageModules from './pages';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import * as PageModules from './pages';
     FontAwesomeModule,
     MaterialModule,
     LayoutModule,
+    HttpClientModule,
     PageModules.BioPageModule,
     PageModules.ContactPageModule,
     PageModules.HomePageModule,
@@ -29,7 +32,7 @@ import * as PageModules from './pages';
     PageModules.ShowsPageModule,
     PageModules.VideosPageModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

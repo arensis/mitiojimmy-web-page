@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-import { AlbumPlayer } from '../album-player';
+import { AlbumPlayer } from '../album-player/album-player';
 
 @Component({
   selector: 'app-bandcamp-album-player',
   templateUrl: './bandcamp-album-player.component.html',
-  styleUrls: ['../album-player.scss']
+  styleUrls: ['../album-player/album-player.scss']
 })
 export class BandcampAlbumPlayerComponent extends AlbumPlayer {
   constructor(sanitizer: DomSanitizer) {
