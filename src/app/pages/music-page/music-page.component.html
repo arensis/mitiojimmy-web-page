@@ -1,29 +1,8 @@
 <div class="container">
-  <app-section
-    [imageUrl]="'assets/images/penaronda.jpeg'"
-    [sectionName]="'Música'"
-    [isPanoramic]="false"
-  >
-      <div class="info">
-        <div class="media">
-          <img src="https://i.scdn.co/image/ab67616d0000b273715beeeb6292e8918f9e078c">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0yBXOnBnbNE0bX9dPfiu2N?utm_source=generator" width="40%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
-
-        <div class="track-list">
-          <div class="title">
-            El Consejero
-            <span class="release-date">Marzo 2022</span>
-          </div>
-
-          <ul>
-            <li>
-              <fa-icon [icon]="musicNote"></fa-icon>
-              <span class="song-title">El Consejero</span>
-              <span class="song-time">3:11</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <app-section [sectionName]="'Discografía'">
+    <app-band-discography
+      *ngFor="let band of bands; let i = index; trackBy: trackFn"
+      [bandDiscography]="band"
+    ></app-band-discography>
   </app-section>
 </div>

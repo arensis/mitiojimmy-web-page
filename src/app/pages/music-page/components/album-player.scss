@@ -1,0 +1,91 @@
+.album {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .media {
+    display: flex;
+    flex-direction: column;
+
+    .release-date {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      width: 380px;
+      border: 2px solid #ffffffa3;
+      border-radius: 3%;
+    }
+  }
+
+  .stream-player {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+
+    iframe {
+      border: 2px solid #ffffffa3;
+      border-radius:12px;
+      margin-top: 36px;
+      height: 380px;
+    }
+  }
+}
+
+@media screen and (max-width: 697px) {
+  .album {
+    flex-direction: column;
+
+    .stream-player {
+      margin-left: 0 !important;
+
+      iframe {
+        width: 380px;
+      }
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 373px) and (orientation: portrait) {
+  .album {
+    flex-direction: column;
+
+    .stream-player {
+      margin-left: 0 !important;
+    }
+
+    .media {
+      img {
+        width: 320px;
+      }
+    }
+  }
+}
+
+// Small phones in portrait orientation
+@media screen and (min-width: 360px) and (max-width: 575px) and (orientation: portrait) {
+  .album {
+    flex-direction: column;
+
+    .stream-player {
+      margin-left: 0 !important;
+
+      iframe {
+        width: 320px;
+      }
+    }
+
+    .media {
+      img {
+        width: 320px;
+      }
+    }
+  }
+}

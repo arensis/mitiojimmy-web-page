@@ -1,103 +1,60 @@
 
 @import 'src/variables.scss';
-
-$screen-xs-max: 420px;
-$screen-sm-max: 576px;
-$screen-md-max: 768px;
-$screen-lg-max: 888px;
-
-@mixin xs {
-  @media (max-width: #{$screen-xs-max}) {
-    @content;
-  }
-}
-
-@mixin sm {
-  @media (min-width: #{$screen-xs-max}) and (max-width: #{$screen-sm-max}) {
-      @content;
-  }
-}
-
-@mixin md {
-  @media (min-width: #{$screen-sm-max}) and (max-width: #{$screen-md-max}){
-      @content;
-  }
-}
-
-@mixin lg {
-  @media (min-width: #{$screen-md-max}) and (max-width: #{$screen-lg-max}){
-      @content;
-  }
-}
-
-@mixin xl {
-  @media (min-width: #{$screen-lg-max}) {
-      @content;
-  }
-}
-
+@import 'src/styles.scss';
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 5vw;
-  grid-auto-columns: minmax(300px, auto);
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  @include xs {
-    grid-column: span 6;
-  }
+  grid-template-columns: repeat(13, 1fr);
+  grid-gap: 53px;
 
   @include sm {
-    grid-column: span 3;
-  }
-
-  @include md {
-    grid-column: span 2;
+    margin-left: 6vw;
   }
 
   @include lg {
-    grid-column: span 2;
+    grid-gap: 50px 68px;
   }
 
   @include xl {
-    grid-column: span 2;
+    grid-gap: 50px 108px;
+  }
+
+  @include xxl {
+    grid-gap: 50px 160px;
   }
 }
 
 .live-entry-container {
   @extend .grid;
+  opacity: 0.9;
 }
 
-.card-header {
-  width: 100%;
-  height: 60px;
-  background: $primary-link-hover-color;
-  clip-path: polygon(11% 0%, 100% 0%, 17% 100%, 26% 62%, 0% 90%);
-  z-index: 1;
-
-  .date {
-    font-weight: 500;
-    font-size: 18px;
-    margin-left: 35px;
-    margin-top: 5px;
+.entry {
+  @include xs {
+    grid-column: span 12;
   }
-}
 
-.card-body {
-  display: flex;
-  position: relative;
-  top: -24px;
-  left: 15px;
-}
+  @include sm {
+    grid-column: span 12;
+  }
 
-.card-body-left {
-  width: 30%;
-  clip-path: polygon(11% 0%, 100% 0%, 17% 100%, 26% 62%, 0% 90%);
-  background-color: white;
-  opacity: 0.8;
+  @include md {
+    grid-column: span 12;
+  }
+
+  @include lg {
+    grid-column: span 6;
+  }
+
+  @include xls {
+    grid-column: span 6;
+  }
+
+  @include xl {
+    grid-column: span 6;
+  }
+
+  @include xxl {
+    grid-column: span 4;
+  }
 }

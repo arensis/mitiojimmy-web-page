@@ -15,6 +15,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/music-page/music-page.module').then(m => m.MusicPageModule)
   },
   {
+    path: 'shows',
+    loadChildren: () => import('./pages/shows-page/shows-page.module').then(m => m.ShowsPageModule)
+  },
+  {
+    path: 'videos',
+    loadChildren: () => import('./pages/videos-page/videos-page.module').then(m => m.VideosPageModule)
+  },
+  {
     path: 'contact',
     loadChildren: () => import('./pages/contact-page/contact-page.module').then(m => m.ContactPageModule)
   },
@@ -26,8 +34,7 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
-  },
-  { path: 'shows', loadChildren: () => import('./pages/shows-page/shows-page.module').then(m => m.ShowsPageModule) }
+  }
 ];
 
 @NgModule({

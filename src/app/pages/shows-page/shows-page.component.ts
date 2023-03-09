@@ -13,6 +13,7 @@ export class ShowsPageComponent implements OnInit {
       date: new Date(),
       time: { hours: 22, minutes: 30 },
       city: "Madrid",
+      province: "Madrid",
       concertHall: "Búho Real",
       ticketsLink: [
         {
@@ -32,6 +33,7 @@ export class ShowsPageComponent implements OnInit {
       date: new Date(),
       time: { hours: 22, minutes: 30 },
       city: "Madrid",
+      province: "Madrid",
       concertHall: "Búho Real",
       ticketsLink: [
         {
@@ -51,6 +53,7 @@ export class ShowsPageComponent implements OnInit {
       date: new Date(),
       time: { hours: 22, minutes: 30 },
       city: "Madrid",
+      province: "Madrid",
       concertHall: "Búho Real",
       ticketsLink: [
         {
@@ -70,6 +73,7 @@ export class ShowsPageComponent implements OnInit {
       date: new Date(),
       time: { hours: 22, minutes: 30 },
       city: "Madrid",
+      province: "Madrid",
       concertHall: "Búho Real",
       ticketsLink: [
         {
@@ -89,6 +93,127 @@ export class ShowsPageComponent implements OnInit {
       date: new Date(),
       time: { hours: 22, minutes: 30 },
       city: "Madrid",
+      province: "Madrid",
+      concertHall: "Búho Real",
+      ticketsLink: [
+        {
+          siteIcon: "assets/images/ticketea-icon.png",
+          siteName: "Ticketea",
+          siteLink: "https://ticketea.com"
+
+        } as TicketLink,
+        {
+          siteIcon: "assets/images/eci.svg",
+          siteName: "El corte inglés",
+          siteLink: "https://elcorteingles.es"
+        } as TicketLink,
+      ]
+    },
+    {
+      date: new Date(),
+      time: { hours: 22, minutes: 30 },
+      city: "Madrid",
+      province: "Madrid",
+      concertHall: "Búho Real",
+      ticketsLink: [
+        {
+          siteIcon: "assets/images/ticketea-icon.png",
+          siteName: "Ticketea",
+          siteLink: "https://ticketea.com"
+
+        } as TicketLink,
+        {
+          siteIcon: "assets/images/eci.svg",
+          siteName: "El corte inglés",
+          siteLink: "https://elcorteingles.es"
+        } as TicketLink,
+      ]
+    },
+    {
+      date: new Date(),
+      time: { hours: 22, minutes: 30 },
+      city: "Madrid",
+      province: "Madrid",
+      concertHall: "Búho Real",
+      ticketsLink: [
+        {
+          siteIcon: "assets/images/ticketea-icon.png",
+          siteName: "Ticketea",
+          siteLink: "https://ticketea.com"
+
+        } as TicketLink,
+        {
+          siteIcon: "assets/images/eci.svg",
+          siteName: "El corte inglés",
+          siteLink: "https://elcorteingles.es"
+        } as TicketLink,
+      ]
+    },
+    {
+      date: new Date(),
+      time: { hours: 22, minutes: 30 },
+      city: "Madrid",
+      province: "Madrid",
+      concertHall: "Búho Real",
+      ticketsLink: [
+        {
+          siteIcon: "assets/images/ticketea-icon.png",
+          siteName: "Ticketea",
+          siteLink: "https://ticketea.com"
+
+        } as TicketLink,
+        {
+          siteIcon: "assets/images/eci.svg",
+          siteName: "El corte inglés",
+          siteLink: "https://elcorteingles.es"
+        } as TicketLink,
+      ]
+    },
+    {
+      date: new Date(),
+      time: { hours: 22, minutes: 30 },
+      city: "Madrid",
+      province: "Madrid",
+      concertHall: "Búho Real",
+      ticketsLink: [
+        {
+          siteIcon: "assets/images/ticketea-icon.png",
+          siteName: "Ticketea",
+          siteLink: "https://ticketea.com"
+
+        } as TicketLink,
+        {
+          siteIcon: "assets/images/eci.svg",
+          siteName: "El corte inglés",
+          siteLink: "https://elcorteingles.es"
+        } as TicketLink,
+      ]
+    },
+    {
+      date: new Date(),
+      time: { hours: 22, minutes: 30 },
+      city: "Madrid",
+      province: "Madrid",
+      concertHall: "Búho Real",
+      ticketsLink: [
+        {
+          siteIcon: "assets/images/ticketea-icon.png",
+          siteName: "Ticketea",
+          siteLink: "https://ticketea.com"
+
+        } as TicketLink,
+        {
+          siteIcon: "assets/images/eci.svg",
+          siteName: "El corte inglés",
+          siteLink: "https://elcorteingles.es"
+        } as TicketLink,
+      ]
+    },
+    {
+      date: new Date(),
+      time: { hours: 22, minutes: 30 },
+      city: "Madrid",
+      province: "Madrid",
       concertHall: "Búho Real",
       ticketsLink: [
         {

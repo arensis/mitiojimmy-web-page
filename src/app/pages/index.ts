@@ -1,3 +1,4 @@
+export { VideosPageModule } from './videos-page/videos-page.module';
 export { ShowsPageModule } from './shows-page/shows-page.module';
 export { LegalAdvisoriesPageModule } from './legal-advisories-page/legal-advisories-page.module';
 export { MusicPageModule } from './music-page/music-page.module';

@@ -1,5 +1,47 @@
 @import './variables.scss';
 
+@mixin xs {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$screen-xs-max}) and (max-width: #{$screen-sm-max}) {
+      @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-sm-max}) and (max-width: #{$screen-md-max}){
+      @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-md-max}) and (max-width: #{$screen-lg-max}){
+      @content;
+  }
+}
+
+@mixin xls {
+  @media (min-width: #{$screen-lg-max}) and (max-width: #{$screen-xl-max}) {
+      @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-max}) and (max-width: #{$screen-xxl-max}) {
+      @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: #{$screen-xxl-max}) {
+      @content;
+  }
+}
+
 @font-face {
   font-family: "Lexend Mega";
   src: local("LexendMega"), url(./assets/fonts/LexendMega.ttf) format("truetype");
@@ -42,6 +84,11 @@ main {
     padding-top: 65px;
     margin-bottom: -65px;
     min-height: 75vh;
+
+    .section-body {
+      text-align: justify;
+      margin: 4vh 4vw;
+    }
   }
 }
 

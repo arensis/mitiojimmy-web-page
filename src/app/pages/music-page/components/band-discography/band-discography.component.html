@@ -1,0 +1,25 @@
+<div class="group-container">
+  <div class="group-title">
+    <span>{{bandDiscography?.bandName}}</span>
+  </div>
+  <ng-container *ngFor="let album of bandDiscography?.albums; let i = index; trackBy: trackFn">
+    <app-bandcamp-album-player
+      *ngIf="(!album.artistPlaylist && album.streamingService === 'BANDCAMP')"
+      [releaseDate]="album.releaseDate"
+      [albumImageUrl]="album.imageUrl"
+      [albumId]="album.id"
+    ></app-bandcamp-album-player>
+    <app-spotify-artist-player
+      *ngIf="(album.artistPlaylist && album.streamingService === 'SPOTIFY')"
+      [releaseDate]="album.releaseDate"
+      [albumImageUrl]="album.imageUrl"
+      [albumId]="album.id"
+    ></app-spotify-artist-player>
+    <app-spotify-album-player
+      *ngIf="(!album.artistPlaylist && album.streamingService === 'SPOTIFY')"
+      [releaseDate]="album.releaseDate"
+      [albumImageUrl]="album.imageUrl"
+      [albumId]="album.id"
+  ></app-spotify-album-player>
+  </ng-container>
+</div>

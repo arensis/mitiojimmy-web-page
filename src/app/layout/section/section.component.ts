@@ -7,9 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SectionComponent {
   @Input()
-  imageUrl!: string;
-  @Input()
   sectionName!: string;
-  @Input()
-  isPanoramic = true;
+
+  imageUrl!: string;
+
+  constructor() {
+    this.imageUrl = 'assets/images/home-bg.jpg';
+  }
 }

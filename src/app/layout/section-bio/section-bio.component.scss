@@ -1,0 +1,32 @@
+@import '/src/variables.scss';
+
+.section-bio-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44vh;
+  background-size: cover;
+  margin-bottom: 6vh;
+  margin-top: -65px;
+
+  .section-bio-name {
+    padding-top: 2rem;
+    font-size: 3rem;
+    font-family: "PaytoneOne Regular";
+    text-shadow: 3px 3px 12px rgb(0 0 0 / 70%);
+  }
+}
+
+.not-panoramic-picture {
+  background-position: center;
+}
+
+.section-bio-body {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  margin: 4vh 4vw;
+  background-color: $primary-background-color;
+  color: $secondary-text-color;
+  font-size: 1rem;
+}

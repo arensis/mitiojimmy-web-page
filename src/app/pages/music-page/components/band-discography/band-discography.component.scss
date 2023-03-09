@@ -1,0 +1,16 @@
+.group-container {
+  margin-bottom: 2rem;
+
+  .group-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .group-container .group-title {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+}

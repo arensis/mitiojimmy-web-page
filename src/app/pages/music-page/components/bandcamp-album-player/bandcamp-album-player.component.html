@@ -1,0 +1,10 @@
+
+<div class="album">
+  <div class="media">
+    <span class="release-date">{{releaseDate}}</span>
+    <img [src]="saveAlbumImageUrl" />
+  </div>
+  <div class="stream-player">
+    <iframe [src]="safeAlbumPlayerUrl" seamless></iframe>
+  </div>
+</div>

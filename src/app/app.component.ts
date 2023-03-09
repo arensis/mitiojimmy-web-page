@@ -20,7 +20,8 @@ export class AppComponent {
     {name: 'Home', url: '/'},
     {name: 'Biografía', url: 'bio'},
     {name: 'Conciertos', url: 'shows'},
-    {name: 'Música', url: 'music'},
+    {name: 'Discografía', url: 'music'},
+    {name: 'Vídeos', url: 'videos'},
     {name: 'Contacto', url: 'contact'}
   ]
 }

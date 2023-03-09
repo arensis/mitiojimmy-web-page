@@ -5,6 +5,7 @@ export interface LiveEntry {
   date: Date;
   time: Time;
   city: string;
+  province: string;
   concertHall: string;
   ticketsLink: TicketLink[]
 }

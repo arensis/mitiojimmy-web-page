@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from '../material.module';
+import { SectionBioComponent } from './section-bio/section-bio.component';
 
 @NgModule({
   imports: [
@@ -17,12 +18,14 @@ import { MaterialModule } from '../material.module';
   declarations: [
    HeaderComponent,
    FooterComponent,
-   SectionComponent
+   SectionComponent,
+   SectionBioComponent
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SectionComponent
+    SectionComponent,
+    SectionBioComponent
   ]
 })
 export class LayoutModule { }

@@ -1,13 +1,13 @@
 @import '/src/variables.scss';
 
 .section-header {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 29vh;
+  height: 30vh;
   background-size: cover;
   margin-bottom: 6vh;
-  margin-top: -65px;
+  margin-top: -110px;
 
   .section-name {
     padding-top: 2rem;
@@ -25,8 +25,18 @@
   display: flex;
   flex-direction: column;
   text-align: justify;
-  margin: 4vh 6vw;
+  margin: 4vh 4vw;
   background-color: $primary-background-color;
   color: $secondary-text-color;
   font-size: 1rem;
 }
+
+@media screen and (min-width: 300px) and (max-width: 576px){
+  .section-header {
+    .section-name {
+      padding-top: 3rem;
+      font-size: 2.4rem;
+    }
+  }
+}
+

@@ -26,7 +26,8 @@ import * as PageModules from './pages';
     PageModules.MusicPageModule,
     PageModules.LegalAdvisoriesPageModule,
     PageModules.HomePageModule,
-    PageModules.ShowsPageModule
+    PageModules.ShowsPageModule,
+    PageModules.VideosPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

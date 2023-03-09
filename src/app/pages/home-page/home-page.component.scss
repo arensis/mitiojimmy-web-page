@@ -1,7 +1,7 @@
 @import '/src/variables.scss';
 
 div.container {
-  background-image: url(../../../assets/images/home-background.jpeg);
+  background-image: url(../../../assets/images/home-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -20,49 +20,38 @@ div.container {
     font-size: 4rem;
   }
 
-  h1, p {
+  h1 {
     color: $primary-text-color;
-    text-shadow: 5px 3px 10px #00000080;
-  }
-
-  p {
-    font-family: 'Lexend Mega';
-    font-style: italic;
-    font-size: 1.5rem;
-    color: $secondary-text-color;
+    text-shadow: 1px 1px 2px #00000080;
   }
 }
 
 // Very small sizes phone in portrait orientation
 @media screen and (max-width: 373px) and (orientation: portrait) {
-  .title h1 {
-    font-size: 1.6rem;
+  div.container {
+    background-image: url(../../../assets/images/home-bg-portrait.jpg);
   }
 
-  .title p {
-    font-size: 0.9rem;
+  .title h1 {
+    font-size: 2rem;
   }
 }
 
 // Small phones in portrait orientation
 @media screen and (min-width: 374px) and (max-width: 575px) and (orientation: portrait) {
-  .title h1 {
-    font-size: 2.3rem;
+  div.container {
+    background-image: url(../../../assets/images/home-bg-portrait.jpg);
   }
 
-  .title p {
-    font-size: 1.2rem;
+  .title h1 {
+    font-size: 2.3rem;
   }
 }
 
 // Landscapes phone or table orientation
 @media screen and (min-width: 500px) and (max-width: 980px) and (orientation: landscape) {
   .title h1 {
-    font-size: 2rem;
-  }
-
-  .title p {
-    font-size: 1rem;
+    font-size: 3rem;
   }
 }
 
