@@ -2,59 +2,13 @@
 @import 'src/variables.scss';
 @import 'src/styles.scss';
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(13, 1fr);
-  grid-gap: 53px;
-
-  @include sm {
-    margin-left: 6vw;
-  }
-
-  @include lg {
-    grid-gap: 50px 68px;
-  }
-
-  @include xl {
-    grid-gap: 50px 108px;
-  }
-
-  @include xxl {
-    grid-gap: 50px 160px;
-  }
-}
-
 .live-entry-container {
-  @extend .grid;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
   opacity: 0.9;
 }
 
 .entry {
-  @include xs {
-    grid-column: span 12;
-  }
-
-  @include sm {
-    grid-column: span 12;
-  }
-
-  @include md {
-    grid-column: span 12;
-  }
-
-  @include lg {
-    grid-column: span 6;
-  }
-
-  @include xls {
-    grid-column: span 6;
-  }
-
-  @include xl {
-    grid-column: span 6;
-  }
-
-  @include xxl {
-    grid-column: span 4;
-  }
+  margin: 1rem;
 }

@@ -6,12 +6,14 @@ import { CommonModule } from '@angular/common';
 import { ShowsPageRoutingModule } from './shows-page-routing.module';
 import { ShowsPageComponent } from './shows-page.component';
 import { LiveEntryComponent } from './components/live-entry/live-entry.component';
+import { LiveDateComponent } from './components/live-date/live-date.component';
 
 
 @NgModule({
   declarations: [
     ShowsPageComponent,
-    LiveEntryComponent
+    LiveEntryComponent,
+    LiveDateComponent
   ],
   imports: [
     CommonModule,

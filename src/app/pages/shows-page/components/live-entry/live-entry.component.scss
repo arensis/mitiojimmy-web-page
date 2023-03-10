@@ -8,46 +8,17 @@
   min-width: 300px;
   height: 150px;
   width: 100%;
-
-  .date-sheet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 10px;
-
-    .month {
-      font-weight: bold;
-      font-size: 33px;
-      padding-bottom: 4px;
-      color: #a9a6a7;
-    }
-
-    .day {
-      font-weight: bold;
-      font-size: 65px;
-      margin: 6px 0;
-      color: #FE4C72;
-    }
-
-    .day-name {
-      font-weight: bold;
-      font-size: 23px;
-      color: #76cfe1;
-    }
-  }
+  max-width: 35rem;
+  background: #00000021;
+  border-radius: 11px;
+  padding: 10px;
 
   .show-details-container {
-    padding-top: 18px;
-    padding-right: 6px;
-    padding-bottom: 23px;
+    padding-top: 0.6rem;
 
     .show-details {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      padding-bottom: 23px;
 
       .basic-info {
         .location {
@@ -55,50 +26,49 @@
           align-items: center;
 
           mat-icon {
-            font-size: 45px;
-            height: 51px;
-            width: 45px;
+            font-size: 3rem;
+            height: 3.2rem;
+            width: 2.8rem;
           }
 
           .place-info {
             display: flex;
             flex-direction: column;
+            max-width: 24.8rem;
 
             .city {
-              font-size: 24px;
-            }
-
-            .hall {
-              font-size: 16px;
-              padding-left: 26px;
+              font-size: 1.3rem;
+              text-align: start !important;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
             }
           }
         }
 
       .show-time {
         display: flex;
-        align-items: center;
-        margin-left: 10px;
+        margin-left: 2.8rem;
 
         mat-icon {
-          font-size: 26px;
-          height: 26x;
-          width: 26px;
-          margin-right: 6px;
+          font-size: 1.3rem;
+          height: 1.3rem;
+          width: 1.3rem;
+          margin-right: 0.3rem;
         }
 
         span {
-          font-size: 20px;
-          padding-top: 3px;
+          font-size: 1rem;
+          padding-bottom: 0.4rem;
         }
       }
 
       }
 
       .guest-artist {
-        font-size: 20px;
+        font-size: 1rem;
         font-weight: bold;
-        padding-left: 12px;
+        padding-left: 3rem;
       }
     }
 
@@ -123,12 +93,65 @@
 
 .tickets {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: flex-end;
-  border-top: 1px solid white;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  width: 200px;
 }
 
+@media screen and (min-width: 300px) and (max-width: 410px) {
+  .calendar-item {
+    width: 20rem !important;
+  }
 
+  .place-info {
+    max-width: 13rem !important;
+  }
+}
+
+@media screen and (min-width: 410px) and (max-width: 605px) {
+  .calendar-item {
+    width: 22rem !important;
+  }
+
+  .place-info {
+    max-width: 15rem !important;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .city {
+    font-size: 1rem !important;
+  }
+
+  .live-hall {
+    font-size: 0.7rem !important;
+  }
+
+  .guest-artist {
+    font-size: 0.7rem !important;
+  }
+
+  .show-time {
+    mat-icon {
+      font-size: 1rem !important;
+      height: 1rem !important;
+      width: 1rem !important;
+      margin-right: 0.3rem !important;
+      margin-top: 0.1rem;
+    }
+
+    span {
+      font-size: 0.8rem !important;
+      padding-bottom: 0.4rem !important;
+    }
+  }
+
+  .location mat-icon {
+    font-size: 2.2rem !important;
+    height: 2.5rem !important;
+    width: 2rem !important;
+  }
+}
 
 

@@ -8,7 +8,7 @@ footer {
     align-items: center;
 
     a {
-      margin: 0.5rem;
+      margin: 1rem 0.5rem 0.5rem;
       font-size: 2rem;
       color: $secondary-link-color;
 
@@ -68,23 +68,31 @@ footer {
     }
   }
 
-  .copyright {
-    color: $secondary-link-color;
-  }
+  .legal-and-royalties {
+    display: inline-flex;
 
-  .web-maker, .legal-advisories {
-    margin-top: 8px !important;
+    .copyright, .web-maker, .legal-advisories {
+      margin-top: 8px !important;
 
-    a {
-      color: $secondary-link-color;
-      font-size: 0.8rem !important;
-      &:hover {
-        color: $secondary-link-hover-color;
+      a, span {
+        font-size: 0.6rem !important;
       }
 
-      &:focus {
-        color: $secondary-link-focus-color;
+      a {
+        color: $secondary-link-color;
+        &:hover {
+          color: $secondary-link-hover-color;
+        }
+
+        &:focus {
+          color: $secondary-link-focus-color;
+        }
       }
+    }
+
+    .copyright::after, .legal-advisories::after {
+      content: '|';
+      margin: 4px;
     }
   }
 }

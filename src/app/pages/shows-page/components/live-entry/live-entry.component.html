@@ -1,18 +1,7 @@
-<div class="tickets">
-  <button>COMPRAR ENTRADAS</button>
-</div>
 <div class="calendar-item">
-  <div class="date-sheet">
-    <span class="month">
-      {{monthName}}
-    </span>
-    <span class="day">
-      {{dayNumber}}
-    </span>
-    <span class="day-name">
-      {{dayName}}
-    </span>
-  </div>
+  <app-live-date
+    [date]="liveEntry.date"
+  ></app-live-date>
   <div class="show-details-container">
     <div class="show-details">
       <div class="basic-info">
@@ -20,8 +9,11 @@
           <mat-icon>location_on</mat-icon>
           <div class="place-info">
             <span class="city">{{liveEntry.city.toUpperCase()}}, {{liveEntry.province.toUpperCase()}}</span>
-            <span clas="live-hall">SALA {{liveEntry.concertHall.toUpperCase()}}</span>
+            <span class="live-hall">SALA {{liveEntry.concertHall.toUpperCase()}}</span>
           </div>
+        </div>
+        <div class="guest-artist">
+          <i>+ DAVILE MATELLÁN</i>
         </div>
         <div class="show-time">
           <mat-icon>access_time</mat-icon>
@@ -29,9 +21,9 @@
             {{liveEntry.time.hours}}:{{liveEntry.time.hours}}
           </span>
         </div>
-      </div>
-      <div class="guest-artist">
-        <i>+ DAVILE MATELLÁN</i>
+        <div class="tickets">
+          <button>COMPRAR ENTRADAS</button>
+        </div>
       </div>
     </div>
   </div>

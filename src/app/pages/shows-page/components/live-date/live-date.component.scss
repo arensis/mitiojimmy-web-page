@@ -1,0 +1,60 @@
+.date-sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.4rem 1.2rem;
+  width: 100%;
+  height: 100%;
+  max-width: 3rem;
+  max-height: 9rem;
+
+  .month {
+    font-weight: bold;
+    font-size: 2.4rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.1rem;
+    color: #a9a6a7;
+  }
+
+  .day {
+    font-weight: bold;
+    font-size: 4.3rem;
+    margin: 6px 0;
+    color: #FE4C72;
+  }
+
+  .day-name {
+    font-weight: bold;
+    font-size: 1.9rem;
+    letter-spacing: 0.45rem;
+    color: #76cfe1;
+    padding-left: 0.4rem;
+    padding-top: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .date-sheet {
+    max-width: 2rem  !important;
+    max-height: 8rem  !important;
+
+  }
+  .month {
+    font-size: 2rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 0.1rem !important;
+  }
+
+  .day {
+    font-size: 3.9rem !important;
+    margin: 6px 0 !important;
+  }
+
+  .day-name {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.45rem !important;
+    padding-left: 0.4rem !important;
+    padding-top: 0.4rem !important;
+  }
+}
