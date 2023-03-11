@@ -6,14 +6,24 @@
     <div class="show-details">
       <div class="basic-info">
         <div class="location">
-          <mat-icon>location_on</mat-icon>
+          <a [href]="liveEntry.concertHall.location">
+            <mat-icon>location_on</mat-icon>
+          </a>
           <div class="place-info">
             <span class="city">{{liveEntry.city.toUpperCase()}}, {{liveEntry.province.toUpperCase()}}</span>
-            <span class="live-hall">SALA {{liveEntry.concertHall.toUpperCase()}}</span>
+            <a [href]="liveEntry.concertHall.url" class="live-hall">SALA {{liveEntry.concertHall.name.toUpperCase()}}</a>
           </div>
         </div>
-        <div class="guest-artist">
-          <i>+ DAVILE MATELLÁN</i>
+        <div class="guest-artist" *ngIf="liveEntry.guestArtists.length > 0">
+          <span class="more">Más:</span>
+          <ul>
+            <ng-container *ngFor="let artist of liveEntry.guestArtists; let i = index; trackBy: trackByFn">
+              <li>
+                <a *ngIf="(artist.url || '').trim() !== ''" [href]="artist.url">{{artist.name.toUpperCase()}}</a>
+                <span *ngIf="(artist.url || '').trim() === ''">{{artist.name.toUpperCase()}}</span>
+              </li>
+            </ng-container>
+          </ul>
         </div>
         <div class="show-time">
           <mat-icon>access_time</mat-icon>
@@ -23,24 +33,24 @@
         </div>
         <div class="tickets">
           <a
-            *ngIf="(liveEntry.ticketsLink || '').trim() !== ''"
+            *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() !== ''"
             mat-raised-button
             color="accent"
-            [href]="liveEntry.ticketsLink"
+            [href]="liveEntry.concertHall.ticketsLink"
             target="_blank"
           >
             <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
             COMPRAR ENTRADAS
           </a>
-          <button
-            *ngIf="(liveEntry.ticketsLink || '').trim() === ''"
+          <a
+            *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() === ''"
             mat-button
             color="accent"
             class="coming-soon"
           >
             <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
             PRÓXIMAMENTE
-          </button>
+          </a>
         </div>
       </div>
     </div>

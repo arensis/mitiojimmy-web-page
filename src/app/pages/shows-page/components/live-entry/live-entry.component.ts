@@ -1,18 +1,24 @@
 import { LiveEntry } from '../../../../model/shows/LiveEntry';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-live-entry',
   templateUrl: './live-entry.component.html',
   styleUrls: ['./live-entry.component.scss']
 })
-export class LiveEntryComponent {
- @Input()
- liveEntry!: LiveEntry;
+export class LiveEntryComponent implements OnInit {
+  @Input()
+  liveEntry!: LiveEntry;
 
- trackByFn(index: number, item: any): number {
-  return index;
+  guestArtist?: string
+
+  ngOnInit(): void {
+    this.guestArtist = this.liveEntry.guestArtists
+      .map(guest => guest.name)
+      .join(',');
   }
 
-
+  trackByFn(index: number, item: any): number {
+    return index;
+  }
 }

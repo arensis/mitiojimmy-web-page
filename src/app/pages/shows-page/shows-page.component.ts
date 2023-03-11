@@ -1,8 +1,7 @@
 import { DataService } from './../../services/data.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { LiveEntry } from 'src/app/model/shows/LiveEntry';
-import { TicketLink } from 'src/app/model/shows/TicketLink';
-import { Subscriber, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-shows-page',
@@ -18,10 +17,6 @@ export class ShowsPageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.liveEntrySubscription = this.dataService.getShowsData()
       .subscribe(shows => this.liveEntries = shows);
-    // this.liveEntrySubscription = this.dataService.getShowsExampleData()
-    //   .subscribe(shows => {
-    //     this.liveEntries = shows
-    //   });
   }
 
   ngOnDestroy(): void {

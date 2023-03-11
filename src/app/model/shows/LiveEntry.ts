@@ -1,11 +1,12 @@
 import { Time } from "@angular/common";
-import { TicketLink } from "./TicketLink";
+import { ConcertHall } from "./ConcertHall";
+import { GuestArtist } from "./GuestArtist";
 
 export interface LiveEntry {
   date: Date;
   time: Time;
   city: string;
   province: string;
-  concertHall: string;
-  ticketsLink: string;
+  concertHall: ConcertHall;
+  guestArtists: GuestArtist[];
 }

@@ -1,10 +1,20 @@
 [
   {
     "date": "05/04/2023",
-    "time": { "hours": 22, "minutes": 30 },
+    "time": { "hours": 20, "minutes": 30 },
     "city": "Madrid",
     "province": "Madrid",
-    "concertHall": "Búho Real",
-    "ticketsLink": ""
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "",
+      "location": "",
+      "url": ""
+    },
+    "guestArtists": [
+      {
+        "name": "Davile Matellán",
+        "url": "https://google.es"
+      }
+    ]
   }
 ]
