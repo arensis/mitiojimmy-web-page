@@ -7,5 +7,5 @@ export interface LiveEntry {
   city: string;
   province: string;
   concertHall: string;
-  ticketsLink: TicketLink[]
+  ticketsLink: string;
 }

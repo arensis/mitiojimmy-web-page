@@ -14,7 +14,7 @@
   padding: 10px;
 
   .show-details-container {
-    padding-top: 0.6rem;
+    padding-top: 0.3rem;
 
     .show-details {
       display: flex;
@@ -96,12 +96,16 @@
   flex-direction: column;
   margin-top: 0.5rem;
   padding-left: 1rem;
-  width: 200px;
+}
+
+.coming-soon {
+  pointer-events: none;
 }
 
 @media screen and (min-width: 300px) and (max-width: 410px) {
   .calendar-item {
     width: 20rem !important;
+    height: 135px !important;
   }
 
   .place-info {
@@ -112,6 +116,7 @@
 @media screen and (min-width: 410px) and (max-width: 605px) {
   .calendar-item {
     width: 22rem !important;
+    height: 140px !important;
   }
 
   .place-info {

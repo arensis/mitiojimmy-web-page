@@ -22,7 +22,23 @@
           </span>
         </div>
         <div class="tickets">
-          <button>COMPRAR ENTRADAS</button>
+          <button
+            *ngIf="(liveEntry.ticketsLink || '').trim() !== ''"
+            mat-raised-button
+            color="accent"
+          >
+            <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
+            COMPRAR ENTRADAS
+          </button>
+          <button
+            *ngIf="(liveEntry.ticketsLink || '').trim() === ''"
+            mat-button
+            color="accent"
+            class="coming-soon"
+          >
+            <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
+            PRÓXIMAMENTE
+          </button>
         </div>
       </div>
     </div>

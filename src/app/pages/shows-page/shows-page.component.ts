@@ -16,13 +16,12 @@ export class ShowsPageComponent implements OnInit, OnDestroy {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    // this.subscription = this.dataService.getShowsData()
-    //   .subscribe(shows => this.liveEntries = shows);
-    this.liveEntrySubscription = this.dataService.getShowsExampleData()
-      .subscribe(shows => {
-        console.log(shows);
-        this.liveEntries = shows
-      });
+    this.liveEntrySubscription = this.dataService.getShowsData()
+      .subscribe(shows => this.liveEntries = shows);
+    // this.liveEntrySubscription = this.dataService.getShowsExampleData()
+    //   .subscribe(shows => {
+    //     this.liveEntries = shows
+    //   });
   }
 
   ngOnDestroy(): void {
