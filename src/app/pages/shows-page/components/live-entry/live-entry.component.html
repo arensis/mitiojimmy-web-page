@@ -18,18 +18,20 @@
         <div class="show-time">
           <mat-icon>access_time</mat-icon>
           <span>
-            {{liveEntry.time.hours}}:{{liveEntry.time.hours}}
+            {{liveEntry.time.hours}}:{{liveEntry.time.minutes}}
           </span>
         </div>
         <div class="tickets">
-          <button
+          <a
             *ngIf="(liveEntry.ticketsLink || '').trim() !== ''"
             mat-raised-button
             color="accent"
+            [href]="liveEntry.ticketsLink"
+            target="_blank"
           >
             <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
             COMPRAR ENTRADAS
-          </button>
+          </a>
           <button
             *ngIf="(liveEntry.ticketsLink || '').trim() === ''"
             mat-button
