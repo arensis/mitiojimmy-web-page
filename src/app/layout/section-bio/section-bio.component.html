@@ -1,8 +1,10 @@
-<div class="section-bio-header not-panoramic-picture" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')'}">
-  <span class="section-bio-name">{{sectionName}}</span>
-</div>
-<div class="section-body">
-  <ng-content></ng-content>
-</div>
+<section>
+  <div class="section-bio-header not-panoramic-picture" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')'}">
+    <span class="section-bio-name">{{sectionName}}</span>
+  </div>
+  <div class="section-body">
+    <ng-content></ng-content>
+  </div>
+</section>
 
 

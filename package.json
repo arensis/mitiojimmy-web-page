@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "npm i && ng deploy --cname=mitiojimmy.com"
+    "deploy": "ng deploy --cname=mitiojimmy.com"
   },
   "private": true,
   "dependencies": {
