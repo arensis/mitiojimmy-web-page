@@ -1,7 +1,9 @@
 <section>
-  <div class="section-header not-panoramic-picture" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')'}">
-    <h1 class="section-name">{{sectionName}}</h1>
-  </div>
+  <header>
+    <div class="section-header not-panoramic-picture" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')'}">
+      <h1 class="section-name">{{sectionName}}</h1>
+    </div>
+  </header>
   <div class="section-body">
     <ng-content></ng-content>
   </div>
