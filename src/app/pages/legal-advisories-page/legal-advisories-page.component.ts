@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import SEOService from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-legal-advisories-page',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LegalAdvisoriesPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private seoService: SEOService,
+    private route: ActivatedRoute,
+  ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+    const { meta } = this.route.snapshot.data;
+    const { link } = this.route.snapshot.data;
+
+    this.seoService.updateTitle(meta.title);
+    this.seoService.createCannonicalLink(link.url);
   }
 
 }
