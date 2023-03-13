@@ -7,13 +7,13 @@
     "concertHall": {
       "name": "Búho Real",
       "ticketsLink": "",
-      "location": "",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
       "url": ""
     },
     "guestArtists": [
       {
         "name": "Davile Matellán",
-        "url": "https://google.es"
+        "url": ""
       }
     ]
   }
