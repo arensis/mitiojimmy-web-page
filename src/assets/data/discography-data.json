@@ -7,7 +7,8 @@
         "imageUrl": "assets/images/GBL-album-cover.jpg",
         "id": "7eAg2VNN0F5vkuwCLyGErH",
         "artistPlaylist": true,
-        "streamingService": "SPOTIFY"
+        "streamingService": "SPOTIFY",
+        "albumName": "Singles Collection"
       }
     ]
   },
@@ -19,28 +20,32 @@
         "imageUrl": "https://f4.bcbits.com/img/0002340923_10.jpg",
         "id": "2407477905",
         "artistPlaylist": false,
-        "streamingService": "BANDCAMP"
+        "streamingService": "BANDCAMP",
+        "albumName": "Perdita mundi"
       },
       {
         "releaseDate": "Octubre 2013",
         "imageUrl": "https://f4.bcbits.com/img/a1856076420_10.jpg",
         "id": "1022444437",
         "artistPlaylist": false,
-        "streamingService": "BANDCAMP"
+        "streamingService": "BANDCAMP",
+        "albumName": "De música ligera"
       },
       {
         "releaseDate": "Octubre 2012",
         "imageUrl": "https://f4.bcbits.com/img/a3567800698_10.jpg",
         "id": "1387061987",
         "artistPlaylist": false,
-        "streamingService": "BANDCAMP"
+        "streamingService": "BANDCAMP",
+        "albumName": "Friogenia"
       },
       {
         "releaseDate": "Abril 2010",
         "imageUrl": "https://f4.bcbits.com/img/a2016682209_10.jpg",
         "id": "115197473",
         "artistPlaylist": false,
-        "streamingService": "BANDCAMP"
+        "streamingService": "BANDCAMP",
+        "albumName": "Maida Vale"
       }
     ]
   }

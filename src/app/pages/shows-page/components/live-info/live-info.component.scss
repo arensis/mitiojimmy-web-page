@@ -1,0 +1,89 @@
+@import 'src/variables.scss';
+@import 'src/styles.scss';
+
+.show-details {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.3rem;
+
+  .location {
+    display: flex;
+    align-items: center;
+
+    mat-icon {
+      font-size: 3rem;
+      height: 3.2rem;
+      width: 2.8rem;
+    }
+
+    .place-info {
+      display: flex;
+      flex-direction: column;
+      max-width: 24.8rem;
+
+      .city {
+        font-size: 1.3rem;
+        text-align: start !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .show-time {
+    display: flex;
+    margin-left: 2.8rem;
+
+    mat-icon {
+      font-size: 1.3rem;
+      height: 1.3rem;
+      width: 1.3rem;
+      margin-right: 0.3rem;
+    }
+
+    span {
+      font-size: 1rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 410px) {
+  .place-info {
+    max-width: 13rem !important;
+  }
+}
+
+@media screen and (min-width: 410px) and (max-width: 605px) {
+  .place-info {
+    max-width: 15rem !important;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .live-hall {
+    font-size: 0.7rem !important;
+  }
+
+  .show-time {
+    mat-icon {
+      font-size: 1rem !important;
+      height: 1rem !important;
+      width: 1rem !important;
+      margin-right: 0.3rem !important;
+      margin-top: 0.1rem;
+    }
+
+    span {
+      font-size: 0.8rem !important;
+      padding-bottom: 0.4rem !important;
+    }
+  }
+
+  .location mat-icon {
+    font-size: 2.2rem !important;
+    height: 2.5rem !important;
+    width: 2rem !important;
+  }
+}

@@ -127,6 +127,10 @@ a.secondary, button.secondary, button.mat-icon-button.secondary {
   text-decoration: none;
 }
 
+.button-disabled {
+  pointer-events: none;
+}
+
 h2 {
   font-size: 2rem !important;
   color: $subtitle-primary-background;

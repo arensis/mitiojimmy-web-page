@@ -8,21 +8,15 @@
     <ng-container *ngFor="let album of bandDiscography?.albums; let i = index; trackBy: trackFn">
       <app-bandcamp-album-player
         *ngIf="(!album.artistPlaylist && album.streamingService === 'BANDCAMP')"
-        [releaseDate]="album.releaseDate"
-        [albumImageUrl]="album.imageUrl"
-        [albumId]="album.id"
+        [album]="album"
       ></app-bandcamp-album-player>
       <app-spotify-artist-player
         *ngIf="(album.artistPlaylist && album.streamingService === 'SPOTIFY')"
-        [releaseDate]="album.releaseDate"
-        [albumImageUrl]="album.imageUrl"
-        [albumId]="album.id"
+        [album]="album"
       ></app-spotify-artist-player>
       <app-spotify-album-player
         *ngIf="(!album.artistPlaylist && album.streamingService === 'SPOTIFY')"
-        [releaseDate]="album.releaseDate"
-        [albumImageUrl]="album.imageUrl"
-        [albumId]="album.id"
+        [album]="album"
     ></app-spotify-album-player>
     </ng-container>
   </div>

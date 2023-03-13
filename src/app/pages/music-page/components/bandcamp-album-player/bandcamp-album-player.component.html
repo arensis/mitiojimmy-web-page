@@ -1,8 +1,8 @@
 
 <div class="album">
   <div class="media">
-    <span class="release-date">{{releaseDate}}</span>
-    <img [src]="saveAlbumImageUrl" />
+    <span class="release-date">{{album?.releaseDate}}</span>
+    <img [src]="saveAlbumImageUrl" [alt]="coverImageAltText"/>
   </div>
   <div class="stream-player">
     <iframe [src]="safeAlbumPlayerUrl" seamless></iframe>

@@ -6,4 +6,5 @@ export interface Album {
   id: string;
   artistPlaylist: boolean;
   streamingService: StreamingServiceType;
+  albumName: string;
 }

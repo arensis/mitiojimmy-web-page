@@ -1,0 +1,31 @@
+<div class="show-details">
+    <div class="location">
+      <a
+        [href]="liveEntry.concertHall.location"
+        class="secondary"
+        [ngClass]="{'button-disabled': (liveEntry.concertHall.location || '').trim() === ''}"
+      >
+        <mat-icon>location_on</mat-icon>
+      </a>
+      <div class="place-info">
+        <span class="city">{{liveEntry.city.toUpperCase()}}, {{liveEntry.province.toUpperCase()}}</span>
+        <a
+          class="secondary live-hall"
+          [href]="liveEntry.concertHall.url"
+          [ngClass]="{'button-disabled': (liveEntry.concertHall.url || '').trim() === ''}"
+        >
+          SALA {{liveEntry.concertHall.name.toUpperCase()}}
+        </a>
+      </div>
+    </div>
+    <app-live-guest-artist
+      *ngIf="liveEntry.guestArtists.length > 0"
+      [guestArtists]="liveEntry.guestArtists"
+    ></app-live-guest-artist>
+    <div class="show-time">
+      <mat-icon>access_time</mat-icon>
+      <span>
+        {{liveEntry.time.hours}}:{{liveEntry.time.minutes}}
+      </span>
+    </div>
+</div>

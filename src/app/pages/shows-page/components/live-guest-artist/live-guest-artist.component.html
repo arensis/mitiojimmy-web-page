@@ -1,0 +1,16 @@
+<div class="guest-artist">
+  <span class="more">Más:</span>
+  <ul>
+    <ng-container *ngFor="let artist of guestArtists; let i = index; trackBy: trackByFn">
+      <li>
+        <a
+          [ngClass]="{'button-disabled': (artist.url || '').trim() === ''}"
+          class="secondary"
+          [href]="artist.url"
+        >
+          {{artist.name.toUpperCase()}}
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</div>
