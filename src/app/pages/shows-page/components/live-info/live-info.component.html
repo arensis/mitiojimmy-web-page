@@ -3,6 +3,7 @@
       <a
         [href]="liveEntry.concertHall.location"
         class="secondary"
+        target="_blank"
         [ngClass]="{'button-disabled': (liveEntry.concertHall.location || '').trim() === ''}"
       >
         <mat-icon>location_on</mat-icon>
@@ -12,6 +13,7 @@
         <a
           class="secondary live-hall"
           [href]="liveEntry.concertHall.url"
+          target="_blank"
           [ngClass]="{'button-disabled': (liveEntry.concertHall.url || '').trim() === ''}"
         >
           SALA {{liveEntry.concertHall.name.toUpperCase()}}

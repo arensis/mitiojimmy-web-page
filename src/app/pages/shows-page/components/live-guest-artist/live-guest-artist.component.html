@@ -7,6 +7,7 @@
           [ngClass]="{'button-disabled': (artist.url || '').trim() === ''}"
           class="secondary"
           [href]="artist.url"
+          target="_blank"s
         >
           {{artist.name.toUpperCase()}}
         </a>
