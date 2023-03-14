@@ -17,7 +17,7 @@ export const seoSectionsMetadata = {
   },
   homePage: {
     meta: {
-      title: 'Mi tío Jimmy - Home'
+      title: 'Web Oficial de Mi tío Jimmy'
     },
     link: {
       url: ''
