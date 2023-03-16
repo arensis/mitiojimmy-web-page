@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { LiveEntry } from '../../../../model/shows/LiveEntry';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -11,6 +12,8 @@ export class LiveEntryComponent implements OnInit {
   liveEntry!: LiveEntry;
 
   guestArtist?: string
+
+  constructor(private tranlsate: TranslateService) {}
 
   ngOnInit(): void {
     this.guestArtist = this.liveEntry.guestArtists

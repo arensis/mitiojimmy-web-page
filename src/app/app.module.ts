@@ -1,3 +1,5 @@
+import { I18nService } from './services/i18n.service';
+import { TranslateModule } from '@ngx-translate/core';
 import { DataService } from './services/data.service';
 import { ShowsPageModule } from './pages/shows-page/shows-page.module';
 import { LayoutModule } from './layout/layout.module';
@@ -30,9 +32,11 @@ import { HttpClientModule } from '@angular/common/http';
     PageModules.LegalAdvisoriesPageModule,
     PageModules.HomePageModule,
     PageModules.ShowsPageModule,
-    PageModules.VideosPageModule
+    PageModules.VideosPageModule,
+    TranslateModule,
+    TranslateModule.forRoot()
   ],
-  providers: [DataService],
+  providers: [DataService, I18nService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

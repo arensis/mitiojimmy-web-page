@@ -1,6 +1,10 @@
 @import '/src/variables.scss';
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   mat-toolbar {
     background: transparent;
     color: $primary-link-color;

@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -11,7 +12,7 @@ export class SectionComponent {
 
   imageUrl!: string;
 
-  constructor() {
+  constructor(private translate: TranslateService) {
     this.imageUrl = 'assets/images/home-bg.jpg';
   }
 }

@@ -1,27 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { faCoffee,  } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { ActivatedRoute } from '@angular/router';
 import SEOService from 'src/app/services/seo.service';
+import { TranslateService } from '@ngx-translate/core';
+import { AbstractPage } from '../abstract-page';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent extends AbstractPage implements OnInit, OnDestroy {
   faCoffee = faCoffee;
 
   constructor(
-    private seoService: SEOService,
-    private route: ActivatedRoute,
-  ) {}
+    seoService: SEOService,
+    route: ActivatedRoute,
+    translate: TranslateService
+  ) {
+    super(seoService, route, translate);
+  }
 
   ngOnInit(): void {
-    const { meta } = this.route.snapshot.data;
-    const { link } = this.route.snapshot.data;
+    this.updateMetaData();
+  }
 
-    this.seoService.updateTitle(meta.title);
-    this.seoService.createCannonicalLink(link.url);
+  ngOnDestroy(): void {
+    this.unsubscribeLanguageSubscription();
   }
 }

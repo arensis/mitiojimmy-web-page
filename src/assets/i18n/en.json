@@ -1,0 +1,27 @@
+{
+  "spanish": "Spanish",
+  "english": "English",
+  "sections": {
+    "home": "Home",
+    "home-title": "Mi tío Jimmy Official Site",
+    "bio": "Biography",
+    "shows": "Shows",
+    "discography": "Discography",
+    "videos": "Videos",
+    "contact": "Contact",
+    "legal-advisory": "Legal Advisoy"
+  },
+  "live-entry": {
+    "guest-artist": "Guests",
+    "concert-hall": "Hall",
+    "tickets-button": {
+      "commin-soon": "Comming soon",
+      "buy": "Buy tickets"
+    }
+  },
+  "biography": {
+    "p1": "Mi tío Jimmy Aksel Gil's solo project.",
+    "p2": "Tras un largo periodo de inactividad, prepara la grabación de su primer disco tras su paso por la banda madrileña Magnética, con la que editó tres álbumes (Maida Vale, Friogenia y Perdita Mundi) y en paralelo con Good Bye Lenin, con quien hasta el momento ha publicado tres sencillos.",
+    "p3": "Se espera que el nuevo disco esté preparado a finales del 2023 y contará con la producción de Carly Yeah. Hasta entonces y mientras se ultiman todos los detalles se podrá disfrutar de un adelanto en próximos conciertos acústicos y a través de las redes sociales."
+  }
+}

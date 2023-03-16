@@ -1,5 +1,7 @@
 <div class="guest-artist">
-  <span class="more">Más:</span>
+  <span class="more">
+    {{ ('live-entry.guest-artist' | translate ).toUpperCase() }}:
+  </span>
   <ul>
     <ng-container *ngFor="let artist of guestArtists; let i = index; trackBy: trackByFn">
       <li>

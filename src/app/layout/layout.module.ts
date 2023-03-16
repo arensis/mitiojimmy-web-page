@@ -1,3 +1,6 @@
+import { TranslateModule } from '@ngx-translate/core';
+import { I18nService } from './../services/i18n.service';
+import { LanguageSelectComponent } from './language-select/language-select.component';
 import { RouterModule } from '@angular/router';
 import { SectionComponent } from './section/section.component';
 import { FooterComponent } from './footer/footer.component';
@@ -14,18 +17,24 @@ import { SectionBioComponent } from './section-bio/section-bio.component';
     CommonModule,
     FontAwesomeModule,
     MaterialModule,
+    TranslateModule
   ],
   declarations: [
    HeaderComponent,
    FooterComponent,
    SectionComponent,
-   SectionBioComponent
+   SectionBioComponent,
+   LanguageSelectComponent
+  ],
+  providers: [
+    I18nService
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SectionComponent,
-    SectionBioComponent
+    SectionBioComponent,
+    TranslateModule
   ]
 })
 export class LayoutModule { }

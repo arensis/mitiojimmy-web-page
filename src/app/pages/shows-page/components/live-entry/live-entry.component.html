@@ -16,7 +16,7 @@
       target="_blank"
     >
       <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
-      COMPRAR ENTRADAS
+      {{ ('live-entry.tickets-button.buy' | translate).toUpperCase() }}
     </a>
     <a
       *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() === ''"
@@ -25,7 +25,7 @@
       class="coming-soon"
     >
       <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
-      PRÓXIMAMENTE
+      {{ ('live-entry.tickets-button.commin-soon' | translate).toUpperCase() }}
     </a>
   </div>
 </div>

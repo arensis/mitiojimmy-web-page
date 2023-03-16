@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -11,6 +12,8 @@ export class HeaderComponent {
 
   title = 'Mi tío Jimmy';
   showBandLogo = false;
+
+  constructor(private translate: TranslateService) {}
 
   openMenu(): void {
     this.onMenuClick.emit();

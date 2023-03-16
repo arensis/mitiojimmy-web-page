@@ -1,0 +1,14 @@
+<a mat-icon-button *ngIf="selectedLanguage" [matMenuTriggerFor]="languageMenu">
+  <span class="language-button">
+    <mat-icon>language</mat-icon>
+    {{ selectedLanguage.toUpperCase() }}
+  </span>
+</a>
+<mat-menu #languageMenu="matMenu">
+  <button mat-menu-item (click)="valueChange('es')">
+    {{ 'spanish' | translate }}
+  </button>
+  <button mat-menu-item (click)="valueChange('en')">
+    {{ 'english' | translate }}
+  </button>
+</mat-menu>

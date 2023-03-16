@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { TranslateService } from '@ngx-translate/core';
+import { I18nService } from './services/i18n.service';
 
 @Component({
   selector: 'app-root',
@@ -17,11 +19,15 @@ export class AppComponent {
   closeIcon = faXmark;
 
   sections = [
-    {name: 'Home', url: '/'},
-    {name: 'Biografía', url: 'bio'},
-    {name: 'Conciertos', url: 'shows'},
-    {name: 'Discografía', url: 'discography'},
-    {name: 'Vídeos', url: 'videos'},
-    {name: 'Contacto', url: 'contact'}
-  ]
+    {name: 'sections.home', url: '/'},
+    {name: 'sections.bio', url: 'bio'},
+    {name: 'sections.shows', url: 'shows'},
+    {name: 'sections.discography', url: 'discography'},
+    {name: 'sections.videos', url: 'videos'},
+    {name: 'sections.contact', url: 'contact'}
+  ];
+
+  constructor(private i18nService: I18nService, private translate: TranslateService) {
+    this.i18nService.init('es', ['es', 'en']);
+  }
 }

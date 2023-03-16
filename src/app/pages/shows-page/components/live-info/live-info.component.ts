@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { LiveEntry } from 'src/app/model/shows/LiveEntry';
 
 @Component({
@@ -9,4 +10,6 @@ import { LiveEntry } from 'src/app/model/shows/LiveEntry';
 export class LiveInfoComponent {
   @Input()
   liveEntry!: LiveEntry;
+
+  constructor(private tranlsate: TranslateService) {}
 }

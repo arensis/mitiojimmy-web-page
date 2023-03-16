@@ -1,5 +1,5 @@
 <div class="container">
-  <app-section [sectionName]="'Conciertos'">
+  <app-section [sectionName]="'shows'">
     <div class="live-entry-container">
       <ng-container *ngFor="let entry of liveEntries; let i = index; trackBy: trackByFn">
         <app-live-entry class="entry" [liveEntry]="entry"></app-live-entry>

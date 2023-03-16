@@ -1,7 +1,7 @@
 export const seoSectionsMetadata = {
   bioPage: {
     meta: {
-      title: 'Mi tío Jimmy - Biografía',
+      title: 'bio',
     },
     link: {
       url: 'bio'
@@ -9,7 +9,7 @@ export const seoSectionsMetadata = {
   },
   contactPage: {
     meta: {
-      title: 'Mi tío Jimmy - Contacto'
+      title: 'contact'
     },
     link: {
       url: 'contact'
@@ -17,7 +17,7 @@ export const seoSectionsMetadata = {
   },
   homePage: {
     meta: {
-      title: 'Web Oficial de Mi tío Jimmy'
+      title: 'home-title'
     },
     link: {
       url: ''
@@ -25,7 +25,7 @@ export const seoSectionsMetadata = {
   },
   legalAdvisoriesPage: {
     meta: {
-      title: 'Mi tío Jimmy - Aviso legal'
+      title: 'legal-advisory'
     },
     link: {
       url: 'legal-advisories'
@@ -33,7 +33,7 @@ export const seoSectionsMetadata = {
   },
   discographyPage: {
     meta: {
-      title: 'Mi tío Jimmy - Discografía'
+      title: 'discography'
     },
     link: {
       url: 'discography'
@@ -41,7 +41,7 @@ export const seoSectionsMetadata = {
   },
   showsPage: {
     meta: {
-      title: 'Mi tío Jimmy - Conciertos'
+      title: 'shows'
     },
     link: {
       url: 'shows'
@@ -49,7 +49,7 @@ export const seoSectionsMetadata = {
   },
   videosPage: {
     meta: {
-      title: 'Mi tío Jimmy - Vídeos'
+      title: 'videos'
     },
     link: {
       url: 'videos'

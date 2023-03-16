@@ -16,7 +16,7 @@
           target="_blank"
           [ngClass]="{'button-disabled': (liveEntry.concertHall.url || '').trim() === ''}"
         >
-          SALA {{liveEntry.concertHall.name.toUpperCase()}}
+          {{ ('live-entry.concert-hall' | translate ).toUpperCase() }} {{liveEntry.concertHall.name.toUpperCase()}}
         </a>
       </div>
     </div>

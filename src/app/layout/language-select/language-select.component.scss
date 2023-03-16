@@ -1,0 +1,17 @@
+a {
+  width: 80px !important;
+}
+
+.language-button {
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    border-radius: 0;
+  }
+  &:hover {
+    color:cornflowerblue;
+  }
+}
+
+

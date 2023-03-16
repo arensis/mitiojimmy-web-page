@@ -2,7 +2,9 @@ import { DataService } from './../../services/data.service';
 import { BandVideos } from './../../model/videos/BandVideos';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { AbstractPage } from '../abstract-page';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import SEOService from 'src/app/services/seo.service';
 
 @Component({
@@ -10,15 +12,18 @@ import SEOService from 'src/app/services/seo.service';
   templateUrl: './videos-page.component.html',
   styleUrls: ['./videos-page.component.scss']
 })
-export class VideosPageComponent implements OnInit, OnDestroy {
+export class VideosPageComponent extends AbstractPage implements OnInit, OnDestroy {
   bandVideosSubscription?: Subscription;
   bands: BandVideos[] = [];
 
   constructor(
     private dataService: DataService,
-    private seoService: SEOService,
-    private route: ActivatedRoute,
-  ) {}
+    seoService: SEOService,
+    route: ActivatedRoute,
+    translate: TranslateService
+  ) {
+    super(seoService, route, translate);
+  }
 
   ngOnInit(): void {
     this.updateMetaData();
@@ -27,6 +32,7 @@ export class VideosPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.unsubscribeLanguageSubscription();
     if (this.bandVideosSubscription) {
       this.bandVideosSubscription.unsubscribe();
     }
@@ -34,13 +40,5 @@ export class VideosPageComponent implements OnInit, OnDestroy {
 
   trackFn(index: number, item: any) {
     return index;
-  }
-
-  updateMetaData() {
-    const { meta } = this.route.snapshot.data;
-    const { link } = this.route.snapshot.data;
-
-    this.seoService.updateTitle(meta.title);
-    this.seoService.createCannonicalLink(link.url);
   }
 }

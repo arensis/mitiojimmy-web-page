@@ -7,7 +7,9 @@
       </button>
       <ul class="sections">
         <li *ngFor="let section of sections">
-          <a [routerLink]="section.url" routerLinkActive="active" (click)="drawer.toggle()">{{section.name}}</a>
+          <a [routerLink]="section.url" routerLinkActive="active" (click)="drawer.toggle()">
+            {{section.name | translate}}
+          </a>
         </li>
       </ul>
   </mat-drawer>

@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { DataService } from './../../services/data.service';
 import { BandDiscography } from '../../model/discography/BandDiscography';
 import { Component, OnDestroy, OnInit } from '@angular/core';
@@ -6,13 +7,14 @@ import { StreamingServiceType } from 'src/app/model/discography/StreamingService
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import SEOService from 'src/app/services/seo.service';
+import { AbstractPage } from '../abstract-page';
 
 @Component({
   selector: 'app-music-page',
   templateUrl: './music-page.component.html',
   styleUrls: ['./music-page.component.scss']
 })
-export class MusicPageComponent implements OnInit, OnDestroy {
+export class MusicPageComponent extends AbstractPage implements OnInit, OnDestroy {
 
   musicNote = faMusic;
 
@@ -22,9 +24,12 @@ export class MusicPageComponent implements OnInit, OnDestroy {
 
   constructor(
     private dataService: DataService,
-    private seoService: SEOService,
-    private route: ActivatedRoute,
-  ) { }
+    seoService: SEOService,
+    route: ActivatedRoute,
+    translate: TranslateService
+  ) {
+    super(seoService, route, translate);
+  }
 
   ngOnInit() {
     this.updateMetaData();
@@ -33,6 +38,7 @@ export class MusicPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.unsubscribeLanguageSubscription();
     if (this.bandsSubscription) {
       this.bandsSubscription.unsubscribe();
     }
@@ -40,13 +46,5 @@ export class MusicPageComponent implements OnInit, OnDestroy {
 
   trackFn(index: number, item: any) {
     return index;
-  }
-
-  updateMetaData() {
-    const { meta } = this.route.snapshot.data;
-    const { link } = this.route.snapshot.data;
-
-    this.seoService.updateTitle(meta.title);
-    this.seoService.createCannonicalLink(link.url);
   }
 }
