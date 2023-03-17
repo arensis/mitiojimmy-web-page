@@ -1,27 +1,36 @@
 # MitiojimmyWebPage
+Angular v15
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
+## Pasos para arrancar el proyecto:
 
-## Development server
+### 1. Instalar dependencias
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este paso sólo hay que hacerlo si se cumple alguna de estas opciones:
+  1. Es la primera vez que se descarga el proyecto
+  2. Se ha borrado la carpeta node_modules
+  3. Si se ha incluido una nueva librería
+  4. Si se han cambiado versiones de librerías en el fichero package.json
 
-## Code scaffolding
+  Se tiene que ejecutar en la raíz del proyecto (donde se encuentra el fichero package.json)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  ```bash
+  npm install
+  ```
 
-## Build
+### 2. Arrancar el proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Se tiene que ejecutar en la raíz del proyecto (donde se encuentra el fichero package.json)
 
-## Running unit tests
+```bash
+npm start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Publicar cambios en la web
 
-## Running end-to-end tests
+Una vez que se ha hecho commit de los cambios (recomendable también subir los cambios al repositorio con git push) ejecutar el comando
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm run deploy
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Esto hará el build del proyecto y subirá los ficheros a la rama de despliegue gh-pages.
