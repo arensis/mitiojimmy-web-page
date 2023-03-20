@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { AlbumPlayer } from '../album-player/album-player';
@@ -8,8 +9,8 @@ import { AlbumPlayer } from '../album-player/album-player';
   styleUrls: ['../album-player/album-player.scss']
 })
 export class BandcampAlbumPlayerComponent extends AlbumPlayer {
-  constructor(sanitizer: DomSanitizer) {
-    super(sanitizer);
+  constructor(sanitizer: DomSanitizer, translate: TranslateService) {
+    super(sanitizer, translate);
   }
 
   buildBasePlayerUrl(albumId: string): string {
