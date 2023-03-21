@@ -14,6 +14,7 @@
       color="accent"
       [href]="liveEntry.concertHall.ticketsLink"
       target="_blank"
+      (click)="onTicketClick(liveEntry.concertHall.name, liveEntry.date, true)"
     >
       <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
       {{ ('live-entry.tickets-button.buy' | translate).toUpperCase() }}
@@ -23,6 +24,7 @@
       mat-button
       color="accent"
       class="coming-soon"
+      (click)="onTicketClick(liveEntry.concertHall.name, liveEntry.date, false)"
     >
       <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
       {{ ('live-entry.tickets-button.commin-soon' | translate).toUpperCase() }}

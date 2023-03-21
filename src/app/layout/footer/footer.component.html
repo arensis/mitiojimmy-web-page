@@ -1,6 +1,13 @@
 <footer>
   <div class="social-icons">
-    <a *ngFor="let socialNetwork of workinSocialNetworks" [href]="socialNetwork.link" [className]="socialNetwork.class" target="_blank" rel="noopener noreferrer">
+    <a
+      *ngFor="let socialNetwork of workinSocialNetworks"
+      [href]="socialNetwork.link"
+      [className]="socialNetwork.class"
+      target="_blank"
+      rel="noopener noreferrer"
+      (click)="onSocialNetworkClick(socialNetwork.class)"
+      >
       <fa-icon [icon]="socialNetwork.icon"></fa-icon>
     </a>
   </div>

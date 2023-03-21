@@ -1,4 +1,5 @@
-import { Directive, OnInit, OnDestroy } from "@angular/core";
+import { GoogleAnalyticsService } from './../services/google-analytics.service';
+import { Directive } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { TranslateService } from "@ngx-translate/core";
 import { Subscription } from "rxjs";

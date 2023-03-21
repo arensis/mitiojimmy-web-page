@@ -1,3 +1,4 @@
+import { GoogleAnalyticsService } from './../../../../services/google-analytics.service';
 import { TranslateService } from '@ngx-translate/core';
 import { LiveEntry } from '../../../../model/shows/LiveEntry';
 import { Component, Input, OnInit } from '@angular/core';
@@ -13,7 +14,10 @@ export class LiveEntryComponent implements OnInit {
 
   guestArtist?: string
 
-  constructor(private tranlsate: TranslateService) {}
+  constructor(
+    private tranlsate: TranslateService,
+    private googleAnalyticsService: GoogleAnalyticsService
+  ) {}
 
   ngOnInit(): void {
     this.guestArtist = this.liveEntry.guestArtists
@@ -23,5 +27,9 @@ export class LiveEntryComponent implements OnInit {
 
   trackByFn(index: number, item: any): number {
     return index;
+  }
+
+  onTicketClick(hall: string, date: Date, onSale: boolean): void {
+    this.googleAnalyticsService.buyTicketsButton(hall, date, onSale);
   }
 }

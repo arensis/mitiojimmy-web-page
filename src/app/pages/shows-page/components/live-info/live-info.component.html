@@ -5,6 +5,7 @@
         class="secondary"
         target="_blank"
         [ngClass]="{'button-disabled': (liveEntry.concertHall.location || '').trim() === ''}"
+        (click)="onLocationClick(liveEntry.concertHall.name, liveEntry.date)"
       >
         <mat-icon>location_on</mat-icon>
       </a>
@@ -15,6 +16,7 @@
           [href]="liveEntry.concertHall.url"
           target="_blank"
           [ngClass]="{'button-disabled': (liveEntry.concertHall.url || '').trim() === ''}"
+          (click)="onConcertHallClick(liveEntry.concertHall.name, liveEntry.date)"
         >
           {{ ('live-entry.concert-hall' | translate ).toUpperCase() }} {{liveEntry.concertHall.name.toUpperCase()}}
         </a>
@@ -23,6 +25,8 @@
     <app-live-guest-artist
       *ngIf="liveEntry.guestArtists.length > 0"
       [guestArtists]="liveEntry.guestArtists"
+      [liveEntryDate]="liveEntry.date"
+      [concertHallName]="liveEntry.concertHall.name"
     ></app-live-guest-artist>
     <div class="show-time">
       <mat-icon>access_time</mat-icon>

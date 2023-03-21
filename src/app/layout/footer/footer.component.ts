@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram, faYoutube, faItunes, faTiktok, faDeezer, faVimeo } from '@fortawesome/free-brands-svg-icons';
+import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,8 @@ import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram, faYoutube, f
 })
 export class FooterComponent implements OnInit {
   workinSocialNetworks!: any[];
+
+  constructor(private googleAnalyticsService: GoogleAnalyticsService) {}
 
   socialNetworks = [
     {class: 'faSpotify', icon: faSpotify, link: ''},
@@ -30,5 +33,9 @@ export class FooterComponent implements OnInit {
 
   private isNotEmptyStringOrNull(text: string): boolean {
     return (text || '' ).length > 0;
+  }
+
+  onSocialNetworkClick(socialNetworkName: string): void {
+    this.googleAnalyticsService.socialNetworkClicked(socialNetworkName);
   }
 }

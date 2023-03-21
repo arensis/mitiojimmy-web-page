@@ -10,6 +10,7 @@
           class="secondary"
           [href]="artist.url"
           target="_blank"
+          (click)="onGuestClick(artist.name)"
         >
           {{artist.name.toUpperCase()}}
         </a>
