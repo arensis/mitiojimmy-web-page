@@ -1,0 +1,27 @@
+
+
+<mat-drawer-container>
+  <mat-drawer #drawer mode="over" position="start">
+      <button mat-icon-button class="sidenav-close-button" (click)="drawer.toggle()">
+        <fa-icon [icon]="closeIcon"></fa-icon>
+      </button>
+      <ul class="sections">
+        <li *ngFor="let section of sections">
+          <a [routerLink]="'/'+section.url" routerLinkActive="active" (click)="drawer.toggle()">
+            {{section.name | translate}}
+          </a>
+        </li>
+      </ul>
+  </mat-drawer>
+
+  <div>
+    <app-header (onMenuClick)="drawer.toggle()"></app-header>
+
+    <main>
+      <ng-content></ng-content>
+    </main>
+
+    <app-footer></app-footer>
+  </div>
+
+</mat-drawer-container>

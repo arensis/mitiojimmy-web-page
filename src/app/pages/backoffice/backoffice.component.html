@@ -1,0 +1,75 @@
+<!-- En móvil o resoluciones menores a XX no puede ser fija, tiene que ser toggle side nav -->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" [opened]="isDesktopDevice" class="backoffice-sidenav" [fixedInViewport]="true">
+    <button *ngIf="!isDesktopDevice" mat-icon-button class="close-button" (click)="sidenav.toggle()">
+      <fa-icon [icon]="closeIcon"></fa-icon>
+    </button>
+    <div class="avatar" [ngClass]="{'mobile': !isDesktopDevice}">
+      <div class="user-picture-profile">
+        <img src="../../../assets/images/aksel-profile-picture.jpg" />
+      </div>
+      <span class="user-name">
+        Aksel Gil Vasco
+      </span>
+    </div>
+    <div class="divider"></div>
+    <ul class="sections">
+      <li>
+        <a [routerLink]="['dashboard']" routerLinkActive="active" (click)="sectionClick(sidenav)">
+          <div class="section-icon dashboard-icon">
+            <fa-icon [icon]="dashboardIcon"></fa-icon>
+          </div>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['shows']" routerLinkActive="active" (click)="sectionClick(sidenav)">
+          <div class="section-icon shows-icon">
+            <fa-icon [icon]="showsIcon"></fa-icon>
+          </div>
+          Conciertos
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['albums']" routerLinkActive="active" (click)="sectionClick(sidenav)">
+          <div class="section-icon albums-icon">
+            <fa-icon [icon]="albumsIcon"></fa-icon>
+          </div>
+          Discografía
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['videos']" routerLinkActive="active" (click)="sectionClick(sidenav)">
+          <div class="section-icon videos-icon">
+            <fa-icon [icon]="videosIcon"></fa-icon>
+          </div>
+          Vídeos
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['bio']" routerLinkActive="active" (click)="sectionClick(sidenav)">
+          <div class="section-icon bio-icon">
+            <fa-icon [icon]="bioIcon"></fa-icon>
+          </div>
+          Biografía
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['contact']" routerLinkActive="active" (click)="sectionClick(sidenav)">
+          <div class="section-icon contact-icon">
+            <fa-icon [icon]="mailContactIcon"></fa-icon>
+          </div>
+          Contacto
+        </a>
+      </li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="body">
+    <a [hidden]="sidenav.opened || isDesktopDevice"  class="menu-button" (click)="sidenav.toggle()">
+      <mat-icon aria-hidden="false" aria-label="Menu icon" fontIcon="menu"></mat-icon>
+    </a>
+    <router-outlet name="backoffice"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -1,0 +1,83 @@
+@import '../../../../../variables.scss';
+
+@media screen and (max-width: 300px) {
+  .mat-drawer-container .mat-drawer {
+    width: 100%;
+    .mat-drawer-container .mat-drawer .mat-drawer-inner-container ul.sections {
+      padding-inline-start: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 301px) {
+  .mat-drawer-container .mat-drawer {
+    width: 83%;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .mat-drawer-container .mat-drawer {
+    width: 63%;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .mat-drawer-container .mat-drawer {
+    width: 59%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .mat-drawer-container .mat-drawer {
+    width: 53%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .mat-drawer-container .mat-drawer {
+    width: 43%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .mat-drawer-container .mat-drawer {
+    width: 43%;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .mat-drawer-container .mat-drawer {
+    width: 36%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .mat-drawer-container .mat-drawer {
+    width: 28%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mat-drawer-container .mat-drawer {
+    width: 23%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .mat-drawer-container .mat-drawer {
+    width: 21%;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .mat-drawer-container .mat-drawer {
+    width: 18%;
+  }
+}
+
+.sections {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 5rem;
+  height: 50%;
+}

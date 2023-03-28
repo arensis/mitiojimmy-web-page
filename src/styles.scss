@@ -91,6 +91,10 @@ main {
   }
 }
 
+.mat-divider {
+  border-top-color: rgb(227 227 227);
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -136,14 +140,34 @@ h2 {
   color: $subtitle-primary-background;
 }
 
-
 // Sidenav
 .mat-drawer-container {
   height: 100%;
 
   background-color: $primary-background-color !important;
+
   .mat-drawer {
     background-color: $secondary-background-color !important;
+
+    .mat-drawer-inner-container {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      button {
+        color: $primary-link-color !important;
+        &:hover {
+          color: $primary-link-hover-color !important;
+        }
+
+        position: relative;
+        left: 83%;
+        font-size: 2rem;
+      }
+
+      ul.sections {
+        height: auto;
+      }
+    }
   }
 }
 
@@ -154,35 +178,5 @@ h2 {
       font-size: 1.5rem !important;
 
     }
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .mat-drawer-container .mat-drawer {
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 801px) {
-  .mat-drawer-container .mat-drawer {
-    width: 70%;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .mat-drawer-container .mat-drawer {
-    width: 60%;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .mat-drawer-container .mat-drawer {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 1900px) {
-  .mat-drawer-container .mat-drawer {
-    width: 40%;
   }
 }

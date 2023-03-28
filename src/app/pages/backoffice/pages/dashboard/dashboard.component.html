@@ -1,0 +1,30 @@
+<div class="card-container">
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>Coniertos a la vista</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content class="card-content-container">
+      <ng-container *ngFor="let liveEntry of liveEntries; let i = index; trackBy: trackFn">
+        <app-dahsboard-live-entry
+          [liveEntry]="liveEntry"
+        ></app-dahsboard-live-entry>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>Albums</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content class="card-content-container">
+      <ng-container *ngFor="let band of bandsDiscography; let i = index; trackBy: trackFn">
+        <div class="album" *ngFor="let album of band.albums; let i = index; trackBy: trackFn">
+          <img [src]="album.imageUrl" />
+          <span>{{album.albumName}}</span>
+        </div>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+</div>

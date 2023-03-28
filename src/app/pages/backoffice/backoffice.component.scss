@@ -1,0 +1,133 @@
+@import '/src/variables.scss';
+
+.body {
+  background-color: $primary-link-color;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($primary-link-color), to(#f690e1));
+  background-image: -webkit-linear-gradient(top, $primary-link-color, #f690e1);
+  background-image: -moz-linear-gradient(top, $primary-link-color, #f690e1);
+  background-image: -o-linear-gradient(top, $primary-link-color, #f690e1);
+  background-image: linear-gradient(to bottom, $primary-link-color, #f690e1);
+  height: 100%;
+
+  a mat-icon {
+    margin: 10px;
+    background: white;
+    border-radius: 100%;
+    padding: 6px;
+  }
+}
+
+.section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px 8px;
+  border-radius: 20px;
+  width: 20px;
+  margin-right: 0.5rem;
+  color: #ececec;
+}
+
+.close-button {
+  color: $primary-link-color;
+  &:hover {
+    color: $primary-link-hover-color;
+  }
+}
+
+.bio-icon {
+  background-color: #5bb668;
+}
+
+.shows-icon {
+  background-color: #a45bad;
+}
+
+.videos-icon {
+  background-color: #c35f5f;
+}
+
+.contact-icon {
+  background-color: #9e9935;
+}
+
+.albums-icon {
+  background-color: #586cb8;
+}
+
+.dashboard-icon {
+  background-color: #4d8e86;
+}
+
+header {
+  height: 20%
+}
+
+.divider {
+  width: 100%;
+  border-top: 3px double #4343435c;
+}
+
+.mobile {
+  margin-top: 0 !important;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  width: 224px;
+  margin: 16px 0;
+  .user-picture-profile {
+    margin-left: 20px;
+    background-color: gray;
+    border: 2px solid $primary-link-color;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+    }
+  }
+
+  .user-name {
+    color: $primary-link-color;
+    font-size: 15px;
+    width: 144px;
+    padding-left: 12px;
+  }
+}
+
+.mat-drawer-container {
+  .backoffice-sidenav {
+    width: p250x;
+    background: rgba(255, 0, 0, 0.5);
+    .mat-drawer-inner-container {
+      display: flex !important;
+      align-items: flex-start !important;
+    }
+  }
+}
+
+
+ul.sections {
+  padding-inline-start: 30px;
+
+  li {
+    a {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-left: -30px;
+      width: 100%;
+      padding: 1rem 57px 1rem 30px;
+    }
+  }
+}
+
+a.active {
+  background-color: rgba(15, 36, 173, 0.1882352941);
+}
+

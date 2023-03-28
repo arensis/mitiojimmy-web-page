@@ -1,0 +1,50 @@
+@import '/src/variables.scss';
+
+div.container {
+  background-image: url(../../../../../assets/images/home-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  height: 20%;
+  font-family: 'Lexend Mega';
+  font-size: 4rem;
+  color: $primary-text-color;
+  text-shadow: 1px 1px 2px #00000080;
+}
+
+// Very small sizes phone in portrait orientation
+@media screen and (max-width: 373px) and (orientation: portrait) {
+  div.container {
+    background-image: url(../../../../../assets/images/home-bg-portrait.jpg);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+// Small phones in portrait orientation
+@media screen and (min-width: 374px) and (max-width: 575px) and (orientation: portrait) {
+  div.container {
+    background-image: url(../../../../../assets/images/home-bg-portrait.jpg);
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+}
+
+// Landscapes phone or table orientation
+@media screen and (min-width: 500px) and (max-width: 980px) and (orientation: landscape) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+
+
