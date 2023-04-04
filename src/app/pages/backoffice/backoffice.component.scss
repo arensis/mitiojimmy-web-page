@@ -30,6 +30,8 @@
 
 .close-button {
   color: $primary-link-color;
+  left: 80% !important;
+  top: -1%;
   &:hover {
     color: $primary-link-hover-color;
   }

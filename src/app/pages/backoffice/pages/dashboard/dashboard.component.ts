@@ -10,7 +10,7 @@ import { LiveEntry } from 'src/app/shared/model/shows/LiveEntry';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit, OnDestroy{
+export class DashboardComponent implements OnInit, OnDestroy {
   bandsDiscographySubscription!: Subscription;
   showsSubscription!: Subscription;
   videosSubscription!: Subscription;
@@ -24,7 +24,15 @@ export class DashboardComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.showsSubscription = this.dataService.getShowsData()
-      .subscribe(shows => this.liveEntries = shows.slice(0, 5));
+      .subscribe(shows => {
+        console.log(shows);
+        this.liveEntries = shows.filter((item: LiveEntry) => {
+          const today = new Date();
+          const liveDate = new Date(item.date);
+          return (liveDate.getTime() > today.getTime()) &&
+          (liveDate.getFullYear() === today.getFullYear());
+        }).slice(0, 5)
+      });
 
     this.bandsDiscographySubscription = this.dataService.getDiscographyData()
       .subscribe(bandsDiscography => this.bandsDiscography = bandsDiscography);

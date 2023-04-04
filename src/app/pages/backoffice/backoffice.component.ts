@@ -31,7 +31,12 @@ export class BackofficeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.router.navigate(['backoffice', 'dashboard']);
+    const isOnBackofficeMainUrl = this.router.url.split('/')
+      .filter(item=> item !== '').length === 1;
+
+    if (isOnBackofficeMainUrl) {
+      this.router.navigate(['backoffice', 'dashboard']);
+    }
   }
 
   sectionClick(sidenav: any) {

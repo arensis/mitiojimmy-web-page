@@ -1,3 +1,5 @@
+import { DataService } from 'src/app/shared/services/data.service';
+import { ShowsService } from './services/shows.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from 'src/app/material.module';
@@ -6,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LiveGuestArtistComponent } from './components/live-guest-artist/live-guest-artist.component';
 import { LiveInfoComponent } from './components/live-info/live-info.component';
+import { LiveEntryComponent } from './components/live-entry/live-entry.component';
 
 
 
@@ -13,7 +16,8 @@ import { LiveInfoComponent } from './components/live-info/live-info.component';
   declarations: [
     LiveDateComponent,
     LiveGuestArtistComponent,
-    LiveInfoComponent
+    LiveInfoComponent,
+    LiveEntryComponent
   ],
   imports: [
     CommonModule,
@@ -21,10 +25,15 @@ import { LiveInfoComponent } from './components/live-info/live-info.component';
     FontAwesomeModule,
     TranslateModule
   ],
+  providers: [
+    ShowsService,
+    DataService
+  ],
   exports: [
     LiveDateComponent,
     LiveGuestArtistComponent,
     LiveInfoComponent,
+    LiveEntryComponent,
     MaterialModule,
     FontAwesomeModule,
     CommonModule,

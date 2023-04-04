@@ -1,1 +1,24 @@
-<p>shows works!</p>
+<ul>
+  <li *ngFor="let liveEntryYear of liveEntryYears; let i = index; trackBy: trackFn">
+    <h2>{{liveEntryYear}}</h2>
+    <ul>
+      <li *ngFor="let month of liveEntriesGrouped[liveEntryYear].months; let i = index; trackBy: trackFn">
+        <h3>
+          <mat-icon>calendar_month</mat-icon>
+          {{translateMonth(month)}}
+        </h3>
+        <ul class="live-entries-backoffice">
+          <li
+            class="live-entry-backoffice"
+            *ngFor="let liveEntry of liveEntriesGrouped[liveEntryYear][month]; let i = index; trackBy: trackFn"
+          >
+            <app-live-entry
+              [liveEntry]="liveEntry"
+              [showBackofficeActions]="true"
+            ></app-live-entry>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>

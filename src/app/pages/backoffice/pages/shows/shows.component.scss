@@ -1,0 +1,47 @@
+h2 {
+  overflow: hidden;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 90%;
+  height: 2px;
+  border-top: 2px solid #c9d0ff;
+  position: absolute;
+  top: 50%;
+  margin-left: 1rem;
+}
+
+h3 {
+  color: white;
+  font-weight: 500;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: flex-end;
+  mat-icon {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    color: white;
+    font-size: 30px;
+  }
+}
+
+.live-entries-backoffice {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.live-entry-backoffice {
+  max-width: 300px;
+  margin: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-inline-start: 1.2rem;
+}

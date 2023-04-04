@@ -1,0 +1,146 @@
+[
+  {
+    "date": "05/04/2023",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "guestArtists": [
+      {
+        "name": "Davile Matellán",
+        "url": "https://spoti.fi/1mOyj77"
+      }
+    ]
+  },
+  {
+    "date": "05/10/2023",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "guestArtists": [
+      {
+        "name": "Davile Matellán",
+        "url": "https://spoti.fi/1mOyj77"
+      }
+    ]
+  },
+  {
+    "date": "05/02/2021",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "guestArtists": [
+      {
+        "name": "Davile Matellán",
+        "url": "https://spoti.fi/1mOyj77"
+      }
+    ]
+  },
+  {
+    "date": "06/14/2023",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "guestArtists": [
+      {
+        "name": "Davile Matellán",
+        "url": "https://spoti.fi/1mOyj77"
+      }
+    ]
+  },
+  {
+    "date": "06/04/2024",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "guestArtists": [
+      {
+        "name": "Davile Matellán",
+        "url": "https://spoti.fi/1mOyj77"
+      }
+    ]
+  },
+  {
+    "date": "08/04/2023",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "guestArtists": [
+      {
+        "name": "Davile Matellán",
+        "url": "https://spoti.fi/1mOyj77"
+      }
+    ]
+  },
+  {
+    "date": "09/04/2024",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "guestArtists": [
+      {
+        "name": "Davile Matellán",
+        "url": "https://spoti.fi/1mOyj77"
+      }
+    ]
+  },
+  {
+    "date": "11/04/2023",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "guestArtists": [
+      {
+        "name": "Davile Matellán",
+        "url": "https://spoti.fi/1mOyj77"
+      }
+    ]
+  }
+]

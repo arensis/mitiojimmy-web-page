@@ -11,6 +11,8 @@ import { GoogleAnalyticsService } from 'src/app/shared/services/google-analytics
 export class LiveEntryComponent implements OnInit {
   @Input()
   liveEntry!: LiveEntry;
+  @Input()
+  showBackofficeActions?: boolean = false;
 
   guestArtist?: string
 
