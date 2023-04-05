@@ -9,6 +9,34 @@
   margin-bottom: 6vh;
   margin-top: -65px;
 
+  @include xs {
+    background-image: url(../../../assets/images/trigomaduro-360.jpg);
+  }
+
+  @include sm {
+    background-image: url(../../../assets/images/trigomaduro-680.jpg);
+  }
+
+  @include md {
+    background-image: url(../../../assets/images/trigomaduro-768.jpg);
+  }
+
+  @include lg {
+    background-image: url(../../../assets/images/trigomaduro-1160.jpg);
+  }
+
+  @include xls {
+    background-image: url(../../../assets/images/trigomaduro-1560.jpg);
+  }
+
+  @include xl {
+    background-image: url(../../../assets/images/trigomaduro-2048.jpg);
+  }
+
+  @include xxl {
+    background-image: url(../../../assets/images/trigomaduro.jpeg);
+  }
+
   .section-bio-name {
     padding-top: 2rem;
     font-size: 3rem;
