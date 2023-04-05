@@ -17,7 +17,7 @@
     "albums": [
       {
         "releaseDate": "01/01/2014",
-        "imageUrl": "https://f4.bcbits.com/img/0002340923_10.jpg",
+        "imageUrl": "assets/images/perdita-mundi-album-cover.jpg",
         "id": "2407477905",
         "artistPlaylist": false,
         "streamingService": "BANDCAMP",
@@ -25,7 +25,7 @@
       },
       {
         "releaseDate": "10/01/2013",
-        "imageUrl": "https://f4.bcbits.com/img/a1856076420_10.jpg",
+        "imageUrl": "assets/images/de-musica-ligera-album-cover.jpg",
         "id": "1022444437",
         "artistPlaylist": false,
         "streamingService": "BANDCAMP",
@@ -33,7 +33,7 @@
       },
       {
         "releaseDate": "10/01/2012",
-        "imageUrl": "https://f4.bcbits.com/img/a3567800698_10.jpg",
+        "imageUrl": "assets/images/friogenia-album-cover.jpg",
         "id": "1387061987",
         "artistPlaylist": false,
         "streamingService": "BANDCAMP",
@@ -41,7 +41,7 @@
       },
       {
         "releaseDate": "04/01/2010",
-        "imageUrl": "https://f4.bcbits.com/img/a2016682209_10.jpg",
+        "imageUrl": "assets/images/maida-vale-album-cover.jpg",
         "id": "115197473",
         "artistPlaylist": false,
         "streamingService": "BANDCAMP",
