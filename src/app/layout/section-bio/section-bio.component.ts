@@ -7,7 +7,6 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./section-bio.component.scss']
 })
 export class SectionBioComponent {
-  imageUrl: string = 'assets/images/trigomaduro.jpeg';
   sectionName: string = 'Biografía';
 
   constructor(private translate: TranslateService) {

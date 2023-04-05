@@ -1,5 +1,4 @@
 @import 'src/variables.scss';
-@import 'src/styles.scss';
 
 .show-card {
   display: flex;
@@ -22,8 +21,7 @@
 .tickets {
   display: flex;
   flex-direction: column;
-  margin-top: 0.5rem;
-  padding-left: 1rem;
+  margin: 0.7rem 0 0.3rem 0;
 }
 
 .coming-soon {

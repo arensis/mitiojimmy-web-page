@@ -10,9 +10,5 @@ export class SectionComponent {
   @Input()
   sectionName!: string;
 
-  imageUrl!: string;
-
-  constructor(private translate: TranslateService) {
-    this.imageUrl = 'assets/images/home-bg.jpg';
-  }
+  constructor(private translate: TranslateService) {}
 }
