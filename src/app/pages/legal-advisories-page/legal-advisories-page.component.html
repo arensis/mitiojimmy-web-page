@@ -1,5 +1,390 @@
 <div class="container">
   <app-section [sectionName]="'legal-advisory'">
-    <!-- Añadir contenido -->
+    <hgroup>
+      <h2>POLÍTICA DE PRIVACIDAD</h2>
+      <p>Actualizada por última vez en: abril de 2023</p>
+    </hgroup>
+
+    <!-- General RGPD -->
+    <p>
+      En esta página, {{ legallyResponsible }}, con domicilio en {{ legallyResponsibleFullAddress }},
+      le informa sobre el procesamiento de sus datos personales, del que <i>{{ siteName }}</i> es responsable de acuerdo con
+      las disposiciones del Reglamento General de Protección de Datos (RGPD) de la UE.
+    </p>
+
+    <p>
+      Puede ponerse en contacto con nosotros en cualquier momento por carta o enviándonos un
+      correo electrónico a <a [href]="contactMail">{{ contactMail }}</a> para cualquier tipo de consuta incluidas
+      las referentes a la protección de datos.
+    </p>
+
+    <section>
+      <h2>Uso del sitio web, sus servicios y contenidos</h2>
+      <p>
+        El usuario se compromete a utilizar el sitio web y sus servicios y contenidos sin contravenir la legislación vigente,
+        la buena fe, los usos generalmente aceptados y el orden público.
+      </p>
+      <p>
+        Así mismo, queda prohibido, el uso del sitio web con fines ilícitos o lesivos contra {{ siteName }},
+        y/o cualquier tercero, o que, de cualquier forma, puedan causar perjuicio o impedir el normal
+        funcionamiento del sitio web. Respecto de los contenidos (informaciones, textos, gráficos, archivos de sonido
+        y/o imagen, fotografías, diseños, etc.), se prohíbe:
+      </p>
+      <ul>
+        <li>
+          Su reproducción, distribución o modificación, a menos que se cuente con la autorización escrita previa de sus
+          legítimos titulares o resulte legalmente permitido.
+        </li>
+        <li>
+          Cualquier vulneración de los derechos de los contenidos de la web.
+        </li>
+        <li>
+          Su utilización para todo tipo de fines comerciales o publicitarios, distintos de los estrictamente permitidos.
+        </li>
+        <li>
+          Cualquier intento de obtener los contenidos del sitio web por cualquier medio distinto de los que se pongan a disposición de los usuarios.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Propiedad intelectual e industrial</h2>
+      <p>
+        Todos los contenidos e información que se hallan en el portal de {{ siteName }} (marcas, logotipos, textos, imágenes,
+        combinaciones de colores, archivos de audio y software, estructura y presentación de sus contenidos, etc…) son
+        propiedad de {{ siteName }} o/y de sus proveedores de contenidos, y se encuentran protegidos por las leyes
+        nacionales e internacionales de Propiedad Intelectual e Industrial. Queda prohibida su distribución, reproducción,
+        comunicación pública y transformación, total o parcial, salvo para uso personal y privado o autorización expresa y
+        por escrito de {{ siteName }}.
+      </p>
+      <p>
+        La violación de los anteriores derechos será perseguida de conformidad con la legislación vigente.
+      </p>
+      <p>
+        Todos los comentarios, ideas, sugerencias, etc…, del USUARIO que se reciban en este portal, se considerarán cedidos a
+        título gratuito y autorizada su reproducción y distribución por cualquier medio y sin limitación temporal ni territorial.
+        Por ello, el USUARIO se compromete a no enviar información que no pueda ser tratada de esta forma.
+      </p>
+    </section>
+
+    <section>
+      <h2>Protección de datos</h2>
+      <p>
+        {{ siteName }} no le solicita ningún dato personal. Únicamente dispondremos de los datos de carácter personal que  voluntariamente
+         nos facilite, bien al pedir el alta en nuestra newsletter, bien mediante el envío de un correo electrónico o mediante cualquier
+         otro medio, y serán tratados cumpliendo con la normativa en materia de protección de datos de carácter personal y, en particular,
+          de lo dispuesto en el Reglamento (UE) 2016/679 del parlamento europeo y del consejo de 27 de abril de 2016 relativo a la
+          protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos
+          datos (Reglamento General de Protección de Datos o RGPD).
+      </p>
+      <p>
+        {{ siteName }} únicamente tratará sus datos personales con la finalidad de gestionar su petición o sugerencia y no serán tratados
+        ulteriormente de manera incompatible con dicho fin.
+      </p>
+      <p>
+        Dichos datos serán conservados únicamente durante el tiempo necesario para los fines del tratamiento y mientras no solicite
+        su supresión u oposición al tratamiento.
+      </p>
+      <p>
+        Los datos personales recabados no serán cedidos o comunicados a terceros, salvo en los supuestos necesarios para el desarrollo,
+        control y cumplimiento de sus expresas peticiones y en los supuestos previstos en la Ley.
+      </p>
+      <p>
+        Usted puede ejercitar, como titular de los datos personales, los siguientes derechos:
+      </p>
+      <ul>
+        <li>
+          Derecho a retirar el consentimiento prestado para el tratamiento de sus datos personales en cualquier momento
+        </li>
+        <li>
+          Derecho de acceso a la información que tratamos sobre su persona
+        </li>
+        <li>
+          Derecho de rectificación de sus datos, en caso de que resultaran inexactos o incompletos
+        </li>
+        <li>
+          Derecho de supresión, cuando, entre otros motivos, sus datos ya no sean necesarios para los fines que fueron recogidos
+        </li>
+        <li>
+          Derecho de oposición o de limitación del tratamiento en determinadas circunstancias, en cuyo caso únicamente los
+          conservaremos para el ejercicio o la defensa de reclamaciones
+        </li>
+        <li>
+          Derecho a presentar una reclamación ante la Agencia Española de Protección de Datos si considera que el
+          tratamiento no se ajusta a la normativa vigente.
+        </li>
+        <li>
+          Para el ejercicio de sus derechos, el titular de los datos deberá remitir solicitud por escrito al correo electrónico
+          de contacto <a [href]="contactMail">{{ contactMail }}</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Cookies -->
+    <section>
+      <h2>Cookies</h2>
+      <p>
+        El Usuario deberá aceptar el uso de tecnología cookie para poder navegar por {{ siteAddress }}
+      </p>
+      <p>
+        En nuestras páginas web utilizamos cookies. Las cookies son pequeños archivos de texto que contienen
+        información y que se pueden guardar a través del navegador en el dispositivo del usuario cuando este
+        visita una página web. La información que se guarda en las cookies se puede leer y procesar cuando la página web
+        se vuelve a visitar desde el mismo dispositivo. Para ello, nosotros utilizamos las funciones de tratamiento
+         y almacenamiento del navegador de su dispositivo, y tomamos información de la memoria de este navegador.
+      </p>
+      <p>
+        Esta página utiliza tipos diferentes de cookies. ¿Qué tipos de cookies utiliza esta página web?
+      </p>
+      <ul class="articles">
+        <li>
+          <article>
+            <h3>Cookies técnicas</h3>
+            <p>
+              Las cookies que son técnicamente necesarias para el funcionamiento correcto de las páginas web.
+              No obstante, por lo general usted podrá desactivar las cookies en su navegador cuando lo desee.
+              Las opciones de configuración de las cookies difieren de un navegador a otro. En todo caso,
+              tenga en cuenta que algunas de las funciones de las páginas web pueden no funcionar, o no
+              hacerlo correctamente, si usted desactiva todas las cookies en los ajustes de su navegador.
+            </p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Cookies de consentimiento</h3>
+            <p>
+              Utilizamos las denominadas cookies de consentimiento para guardar sus preferencias en lo que respecta
+              a su consentimiento, a su derecho a retirar su consentimiento, si procede, y a su negativa al uso de
+              cookies en nuestras páginas web.
+            </p>
+            <p>
+              El objetivo del procesamiento de datos es guardar las preferencias de los usuarios en lo que
+              respecta a las cookies (consentimiento, revocación, anulación). Por este motivo se almacenan la fecha
+              y hora en que se seleccionaron las opciones y se hizo la última visita a la página.
+            </p>
+            <p>
+              La base jurídica del procesamiento de la información es nuestro interés legítimo en controlar de forma sencilla
+              y fiable la configuración de cookies de acuerdo con las opciones seleccionadas por el usuario, y en mejorar la
+              experiencia del usuario (art. 6, párr. 1, letra f del RGPD).
+            </p>
+            <p>
+              Los datos son facilitados activamente por los usuarios (a través de la configuración de las cookies), o
+              transmitidos automáticamente por el navegador de los usuarios (datos de protocolo, marca de tiempo).
+            </p>
+            <p>
+              La información sobre su decisión con respecto a rechazar las cookies se borrará al final de la sesión.
+            </p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Cookies de sesión</h3>
+            <p>
+              En nuestras páginas web utilizamos cookies de sesión. Estas cookies nos permiten guardar información sobre los
+              ajustes de idioma de visualización de la página.
+            </p>
+            <p>
+              La base jurídica del procesamiento de la información es el contrato de utilización para la visita de la
+              página web y nuestro interés legítimo en poner a disposición de los visitantes las sesiones individuales,
+              incluidas la función que permite aceptar/rechazar las cookies o la función de
+              ajuste del idioma que corresponda, siempre de acuerdo con el art. 6, párr. 1, letra f del RGPD.
+            </p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Cookies de análisis</h3>
+            <p>
+              Son aquéllas que bien tratadas por nosotros o por terceros, nos permiten cuantificar el número de usuarios y
+              así realizar la medición y análisis estadístico de la utilización que hacen los usuarios del servicio ofertado.
+              Para ello se analiza su navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios
+              que le ofrecemos.
+            </p>
+            <p>
+              En particular, este sitio Web utiliza Google Analytics, un servicio analítico de web prestado por Google, Inc.
+              con domicilio en los Estados Unidos con sede central en 1600 Amphitheatre Parkway, Mountain View, California 94043.
+                Para la prestación de estos servicios, estos utilizan cookies que recopilan la información,
+                incluida la dirección IP del usuario, que será transmitida, tratada y almacenada por Google en los términos
+                fijados en la Web Google.com. Incluyendo la posible transmisión de dicha información a terceros por razones
+                de exigencia legal o cuando dichos terceros procesen la información por cuenta de Google.
+            </p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Audio and video widgets -->
+    <section>
+      <h2>Contenidos de audio y de otro tipo pertenecientes a terceras partes</h2>
+      <p>
+        Nuestras páginas web contienen enlaces a archivos de audio que están guardados y a los que se puede acceder a
+        través de plataformas de música externas. Cuando usted hace clic en el botón de reproducción para escuchar un
+        contenido de audio de una de estas plataformas, la plataforma carga el archivo en cuestión. Desde el punto de
+        vista técnico, sucede lo mismo que pasaría si usted accediera a la página web de la plataforma correspondiente
+        a través de un enlace: la plataforma de música externa recibe toda la información que su navegador transmite
+        automáticamente (incluida su dirección IP). Esta plataforma de música externa guarda sus propias cookies en el
+        dispositivo desde el que usted accede a los servicios, aunque usted no tenga una cuenta de usuario en dicha
+        plataforma. Si usted sí tiene una cuenta en la plataforma y ha iniciado sesión en ella, sus datos se asociarán
+        directamente con esa cuenta. Si no quiere que su perfil se relacione con una plataforma externa, debe cerrar
+        sesión en su cuenta de usuario en la plataforma que corresponda antes de reproducir el archivo de audio.
+      </p>
+      <p>
+        Si necesita más detalles sobre una plataforma de música externa, consulte la información que incluimos en
+        los siguientes párrafos y la información sobre protección de datos de la propia plataforma, a la que podrá
+        acceder a través de un enlace desde la misma plataforma.
+      </p>
+      <ul class="articles">
+        <li>
+          <article>
+            <h3>Integración de YouTube</h3>
+            <p>
+              La recopilación y el procesamiento de estos datos son responsabilidad exclusiva de Google
+              Ireland Limited, Google Building Gordon House, 4 Barrow St, Dublín, D04 E5W5, Irlanda.
+              En Estados Unidos, Google Ireland Limited recurre a Google LLC (1600 Amphitheatre Parkway,
+              Mountain View, CA 94043, Estados Unidos) como proveedor de servicios. {{ siteName }} no puede
+              influir en modo alguno en el tratamiento que Google hace de sus datos.
+              Encontrará información sobre el modo en que Google procesa sus datos personales en la
+              política de privacidad de Google:
+              <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
+            </p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Integración de Spotify</h3>
+            <p>
+              La recopilación y el procesamiento de estos datos son responsabilidad exclusiva de Spotify
+              AB, Regeringsgatan 19, 111 53, Estocolmo, Suecia. {{ siteName }} no puede influir en modo alguno
+              en el tratamiento que Spotify hace de sus datos. Encontrará información sobre el modo en
+              que Spotify procesa sus datos personales en la política de privacidad de Spotify:
+              <a href="https://www.spotify.com/es/legal/privacy-policy/">https://www.spotify.com/es/legal/privacy-policy/</a>
+            </p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Integración de Bandcamp</h3>
+            <p>
+              La recopilación y el procesamiento de estos datos son responsabilidad exclusiva de Bandcamp,
+              Inc., Estados Unidos. {{ siteName }} no puede influir en modo alguno en el tratamiento que Bandcamp
+              hace de sus datos. Encontrará información sobre el modo en que Bandcamp procesa sus datos
+              personales en la política de privacidad de Bandcamp:
+              <a href="https://bandcamp.com/privacy">https://bandcamp.com/privacy</a>
+            </p>
+          </article>
+        </li>
+        <!-- <li>
+          <article>
+            <h3>Integración de SoundCloud</h3>
+            <p>
+              a recopilación y el procesamiento de estos datos son responsabilidad exclusiva de SoundCloud
+              Global Limited & Co. KG, Rheinsberger Str. 76/77, 10115, Berlín, Alemania, o de SoundCloud
+              Inc, 71 5th Avenue, 5th Floor, New York 10003, Nueva York, Estados Unidos (si usted se
+              encuentra en Estados Unidos). {{ siteName }} no puede influir en modo alguno en el tratamiento que
+              SoundCloud hace de sus datos.
+            </p>
+            <p>
+              Encontrará información sobre el modo en que SoundCloud procesa sus datos personales en la
+              política de privacidad de SoundCloud:
+              <a href="https://soundcloud.com/pages/privacy">https://soundcloud.com/pages/privacy</a>
+            </p>
+          </article>
+        </li> -->
+      </ul>
+      </section>
+
+      <section>
+        <h2>Redes sociales de {{ siteName }}</h2>
+        <p>
+          {{ siteName }} tiene presencia en las redes sociales. El objetivo del procesamiento de datos en
+          nuestros perfiles en las redes sociales es ofrecerle contenido interesante e interactuar con
+          usted en las plataformas de las distintas redes. Según el servicio de red social, es posible
+          también que los datos de utilización se analicen para mejorar nuestra presencia en las redes
+          sociales.
+        </p>
+        <p>
+          Los datos que se procesan son datos sobre el contenido y la utilización de los perfiles en las redes sociales en
+          cuestión.
+        </p>
+        <p>
+          La información y los datos que se muestran o se comparten en los perfiles de {{ siteName }} en las redes sociales
+          pueden ser accesibles para el proveedor de la plataforma que corresponda, para los usuarios de dicha plataforma
+          y para {{ siteName }} (o para los proveedores de servicios contratados por {{ siteName }}).
+        </p>
+        <p>
+          En las propias redes sociales, así como en la presente información sobre protección de datos, encontrará más
+          detalles sobre el modo en que se tratan sus datos en los perfiles en las redes sociales.
+        </p>
+        <ul class="articles">
+          <!-- <li>
+            <article>
+              <h3>Facebook</h3>
+              <p>
+                Nuestra compañía y Facebook (para usuarios residentes en la UE o en el EEE: Facebook Ireland Ltd. (Facebook),
+                4 Grand Canal Square, Grand Canal Harbour, Dublín 2, Irlanda), son responsables conjuntas del modo en que se
+                procesan los datos personales a través del perfil de {{ siteName }} en Facebook. El acuerdo sobre la responsabilidad
+                conjunta se puede leer en https://www.facebook.com/legal/terms/page_controller_addendum. De conformidad con
+                este acuerdo, Facebook es responsable de informar a las personas afectadas sobre las actividades de procesamiento
+                de datos. La política de privacidad de Facebook se puede consultar en
+                https://www.facebook.com/privacy/explanation. Las personas afectadas pueden reclamar sus derechos a cualquiera
+                de las empresas responsables del procesamiento, {{ siteName }} y/o Facebook. Encontrará más información sobre los
+                datos que Facebook comparte con {{ siteName }} en https://www.facebook.com/business/learn/facebook-page-insights-basics.
+                 La base jurídica del procesamiento de los datos por parte de {{ siteName }} es el interés legítimo en analizar los
+                 datos de utilización para mejorar su perfil en Facebook (art. 6, párr. 1, letra f del RGPD).
+              </p>
+            </article>
+          </li> -->
+          <li>
+            <article>
+              <h3>Instagram</h3>
+            <p>
+              Nuestra compañía e Instagram (servicio puesto a disposición de los usuarios residentes en la UE o en el EEE por
+              Facebook Ireland Ltd. (Facebook), 4 Grand Canal Square, Grand Canal Harbour, Dublín 2, Irlanda), son responsables
+              conjuntas del modo en que se procesan los datos personales a través del perfil de {{ siteName }} en Instagram. El acuerdo
+              sobre la responsabilidad conjunta se puede leer en https://www.facebook.com/legal/terms/page_controller_addendum.
+              De conformidad con este acuerdo, Instagram (servicio proporcionado por Facebook), es responsable de informar a las
+              personas afectadas sobre el procesamiento de sus datos. La política de privacidad de Instagram se puede consultar
+              en https://help.instagram.com/519522125107875. Las personas afectadas pueden reclamar sus derechos a cualquiera de
+              las empresas responsables del procesamiento, {{ siteName }} y/o Instagram (servicio proporcionado por Facebook).
+              Encontrará más información sobre los datos que Instagram comparte con {{ siteName }} en
+              https://facebook.com/help/instagram/788388387972460. La base jurídica del procesamiento de los datos por parte
+              de {{ siteName }} es el interés legítimo en analizar los datos de utilización para mejorar su perfil en
+              Instagram (art. 6, párr. 1, letra f del RGPD).
+            </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Youtube</h3>
+            <p>
+              Tenemos nuestro propio canal en la plataforma YouTube. La recopilación y el procesamiento de datos en este
+              contexto son responsabilidad exclusiva de Google (para la UE/el EEE, Google Ireland Limited, Google Building
+              Gordon House, 4 Barrow St, Dublín, D04 E5W5, Irlanda; Google Ireland Limited recurre a la empresa Google LLC en
+              Estados Unidos —1600 Amphitheatre Parkway, Mountain View, CA 94043, Estados Unidos— como proveedora de servicios).
+              No tenemos conocimiento de más detalles sobre el procesamiento de datos personales en el ámbito del control de
+              datos de Google, o de un posible tratamiento de datos en Estados Unidos. {{ siteName }} no puede influir en modo alguno
+              en el tratamiento que Google hace de sus datos. Encontrará información sobre el modo en que Google procesa sus
+              datos personales en la política de privacidad de Google: https://policies.google.com/privacy. La base jurídica
+              del procesamiento de los datos por parte de {{ siteName }} es el interés legítimo en analizar los datos de utilización
+              para mejorar su canal de YouTube (art. 6, párr. 1, letra f del RGPD).
+            </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Twitter</h3>
+              <p>
+                {{ siteName }} tiene su propio perfil en Twitter (de Twitter, Inc., 1355 Market Street, Suite 900 San Francisco,
+                CA 94103, Estados Unidos). A los usuarios residentes en la UE/en el EEE se les aplica el anexo al acuerdo sobre
+                protección de datos entre Twitter y {{ siteName }}: https://gdpr.twitter.com/en/controller-to-controller-transfers.html.
+                Conforme a este acuerdo, la recopilación y el procesamiento de estos datos son responsabilidad exclusiva de
+                Twitter. La política de privacidad de Twitter se puede consultar en https://twitter.com/es/privacy. La base
+                jurídica del procesamiento de los datos por parte de {{ siteName }}, si procede, es el interés legítimo en analizar
+                los datos de utilización para mejorar su perfil en Twitter (art. 6, párr. 1, letra f del RGPD).
+              </p>
+            </article>
+          </li>
+        </ul>
+    </section>
   </app-section>
 </div>

@@ -10,6 +10,12 @@ import { AbstractPage } from '../abstract-page';
   styleUrls: ['./legal-advisories-page.component.scss']
 })
 export class LegalAdvisoriesPageComponent extends AbstractPage implements OnInit, OnDestroy {
+  legallyResponsible = 'Aksel Gil Vasco';
+  legallyResponsibleFullAddress = 'C/Alondra 26 4º Dcha, Madrid, 28025, Madrid España'
+  siteName = 'Mi Tío Jimmy'
+  contactMail = 'info@mitiojimmy.com'
+  siteAddress = 'MITIOJIMMY.COM'
+
 
   constructor(
     seoService: SEOService,
