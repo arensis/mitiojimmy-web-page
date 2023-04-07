@@ -13,12 +13,13 @@ export class LanguageSelectComponent implements OnInit {
   constructor(private translateService: TranslateService) { }
 
   ngOnInit() {
-    this.selectedLanguage = localStorage.getItem('lang') || '';
+    // this.selectedLanguage = localStorage.getItem('lang') || '';
+    this.selectedLanguage = 'es';
   }
 
   valueChange(selectedLanguage: string) {
     this.selectedLanguage = selectedLanguage;
-    localStorage.setItem('lang', selectedLanguage);
+    // localStorage.setItem('lang', selectedLanguage);
     document.documentElement.setAttribute("lang", selectedLanguage);
     this.translateService.use(selectedLanguage);
   }

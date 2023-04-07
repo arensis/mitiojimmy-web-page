@@ -9,7 +9,7 @@
   }
 }
 
-iframe {
+iframe, img {
   border-radius: 7px;
   border: 2px solid rgba(255, 255, 255, 0.6392156863);
   width: 460px;
@@ -17,14 +17,14 @@ iframe {
 }
 
 @media screen and (min-width: 360px) and (max-width: 460px) and (orientation: portrait) {
-  iframe {
+  iframe, img {
     width: 310px;
     height: 190px;
   }
 }
 
 @media screen and (min-width: 460px) and (max-width: 1100px) {
-  iframe {
+  iframe, img {
     width: 360px;
     height: 200px;
   }

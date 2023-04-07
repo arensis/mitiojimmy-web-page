@@ -14,6 +14,9 @@ export class VideoComponent implements OnInit{
   @Input()
   video?: Video;
 
+  videoUrl!: string;
+  img!: string;
+
   constructor(
     private sanitizer: DomSanitizer,
     private translate: TranslateService
@@ -29,6 +32,33 @@ export class VideoComponent implements OnInit{
   ngOnInit(): void {
     if (this.video) {
       this.safeVideoUrl = this.buildVideoUrl(this.video.id);
+      switch(this.video.id) {
+        case 'cDM5mGgDjVg': {
+          this.videoUrl = 'https://youtu.be/cDM5mGgDjVg';
+          this.img = 'assets/images/temp/youtube-insignificante.png';
+          break;
+        }
+        case 'xbMjIZ9cx5g': {
+          this.videoUrl = 'https://youtu.be/xbMjIZ9cx5g';
+          this.img = 'assets/images/temp/youtube-insignificantelive.png';
+          break;
+        }
+        case 'M5cAVm4_V0Q': {
+          this.videoUrl = 'https://youtu.be/M5cAVm4_V0Q';
+          this.img = 'assets/images/temp/youtube-musicaligera.png';
+          break;
+        }
+        case 'RvDGUs_vFRA': {
+          this.videoUrl = 'https://youtu.be/RvDGUs_vFRA';
+          this.img = 'assets/images/temp/youtube-notienesalma.png';
+          break;
+        }
+        case 'Gg3N_jTHuLo': {
+          this.videoUrl = 'https://youtu.be/Gg3N_jTHuLo';
+          this.img = 'assets/images/temp/youtube-volarlotodo.png';
+          break;
+        }
+      }
     }
 
     const date = moment(this.video?.releaseDate);

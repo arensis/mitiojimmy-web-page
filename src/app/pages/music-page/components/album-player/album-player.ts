@@ -13,6 +13,8 @@ export abstract class AlbumPlayer implements OnInit {
   safeAlbumPlayerUrl?: SafeUrl;
   saveAlbumImageUrl?: SafeUrl;
   coverImageAltText?: string;
+  img = ''
+  bandCampLink = ''
 
   monthName!: string;
   year!: string;
@@ -22,6 +24,29 @@ export abstract class AlbumPlayer implements OnInit {
 
   ngOnInit(): void {
     if (this.album) {
+      switch(this.album?.albumName) {
+        case 'Perdita mundi': {
+          this.img = 'assets/images/temp/bandcamp-perditamundi.png';
+          this.bandCampLink = 'https://magneticaonline.bandcamp.com/album/perdita-mundi?from=embed'
+          break;
+        }
+        case 'De música ligera': {
+          this.img = 'assets/images/temp/bandcamp-musicaligera.png';
+          this.bandCampLink = 'https://magneticaonline.bandcamp.com/album/de-m-sica-ligera?from=embed'
+          break;
+        }
+        case 'Friogenia': {
+          this.img = 'assets/images/temp/bandcamp-friogenia.png';
+          this.bandCampLink = 'https://magneticaonline.bandcamp.com/album/friogenia?from=embed'
+          break;
+        }
+        case 'Maida Vale': {
+          this.img = 'assets/images/temp/bandcamp-maidavale.png';
+          this.bandCampLink = 'https://magneticaonline.bandcamp.com/album/maida-vale?from=embed'
+          break;
+        }
+      }
+
       this.saveAlbumImageUrl = this.sanitizer.bypassSecurityTrustUrl(this.album.imageUrl);
       this.safeAlbumPlayerUrl = this.buildPlayerUrl(this.album.id);
       this.coverImageAltText = ['Portada de álbum', this.album.albumName].join(': ');

@@ -19,9 +19,9 @@ export class I18nService {
     this.supportedLanguages = supportedLanguages;
     this.language = '';
 
-    this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
-      localStorage.setItem(languageKey, event.lang)
-    });
+    // this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
+    //   localStorage.setItem(languageKey, event.lang)
+    // });
   }
 
   set language(language: string) {
@@ -37,7 +37,7 @@ export class I18nService {
       language = this.defaultLanguage;
     }
 
-    localStorage.setItem(languageKey, language);
+    // localStorage.setItem(languageKey, language);
     document.documentElement.setAttribute("lang", language);
     this.translateService.use(language);
   }

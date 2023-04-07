@@ -5,6 +5,9 @@
     <img [src]="saveAlbumImageUrl" [alt]="coverImageAltText"/>
   </div>
   <div class="stream-player">
-    <iframe [src]="safeAlbumPlayerUrl" seamless></iframe>
+    <a [href]="bandCampLink" target="_blank">
+      <img [src]="this.img" style="height: 380px; width: 100%; margin-top: 30px"/>
+    </a>
+    <!-- <iframe [src]="safeAlbumPlayerUrl" seamless></iframe> -->
   </div>
 </div>

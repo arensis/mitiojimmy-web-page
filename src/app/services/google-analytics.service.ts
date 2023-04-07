@@ -48,11 +48,11 @@ export class GoogleAnalyticsService {
       const eventLabelTransformed = eventLabel ? eventAction : null;
       const eventValueTransformed = eventValue ? eventValue : null;
 
-         gtag('event', eventName, {
-                 eventCategory: eventCategory,
-                 eventLabel: eventLabelTransformed,
-                 eventAction: eventAction,
-                 eventValue: eventValueTransformed
-               })
+        //  gtag('event', eventName, {
+        //          eventCategory: eventCategory,
+        //          eventLabel: eventLabelTransformed,
+        //          eventAction: eventAction,
+        //          eventValue: eventValueTransformed
+        //        })
     }
 }
