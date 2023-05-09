@@ -1,9 +1,57 @@
 <div class="container">
   <app-section [sectionName]="'shows'">
-    <div class="live-entry-container">
+    <!-- <div class="live-entry-container">
       <ng-container *ngFor="let entry of liveEntries; let i = index; trackBy: trackByFn">
         <app-live-entry class="entry" [liveEntry]="entry"></app-live-entry>
       </ng-container>
-    </div>
+    </div> -->
+    <h1>Próximos conciertos</h1>
+    <ul>
+      <li *ngFor="let liveEntryYear of liveEntryYears; let i = index; trackBy: trackFn">
+        <h2>{{liveEntryYear}}</h2>
+        <ul>
+          <li *ngFor="let month of liveEntriesGrouped[liveEntryYear].months; let i = index; trackBy: trackFn">
+            <h3>
+              <mat-icon>calendar_month</mat-icon>
+              {{translateMonth(month)}}
+            </h3>
+            <ul class="live-entries-backoffice">
+              <li
+                class="live-entry-backoffice"
+                *ngFor="let liveEntry of liveEntriesGrouped[liveEntryYear][month]; let i = index; trackBy: trackFn"
+              >
+                <app-live-entry
+                  [liveEntry]="liveEntry"
+                ></app-live-entry>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h1>Conciertos anteriores</h1>
+    <ul>
+      <li *ngFor="let liveEntryYear of liveEntryYears; let i = index; trackBy: trackFn">
+        <h2>{{liveEntryYear}}</h2>
+        <ul>
+          <li *ngFor="let month of liveEntriesGrouped[liveEntryYear].months; let i = index; trackBy: trackFn">
+            <h3>
+              <mat-icon>calendar_month</mat-icon>
+              {{translateMonth(month)}}
+            </h3>
+            <ul class="live-entries-backoffice">
+              <li
+                class="live-entry-backoffice"
+                *ngFor="let liveEntry of liveEntriesGrouped[liveEntryYear][month]; let i = index; trackBy: trackFn"
+              >
+                <app-live-entry
+                  [liveEntry]="liveEntry"
+                ></app-live-entry>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </app-section>
 </div>

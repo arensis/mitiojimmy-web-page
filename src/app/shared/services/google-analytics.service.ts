@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 declare let gtag:Function;
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class GoogleAnalyticsService {
   buyTicketsButton(hall: string, date: Date, onSale: boolean): void {
     this.liveEntryClick(hall, date, onSale ? 'enabledSales' : 'disabledSales');

@@ -2,9 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '@ngx-translate/core';
-import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
-import SEOService from 'src/app/services/seo.service';
 import { AbstractPage } from '../abstract-page';
+import SEOService from 'src/app/shared/services/seo.service';
+import { GoogleAnalyticsService } from 'src/app/shared/services/google-analytics.service';
 
 @Component({
   selector: 'app-contact-page',

@@ -1,9 +1,10 @@
-import { GoogleAnalyticsService } from './../services/google-analytics.service';
 import { Directive } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { TranslateService } from "@ngx-translate/core";
 import { Subscription } from "rxjs";
-import SEOService from "../services/seo.service";
+import SEOService from "../shared/services/seo.service";
+import { LocaleSpecifier } from "moment";
+import moment from "moment";
 
 @Directive()
 export abstract class AbstractPage {
@@ -31,5 +32,12 @@ export abstract class AbstractPage {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
     }
+  }
+
+  translateMonth(month: number): string {
+    const lang = this.translate.currentLang;
+
+    return moment().locale(lang as LocaleSpecifier)
+      .month(month).format('MMMM').toUpperCase();
   }
 }

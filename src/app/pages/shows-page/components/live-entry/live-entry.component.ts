@@ -1,7 +1,9 @@
-import { GoogleAnalyticsService } from './../../../../services/google-analytics.service';
 import { TranslateService } from '@ngx-translate/core';
 import { LiveEntry } from '../../../../model/shows/LiveEntry';
 import { Component, Input, OnInit } from '@angular/core';
+import { GoogleAnalyticsService } from 'src/app/shared/services/google-analytics.service';
+import { Moment } from 'moment';
+import moment from 'moment';
 
 @Component({
   selector: 'app-live-entry',
@@ -13,6 +15,7 @@ export class LiveEntryComponent implements OnInit {
   liveEntry!: LiveEntry;
 
   guestArtist?: string
+  isNewShow!: boolean;
 
   constructor(
     private tranlsate: TranslateService,
@@ -23,6 +26,8 @@ export class LiveEntryComponent implements OnInit {
     this.guestArtist = this.liveEntry.guestArtists
       .map(guest => guest.name)
       .join(',');
+
+    this.isNewShow = moment(this.liveEntry.date).isAfter(moment());
   }
 
   trackByFn(index: number, item: any): number {

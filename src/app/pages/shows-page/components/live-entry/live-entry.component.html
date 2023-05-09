@@ -9,7 +9,7 @@
   </div>
   <div class="tickets">
     <a
-      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() !== ''"
+      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() !== '' && isNewShow "
       mat-raised-button
       color="accent"
       [href]="liveEntry.concertHall.ticketsLink"
@@ -20,7 +20,7 @@
       {{ ('live-entry.tickets-button.buy' | translate).toUpperCase() }}
     </a>
     <a
-      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() === ''"
+      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() === '' && isNewShow"
       mat-button
       color="accent"
       class="coming-soon"

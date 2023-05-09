@@ -1,7 +1,7 @@
-import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
 import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LiveEntry } from 'src/app/model/shows/LiveEntry';
+import { GoogleAnalyticsService } from 'src/app/shared/services/google-analytics.service';
 
 @Component({
   selector: 'app-live-info',

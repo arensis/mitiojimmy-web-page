@@ -1,25 +1,74 @@
 
 @import 'src/variables.scss';
 
-.live-entry-container {
+// .live-entry-container {
+//   display: flex;
+//   justify-content: center;
+//   flex-flow: wrap;
+//   opacity: 0.9;
+// }
+
+// .entry {
+//   margin: 1rem 1.5rem;
+// }
+
+// @media screen and (min-width: 300px) and (max-width: 410px) {
+//   .entry {
+//     margin-left: 0
+//   }
+// }
+
+// @media screen and (min-width: 410px) and (max-width: 605px) {
+//   .entry {
+//     margin-left: 0
+//   }
+// }
+
+h2 {
+  overflow: hidden;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 90%;
+  height: 2px;
+  border-top: 2px solid #c9d0ff;
+  position: absolute;
+  top: 50%;
+  margin-left: 1rem;
+}
+
+h3 {
+  color: white;
+  font-weight: 500;
   display: flex;
-  justify-content: center;
-  flex-flow: wrap;
-  opacity: 0.9;
-}
-
-.entry {
-  margin: 1rem 1.5rem;
-}
-
-@media screen and (min-width: 300px) and (max-width: 410px) {
-  .entry {
-    margin-left: 0
+  font-size: 1.2rem;
+  align-items: flex-end;
+  mat-icon {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    color: white;
+    font-size: 30px;
   }
 }
 
-@media screen and (min-width: 410px) and (max-width: 605px) {
-  .entry {
-    margin-left: 0
-  }
+.live-entries-backoffice {
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.live-entry-backoffice {
+  max-width: 300px;
+  margin: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-inline-start: 1.2rem;
+}
+

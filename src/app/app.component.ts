@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { TranslateService } from '@ngx-translate/core';
-import { I18nService } from './services/i18n.service';
+import { I18nService } from './shared/services/i18n.service';
 
 @Component({
   selector: 'app-root',

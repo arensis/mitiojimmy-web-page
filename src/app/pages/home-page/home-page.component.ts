@@ -2,9 +2,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { faCoffee,  } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { ActivatedRoute } from '@angular/router';
-import SEOService from 'src/app/services/seo.service';
 import { TranslateService } from '@ngx-translate/core';
 import { AbstractPage } from '../abstract-page';
+import SEOService from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-home-page',

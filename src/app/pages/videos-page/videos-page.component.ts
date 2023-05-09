@@ -1,11 +1,11 @@
-import { DataService } from './../../services/data.service';
 import { BandVideos } from './../../model/videos/BandVideos';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AbstractPage } from '../abstract-page';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import SEOService from 'src/app/services/seo.service';
+import { DataService } from 'src/app/shared/services/data.service';
+import SEOService from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-videos-page',

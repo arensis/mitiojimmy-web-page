@@ -9,6 +9,7 @@ import { LiveEntryComponent } from './components/live-entry/live-entry.component
 import { LiveDateComponent } from './components/live-date/live-date.component';
 import { LiveInfoComponent } from './components/live-info/live-info.component';
 import { LiveGuestArtistComponent } from './components/live-guest-artist/live-guest-artist.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { LiveGuestArtistComponent } from './components/live-guest-artist/live-gu
     CommonModule,
     LayoutModule,
     MaterialModule,
-    ShowsPageRoutingModule
+    ShowsPageRoutingModule,
+    SharedModule
   ]
 })
 export class ShowsPageModule { }

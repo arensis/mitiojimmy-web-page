@@ -1,4 +1,3 @@
-import { I18nService } from './../../services/i18n.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 

@@ -1,5 +1,4 @@
 import { TranslateModule } from '@ngx-translate/core';
-import { I18nService } from './../services/i18n.service';
 import { LanguageSelectComponent } from './language-select/language-select.component';
 import { RouterModule } from '@angular/router';
 import { SectionComponent } from './section/section.component';
@@ -10,14 +9,13 @@ import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from '../material.module';
 import { SectionBioComponent } from './section-bio/section-bio.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     RouterModule,
-    CommonModule,
-    FontAwesomeModule,
-    MaterialModule,
-    TranslateModule
+    TranslateModule,
+    SharedModule
   ],
   declarations: [
    HeaderComponent,
@@ -25,9 +23,6 @@ import { SectionBioComponent } from './section-bio/section-bio.component';
    SectionComponent,
    SectionBioComponent,
    LanguageSelectComponent
-  ],
-  providers: [
-    I18nService
   ],
   exports: [
     HeaderComponent,

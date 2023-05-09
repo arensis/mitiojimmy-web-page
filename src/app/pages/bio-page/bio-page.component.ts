@@ -1,8 +1,8 @@
 import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import SEOService from 'src/app/services/seo.service';
 import { AbstractPage } from '../abstract-page';
+import SEOService from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-bio-page',

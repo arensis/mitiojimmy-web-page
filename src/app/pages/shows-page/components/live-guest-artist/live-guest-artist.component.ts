@@ -1,6 +1,6 @@
+import { GoogleAnalyticsService } from 'src/app/shared/services/google-analytics.service';
 import { GuestArtist } from './../../../../model/shows/GuestArtist';
 import { Component, Input } from '@angular/core';
-import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
 
 @Component({
   selector: 'app-live-guest-artist',

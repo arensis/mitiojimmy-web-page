@@ -1,13 +1,13 @@
 import { TranslateService } from '@ngx-translate/core';
-import { DataService } from './../../services/data.service';
 import { BandDiscography } from '../../model/discography/BandDiscography';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import { StreamingServiceType } from 'src/app/model/discography/StreamingServiceType';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import SEOService from 'src/app/services/seo.service';
 import { AbstractPage } from '../abstract-page';
+import { DataService } from 'src/app/shared/services/data.service';
+import SEOService from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-music-page',

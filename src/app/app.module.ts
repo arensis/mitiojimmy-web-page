@@ -1,6 +1,4 @@
-import { I18nService } from './services/i18n.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { DataService } from './services/data.service';
 import { ShowsPageModule } from './pages/shows-page/shows-page.module';
 import { LayoutModule } from './layout/layout.module';
 import { MaterialModule } from './material.module';
@@ -12,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import * as PageModules from './pages';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -34,9 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     PageModules.ShowsPageModule,
     PageModules.VideosPageModule,
     TranslateModule,
-    TranslateModule.forRoot()
+    TranslateModule.forRoot(),
+    SharedModule
   ],
-  providers: [DataService, I18nService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

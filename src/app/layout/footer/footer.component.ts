@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram, faYoutube, faItunes, faTiktok, faDeezer, faVimeo } from '@fortawesome/free-brands-svg-icons';
-import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
+import { GoogleAnalyticsService } from 'src/app/shared/services/google-analytics.service';
 
 @Component({
   selector: 'app-footer',
