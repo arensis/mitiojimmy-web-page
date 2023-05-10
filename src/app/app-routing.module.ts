@@ -42,7 +42,8 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
-  }
+  },
+  { path: 'chronicle-page', loadChildren: () => import('./pages/shows-page/chronicle-page/chronicle-page.module').then(m => m.ChroniclePageModule) }
 ];
 
 @NgModule({

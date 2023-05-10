@@ -29,6 +29,15 @@
       <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
       {{ ('live-entry.tickets-button.commin-soon' | translate).toUpperCase() }}
     </a>
+    <a
+      *ngIf="!isNewShow && containsShowChronicle"
+      mat-raised-button
+      color="primary"
+      [routerLink]="['chronicle', liveEntryId]"
+    >
+      <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
+      {{ ('live-entry.tickets-button.commin-soon' | translate).toUpperCase() }}
+    </a>
   </div>
 </div>
 

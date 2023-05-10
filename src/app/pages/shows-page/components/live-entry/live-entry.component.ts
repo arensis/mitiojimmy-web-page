@@ -16,6 +16,8 @@ export class LiveEntryComponent implements OnInit {
 
   guestArtist?: string
   isNewShow!: boolean;
+  containsShowChronicle: boolean = true;
+  liveEntryId: string = '';
 
   constructor(
     private tranlsate: TranslateService,
@@ -28,6 +30,7 @@ export class LiveEntryComponent implements OnInit {
       .join(',');
 
     this.isNewShow = moment(this.liveEntry.date).isAfter(moment());
+    this.liveEntryId = this.liveEntry.date.toString().split('/').join('-');
   }
 
   trackByFn(index: number, item: any): number {
