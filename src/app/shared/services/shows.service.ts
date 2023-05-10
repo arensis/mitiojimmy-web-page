@@ -6,14 +6,14 @@ import { LiveEntry } from "src/app/model/shows/LiveEntry";
 export class ShowsService {
   getNewShowsGroupedByYearsAndMonths(shows: LiveEntry[]) {
     const newShowsList: LiveEntry[] = shows.filter(item =>
-      moment(item.date).isAfter(moment().add(1, 'days')));
+      moment(item.date).isAfter(moment()));
 
     return this.groupByYearsAndMonths(newShowsList);
   }
 
   getOlderShowsGroupedByYearsAndMonths(shows: LiveEntry[]) {
     const newShowsList: LiveEntry[] = shows.filter(item =>
-      moment(item.date).isBefore(moment()));
+      moment(item.date).isBefore(moment().add(1, 'days')));
 
     return this.groupByYearsAndMonths(newShowsList);
   }
