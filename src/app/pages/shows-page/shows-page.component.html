@@ -1,27 +1,27 @@
 <div class="container">
   <app-section [sectionName]="'shows'">
-    <!-- <div class="live-entry-container">
-      <ng-container *ngFor="let entry of liveEntries; let i = index; trackBy: trackByFn">
-        <app-live-entry class="entry" [liveEntry]="entry"></app-live-entry>
-      </ng-container>
-    </div> -->
     <h1>Próximos conciertos</h1>
     <ul>
-      <li *ngFor="let liveEntryYear of liveEntryYears; let i = index; trackBy: trackFn">
-        <h2>{{liveEntryYear}}</h2>
+      <li *ngIf="newLivesCount === 0" class="no-shows-availables-li">
+        <div class="no-shows-availables">
+          No hay conciertos a la vista
+        </div>
+      </li>
+      <li *ngFor="let newLiveEntryYear of newLiveEntryYears; let i = index; trackBy: trackFn">
+        <h3>{{newLiveEntryYear}}</h3>
         <ul>
-          <li *ngFor="let month of liveEntriesGrouped[liveEntryYear].months; let i = index; trackBy: trackFn">
-            <h3>
+          <li *ngFor="let month of newLiveEntriesGrouped[newLiveEntryYear].months; let i = index; trackBy: trackFn">
+            <h4>
               <mat-icon>calendar_month</mat-icon>
               {{translateMonth(month)}}
-            </h3>
+            </h4>
             <ul class="live-entries-backoffice">
               <li
                 class="live-entry-backoffice"
-                *ngFor="let liveEntry of liveEntriesGrouped[liveEntryYear][month]; let i = index; trackBy: trackFn"
+                *ngFor="let newLiveEntry of newLiveEntriesGrouped[newLiveEntryYear][month]; let i = index; trackBy: trackFn"
               >
                 <app-live-entry
-                  [liveEntry]="liveEntry"
+                  [liveEntry]="newLiveEntry"
                 ></app-live-entry>
               </li>
             </ul>
@@ -31,10 +31,10 @@
     </ul>
     <h1>Conciertos anteriores</h1>
     <ul>
-      <li *ngFor="let liveEntryYear of liveEntryYears; let i = index; trackBy: trackFn">
-        <h2>{{liveEntryYear}}</h2>
+      <li *ngFor="let olderLiveEntryYear of olderLiveEntryYears; let i = index; trackBy: trackFn">
+        <h2>{{olderLiveEntryYear}}</h2>
         <ul>
-          <li *ngFor="let month of liveEntriesGrouped[liveEntryYear].months; let i = index; trackBy: trackFn">
+          <li *ngFor="let month of olderLiveEntriesGrouped[olderLiveEntryYear].months; let i = index; trackBy: trackFn">
             <h3>
               <mat-icon>calendar_month</mat-icon>
               {{translateMonth(month)}}
@@ -42,10 +42,10 @@
             <ul class="live-entries-backoffice">
               <li
                 class="live-entry-backoffice"
-                *ngFor="let liveEntry of liveEntriesGrouped[liveEntryYear][month]; let i = index; trackBy: trackFn"
+                *ngFor="let olderLiveEntry of olderLiveEntriesGrouped[olderLiveEntryYear][month]; let i = index; trackBy: trackFn"
               >
                 <app-live-entry
-                  [liveEntry]="liveEntry"
+                  [liveEntry]="olderLiveEntry"
                 ></app-live-entry>
               </li>
             </ul>

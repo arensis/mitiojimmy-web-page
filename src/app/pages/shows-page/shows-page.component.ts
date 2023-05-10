@@ -14,12 +14,12 @@ import { ShowsService } from 'src/app/shared/services/shows.service';
   styleUrls: ['./shows-page.component.scss']
 })
 export class ShowsPageComponent extends AbstractPage implements OnInit, OnDestroy {
-  liveEntrySubscription?: Subscription;
-  liveEntries: LiveEntry[] = [];
-
   showsSubscription!: Subscription;
-  liveEntriesGrouped: any;
-  liveEntryYears: string[] = []
+  newLiveEntriesGrouped: any;
+  newLiveEntryYears: string[] = []
+  olderLiveEntriesGrouped: any;
+  olderLiveEntryYears: string[] = []
+  newLivesCount!: number;
 
   constructor(
     private dataService: DataService,
@@ -34,22 +34,19 @@ export class ShowsPageComponent extends AbstractPage implements OnInit, OnDestro
 
   ngOnInit(): void {
     this.updateMetaData();
-    this.liveEntrySubscription = this.dataService.getShowsData()
-      .subscribe(shows => this.liveEntries = shows);
 
     this.showsSubscription = this.dataService.getShowsData()
       .subscribe(shows => {
-        this.liveEntriesGrouped = this.showsService.groupByYearsAndMonths(shows);
-        this.liveEntryYears = Object.keys(this.liveEntriesGrouped);
-        console.log(this.liveEntriesGrouped);
+        this.newLiveEntriesGrouped = this.showsService.getNewShowsGroupedByYearsAndMonths(shows);
+        this.newLiveEntryYears = Object.keys(this.newLiveEntriesGrouped);
+        this.olderLiveEntriesGrouped = this.showsService.getOlderShowsGroupedByYearsAndMonths(shows);
+        this.olderLiveEntryYears = Object.keys(this.olderLiveEntriesGrouped);
+        this.newLivesCount = Object.keys(this.newLiveEntriesGrouped).length;
       });
   }
 
   ngOnDestroy(): void {
     this.unsubscribeLanguageSubscription();
-    if (this.liveEntrySubscription) {
-      this.liveEntrySubscription.unsubscribe();
-    }
 
     if (this.showsSubscription) {
       this.showsSubscription.unsubscribe();
