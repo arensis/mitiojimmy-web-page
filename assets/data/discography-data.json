@@ -1,5 +1,20 @@
 [
   {
+    "bandName": "Mi tío Jimmy",
+    "albums": [
+      {
+        "releaseDate": "05/11/2023",
+        "imageUrl": "assets/images/los-elegidos-album-cover.jpg",
+        "id": "833973941",
+        "artistPlaylist": false,
+        "isTrack": true,
+        "streamingService": "BANDCAMP",
+        "albumName": "Los Elegidos"
+
+      }
+    ]
+  },
+  {
     "bandName": "Good Bye Lenin",
     "albums": [
       {
@@ -7,6 +22,7 @@
         "imageUrl": "assets/images/GBL-album-cover.jpg",
         "id": "7eAg2VNN0F5vkuwCLyGErH",
         "artistPlaylist": true,
+        "isTrack": false,
         "streamingService": "SPOTIFY",
         "albumName": "Singles Collection"
       }
@@ -20,6 +36,7 @@
         "imageUrl": "assets/images/perdita-mundi-album-cover.jpg",
         "id": "2407477905",
         "artistPlaylist": false,
+        "isTrack": false,
         "streamingService": "BANDCAMP",
         "albumName": "Perdita mundi"
       },
@@ -28,6 +45,7 @@
         "imageUrl": "assets/images/de-musica-ligera-album-cover.jpg",
         "id": "1022444437",
         "artistPlaylist": false,
+        "isTrack": false,
         "streamingService": "BANDCAMP",
         "albumName": "De música ligera"
       },
@@ -36,6 +54,7 @@
         "imageUrl": "assets/images/friogenia-album-cover.jpg",
         "id": "1387061987",
         "artistPlaylist": false,
+        "isTrack": false,
         "streamingService": "BANDCAMP",
         "albumName": "Friogenia"
       },
@@ -44,6 +63,7 @@
         "imageUrl": "assets/images/maida-vale-album-cover.jpg",
         "id": "115197473",
         "artistPlaylist": false,
+        "isTrack": false,
         "streamingService": "BANDCAMP",
         "albumName": "Maida Vale"
       }
