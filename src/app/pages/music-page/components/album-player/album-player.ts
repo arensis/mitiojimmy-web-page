@@ -45,10 +45,15 @@ export abstract class AlbumPlayer implements OnInit {
           this.bandCampLink = 'https://magneticaonline.bandcamp.com/album/maida-vale?from=embed'
           break;
         }
+        case 'Los Elegidos': {
+          this.img = 'assets/images/temp/bandcamp-loselegidos.png';
+          this.bandCampLink = 'https://mitiojimmy.bandcamp.com/track/los-elegidos'
+          break;
+        }
       }
 
       this.saveAlbumImageUrl = this.sanitizer.bypassSecurityTrustUrl(this.album.imageUrl);
-      this.safeAlbumPlayerUrl = this.buildPlayerUrl(this.album.id);
+      this.safeAlbumPlayerUrl = this.buildPlayerUrl(this.album.id, this.album.isTrack);
       this.coverImageAltText = ['Portada de álbum', this.album.albumName].join(': ');
 
       const date = moment(this.album.releaseDate);
@@ -66,8 +71,8 @@ export abstract class AlbumPlayer implements OnInit {
     }
   }
 
-  buildPlayerUrl(albumId: string): SafeUrl {
-    const albumPlayerUrl = this.buildBasePlayerUrl(albumId);
+  buildPlayerUrl(albumId: string, isTrack: boolean): SafeUrl {
+    const albumPlayerUrl = this.buildBasePlayerUrl(albumId, isTrack);
     return this.sanitizer.bypassSecurityTrustResourceUrl(albumPlayerUrl);
   }
 
@@ -77,5 +82,5 @@ export abstract class AlbumPlayer implements OnInit {
     this.year = date.format('YYYY').toString();
   }
 
-  abstract buildBasePlayerUrl(albumId: string): string;
+  abstract buildBasePlayerUrl(albumId: string, isTrack: boolean): string;
 }

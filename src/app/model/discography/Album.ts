@@ -5,6 +5,7 @@ export interface Album {
   imageUrl: string;
   id: string;
   artistPlaylist: boolean;
+  isTrack: boolean;
   streamingService: StreamingServiceType;
   albumName: string;
 }

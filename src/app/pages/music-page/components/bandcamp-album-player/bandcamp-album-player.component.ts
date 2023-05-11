@@ -13,8 +13,9 @@ export class BandcampAlbumPlayerComponent extends AlbumPlayer {
     super(sanitizer, translate);
   }
 
-  buildBasePlayerUrl(albumId: string): string {
-      return 'https://bandcamp.com/EmbeddedPlayer/album='
+  buildBasePlayerUrl(albumId: string, isTrack: boolean): string {
+      return 'https://bandcamp.com/EmbeddedPlayer/'
+        .concat(isTrack ? 'track=' : 'album=')
         .concat(albumId)
         .concat('/size=large/bgcol=333333/linkcol=FE4C72/artwork=small/transparent=true/');
   }
