@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram, faYoutube, faItunes, faTiktok, faDeezer, faVimeo } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faBandcamp, faFacebook, faSpotify, faInstagram, faYoutube, faItunes, faTiktok, faDeezer, faVimeo, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
 import { GoogleAnalyticsService } from 'src/app/shared/services/google-analytics.service';
 
 @Component({
@@ -22,7 +22,8 @@ export class FooterComponent implements OnInit {
     {class: 'faInstagram', icon: faInstagram, link: 'https://www.instagram.com/mitiojimmy/'},
     {class: 'faTiktok', icon: faTiktok, link: ''},
     {class: 'faFacebook', icon: faFacebook, link: ''},
-    {class: 'faTwitter', icon: faTwitter, link: 'https://twitter.com/mitiojimmy'}
+    {class: 'faTwitter', icon: faTwitter, link: 'https://twitter.com/mitiojimmy'}, 
+    { clase: 'faSoundcloud', icon: 'faSoundcloud', link: 'https://soundcloud.com/mitiojimmy' }
   ];
 
   ngOnInit(): void {
