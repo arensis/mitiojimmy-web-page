@@ -22,8 +22,8 @@ export class FooterComponent implements OnInit {
     {class: 'faInstagram', icon: faInstagram, link: 'https://www.instagram.com/mitiojimmy/'},
     {class: 'faTiktok', icon: faTiktok, link: ''},
     {class: 'faFacebook', icon: faFacebook, link: ''},
-    {class: 'faTwitter', icon: faTwitter, link: 'https://twitter.com/mitiojimmy'}, 
-    { clase: 'faSoundcloud', icon: 'faSoundcloud', link: 'https://soundcloud.com/mitiojimmy' }
+    {class: 'faTwitter', icon: faTwitter, link: 'https://twitter.com/mitiojimmy'},
+    {class: 'faSoundcloud', icon: faSoundcloud, link: 'https://soundcloud.com/mitiojimmy' }
   ];
 
   ngOnInit(): void {
