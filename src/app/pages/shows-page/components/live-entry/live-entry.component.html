@@ -29,15 +29,18 @@
       <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
       {{ ('live-entry.tickets-button.commin-soon' | translate).toUpperCase() }}
     </a>
-    <!-- <a
+    <a
       *ngIf="!isNewShow && containsShowChronicle"
       mat-raised-button
-      color="primary"
-      [routerLink]="['chronicle', liveEntryId]"
+      [class]="chronicleStyle.class"
+      [href]="liveEntry.chronicle.url"
+      target="_blank"
     >
-      <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
-      {{ ('live-entry.tickets-button.commin-soon' | translate).toUpperCase() }}
-    </a> -->
+      <div class="label">
+        <fa-icon [icon]="chronicleStyle.icon"></fa-icon>
+        <span>{{ liveEntry.chronicle.title.toUpperCase() }}</span>
+      </div>
+    </a>
   </div>
 </div>
 

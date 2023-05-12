@@ -1,6 +1,7 @@
 import { Time } from "@angular/common";
 import { ConcertHall } from "./ConcertHall";
 import { GuestArtist } from "./GuestArtist";
+import { Chronicle } from "./chronicle/Chronicle";
 
 export interface LiveEntry {
   date: Date;
@@ -8,5 +9,6 @@ export interface LiveEntry {
   city: string;
   province: string;
   concertHall: ConcertHall;
+  chronicle: Chronicle;
   guestArtists: GuestArtist[];
 }
