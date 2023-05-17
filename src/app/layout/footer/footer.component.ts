@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit {
     {class: 'faBandcamp', icon: faBandcamp, link: 'https://mitiojimmy.bandcamp.com/'},
     {class: 'faItunes', icon: faItunes, link: ''},
     {class: 'faDeezer', icon: faDeezer, link: ''},
-    {class: 'faYoutube', icon: faYoutube, link: 'https://youtube.com/channel/UCT5HFyG_6d5ysJBgxWpcgzg'},
+    {class: 'faYoutube', icon: faYoutube, link: 'https://www.youtube.com/@mitiojimmy'},
     {class: 'faVimeo', icon: faVimeo, link: ''},
     {class: 'faInstagram', icon: faInstagram, link: 'https://www.instagram.com/mitiojimmy/'},
     {class: 'faTiktok', icon: faTiktok, link: ''},
