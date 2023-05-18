@@ -3,6 +3,7 @@
 footer {
   .social-icons {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -74,8 +75,15 @@ footer {
 
   .legal-and-royalties {
     display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
 
     .copyright, .web-maker, .legal-advisories {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      align-items: center;
       margin-top: 8px !important;
 
       a, span {
