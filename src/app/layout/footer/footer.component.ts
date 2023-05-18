@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   constructor(private googleAnalyticsService: GoogleAnalyticsService) {}
 
   socialNetworks = [
-    {class: 'faSpotify', icon: faSpotify, link: ''},
+    {class: 'faSpotify', icon: faSpotify, link: 'https://open.spotify.com/artist/32WVgopB3xieUzzjOfOS85?si=z9hh-GyaShisFwkLp1SBXg'},
     {class: 'faBandcamp', icon: faBandcamp, link: 'https://mitiojimmy.bandcamp.com/'},
     {class: 'faItunes', icon: faItunes, link: ''},
     {class: 'faDeezer', icon: faDeezer, link: ''},
