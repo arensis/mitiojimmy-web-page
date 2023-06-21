@@ -17,7 +17,7 @@ export class I18nService {
   public init(defaultLanguage: string, supportedLanguages: string[]) {
     this.defaultLanguage = defaultLanguage;
     this.supportedLanguages = supportedLanguages;
-    this.language = '';
+    this.language = navigator.language;
 
     // this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
     //   localStorage.setItem(languageKey, event.lang)
