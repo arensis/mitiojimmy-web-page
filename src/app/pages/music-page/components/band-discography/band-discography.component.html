@@ -14,10 +14,10 @@
         *ngIf="(album.artistPlaylist && album.streamingService === 'SPOTIFY')"
         [album]="album"
       ></app-spotify-artist-player>
-      <!-- <app-spotify-album-player
+      <app-spotify-album-player
         *ngIf="(!album.artistPlaylist && album.streamingService === 'SPOTIFY')"
         [album]="album"
-    ></app-spotify-album-player> -->
+      ></app-spotify-album-player>
     </ng-container>
   </div>
 </article>

@@ -3,6 +3,16 @@
     "bandName": "Mi tío Jimmy",
     "albums": [
       {
+        "releaseDate": "07/05/2023",
+        "imageUrl": "assets/images/dragons-son-album-cover.jpg",
+        "id": "2PnAfx7MTAVHOAAFa5h0b3",
+        "artistPlaylist": false,
+        "isTrack": true,
+        "streamingService": "SPOTIFY",
+        "albumName": "Dragon's son"
+
+      },
+      {
         "releaseDate": "05/11/2023",
         "imageUrl": "assets/images/los-elegidos-album-cover.jpg",
         "id": "833973941",

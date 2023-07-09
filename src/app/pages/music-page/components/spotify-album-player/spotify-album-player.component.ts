@@ -17,6 +17,4 @@ export class SpotifyAlbumPlayerComponent  extends AlbumPlayer {
     return 'https://open.spotify.com/embed/album/'.concat(albumId)
       .concat('?utm_source=generator&theme=0');
   }
-
-
 }
