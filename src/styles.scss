@@ -26,7 +26,10 @@
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $primary-background-color !important;
+}
 
 header {
   position: relative;
@@ -49,6 +52,11 @@ main {
   }
 }
 
+.app-container {
+  min-height: 80%;
+  padding-bottom: 36px;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -56,6 +64,142 @@ footer {
   align-items: center;
   padding: 0.5rem 1.5rem;
   border-top: 8px solid $border-color;
+  margin-top: -36px; // footer in index
+}
+
+// footer component styles
+footer {
+  background-color: $primary-background-color !important;
+  color: $secondary-text-color;
+
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      margin: 1rem 0.5rem 0.5rem;
+       svg {
+        filter: $secondary-link-filter;
+        width: 2rem;
+       }
+
+      &.faSpotify:focus {
+        svg {
+          filter: $spotify-filter-dark !important;
+        }
+      }
+
+      &.faTwitter:focus {
+        svg {
+          filter: $twitter-filter-dark !important;
+        }
+      }
+
+      &.faBandcamp:focus {
+        svg {
+          filter: $bandcamp-filter-dark !important;
+        }
+      }
+
+      &.faFacebook:focus {
+        svg {
+          filter: $facebook-filter-dark !important;
+        }
+      }
+
+      &.faInstagram:focus {
+        svg {
+          filter: $instagram-filter-dark !important;
+        }
+      }
+
+      &.faYoutube:focus {
+        svg {
+          filter: $youtube-filter-dark !important;
+        }
+      }
+
+      &.faSpotify:hover {
+        svg {
+          filter: $spotify-filter !important;
+        }
+      }
+
+      &.faTwitter:hover {
+        svg {
+          filter: $twitter-filter !important;
+        }
+      }
+
+      &.faBandcamp:hover {
+        svg {
+          filter: $bandcamp-filter !important;
+        }
+      }
+
+      &.faFacebook:hover {
+        svg {
+          filter: $facebook-filter !important;
+        }
+      }
+
+      &.faInstagram:hover {
+        svg {
+          filter: $instagram-filter !important;
+        }
+      }
+
+      &.faYoutube:hover {
+        svg {
+          filter: $youtube-filter !important;
+        }
+      }
+
+      &.faSoundcloud:hover {
+        svg {
+          filter: $soundcloud-filter !important;
+        }
+      }
+    }
+  }
+
+  .legal-and-royalties {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    .copyright, .web-maker, .legal-advisories {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      margin-top: 8px !important;
+
+      a, span {
+        font-size: 0.6rem !important;
+      }
+
+      a {
+        color: $secondary-link-color;
+        &:hover {
+          color: $secondary-link-hover-color;
+        }
+
+        &:focus {
+          color: $secondary-link-focus-color;
+        }
+      }
+    }
+
+    .copyright::after, .legal-advisories::after {
+      content: '|';
+      margin: 4px;
+    }
+  }
 }
 
 //Links
@@ -97,9 +241,13 @@ h2 {
 
 // Sidenav
 .mat-drawer-container {
-  height: 100%;
-
+  // height: 100%; // footer in component
+  height: 82%; //footer in index
+  position: unset !important; // footer in index
   background-color: $primary-background-color !important;
+  mat-drawer-content {
+    display: contents; // footer in index
+  }
   .mat-drawer {
     background-color: $secondary-background-color !important;
   }

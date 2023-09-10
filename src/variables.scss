@@ -5,19 +5,33 @@ $screen-lg-max: 1160px;
 $screen-xl-max: 1560px;
 $screen-xxl-max: 2048px;
 
-$instagram-color: #ca00a3;
-$facebook-color: #1877F2;
-$bandcamp-color: #477987;
-$twitter-color: rgb(29, 155, 240);
 $spotify-color: #1ED760;
+$spotify-filter: invert(63%) sepia(65%) saturate(565%) hue-rotate(87deg) brightness(94%) contrast(91%);
+$spotify-filter-dark: invert(63%) sepia(65%) saturate(565%) hue-rotate(87deg) brightness(74%) contrast(91%);
+$instagram-color: #ca00a3;
+$instagram-filter: invert(10%) sepia(100%) saturate(6288%) hue-rotate(305deg) brightness(90%) contrast(103%);
+$instagram-filter-dark: invert(10%) sepia(100%) saturate(6288%) hue-rotate(305deg) brightness(70%) contrast(103%);
+$facebook-color: #1877F2;
+$facebook-filter: invert(30%) sepia(75%) saturate(3465%) hue-rotate(207deg) brightness(102%) contrast(90%);
+$facebook-filter-dark: invert(30%) sepia(75%) saturate(3465%) hue-rotate(207deg) brightness(82%) contrast(90%);
+$bandcamp-color: #477987;
+$bandcamp-filter: invert(46%) sepia(26%) saturate(732%) hue-rotate(146deg) brightness(85%) contrast(78%);
+$bandcamp-filter-dark: invert(46%) sepia(26%) saturate(732%) hue-rotate(146deg) brightness(65%) contrast(78%);
+$twitter-color: #1d9bf0;
+$twitter-filter: invert(43%) sepia(75%) saturate(962%) hue-rotate(173deg) brightness(103%) contrast(88%);
+$twitter-filter-dark: invert(43%) sepia(75%) saturate(962%) hue-rotate(173deg) brightness(83%) contrast(88%);
 $youtube-color: #FF0000;
+$youtube-filter: invert(11%) sepia(98%) saturate(7253%) hue-rotate(8deg) brightness(98%) contrast(115%);
+$youtube-filter-dark: invert(11%) sepia(98%) saturate(7253%) hue-rotate(8deg) brightness(78%) contrast(115%);
 $soundcloud-color: #f50;
-
+$soundcloud-filter: invert(45%) sepia(49%) saturate(5094%) hue-rotate(359deg) brightness(98%) contrast(110%);
+$soundcloud-filter-dark: invert(45%) sepia(49%) saturate(5094%) hue-rotate(359deg) brightness(78%) contrast(110%);
 //Style guide Hostalia
 $primary-link-color: #4B4B7E;
 $primary-link-hover-color: #FE4C72;
 $primary-link-focus-color: #521a26;
 $secondary-link-color: #fff;
+$secondary-link-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(331deg) brightness(103%) contrast(101%);
 $secondary-link-hover-color: $primary-link-hover-color;
 $secondary-link-focus-color: $primary-link-focus-color;
 $primary-background-color: $primary-link-color;
