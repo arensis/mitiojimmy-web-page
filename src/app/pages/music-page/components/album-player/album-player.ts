@@ -13,8 +13,8 @@ export abstract class AlbumPlayer implements OnInit {
   safeAlbumPlayerUrl?: SafeUrl;
   saveAlbumImageUrl?: SafeUrl;
   coverImageAltText?: string;
-  img = ''
-  bandCampLink = ''
+  img = '';
+  bandCampLink = '';
 
   monthName!: string;
   year!: string;
@@ -48,6 +48,14 @@ export abstract class AlbumPlayer implements OnInit {
         case 'Los Elegidos': {
           this.img = 'assets/images/temp/bandcamp-loselegidos.png';
           this.bandCampLink = 'https://mitiojimmy.bandcamp.com/track/los-elegidos'
+          break;
+        }
+        case "Dragon's son": {
+          this.img = 'assets/images/temp/spotify-dragons-son.png';
+          break;
+        }
+        case 'Planteamiento matemático': {
+          this.img = 'assets/images/temp/spotify-planteamiento-matematico.png';
           break;
         }
       }
