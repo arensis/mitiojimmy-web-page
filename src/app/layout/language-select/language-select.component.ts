@@ -15,6 +15,7 @@ export class LanguageSelectComponent implements OnInit {
   ngOnInit() {
     // this.selectedLanguage = localStorage.getItem('lang') || this.i18nService.language;
     this.selectedLanguage = this.i18nService.language.split('-').includes('es') ? 'es' : 'en';
+    this.translateService.use(this.selectedLanguage);
   }
 
   valueChange(selectedLanguage: string) {
