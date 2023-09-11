@@ -15,7 +15,8 @@ export class I18nService {
   }
 
   public init(defaultLanguage: string, supportedLanguages: string[]) {
-    this.defaultLanguage = defaultLanguage;
+    // this.defaultLanguage = defaultLanguage;
+    this.defaultLanguage = navigator.language;
     this.supportedLanguages = supportedLanguages;
     this.language = navigator.language;
 
@@ -25,7 +26,8 @@ export class I18nService {
   }
 
   set language(language: string) {
-    language = language || localStorage.getItem(languageKey) || this.translateService.getBrowserCultureLang() || '';
+    // language = language || localStorage.getItem(languageKey) || this.translateService.getBrowserCultureLang() || '';
+    language = language || this.translateService.getBrowserCultureLang() || '';
     let isSupportedLanguage = this.supportedLanguages.includes(language);
 
     if (language && !isSupportedLanguage) {
