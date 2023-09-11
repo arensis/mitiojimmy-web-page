@@ -3,6 +3,15 @@
     "bandName": "Mi tío Jimmy",
     "albums": [
       {
+        "releaseDate": "09/10/2023",
+        "imageUrl": "assets/images/planteamiento-matematico-album-cover.jpeg",
+        "id": "6NqD2N7WF6akx1Mn0kZNIK",
+        "artistPlaylist": false,
+        "isTrack": true,
+        "streamingService": "SPOTIFY",
+        "albumName": "Planteamiento matemático"
+      },
+      {
         "releaseDate": "07/05/2023",
         "imageUrl": "assets/images/dragons-son-album-cover.jpg",
         "id": "2PnAfx7MTAVHOAAFa5h0b3",
@@ -10,7 +19,6 @@
         "isTrack": true,
         "streamingService": "SPOTIFY",
         "albumName": "Dragon's son"
-
       },
       {
         "releaseDate": "05/11/2023",
@@ -20,7 +28,6 @@
         "isTrack": true,
         "streamingService": "BANDCAMP",
         "albumName": "Los Elegidos"
-
       }
     ]
   },
