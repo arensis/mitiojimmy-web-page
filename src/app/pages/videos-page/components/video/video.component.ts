@@ -60,7 +60,7 @@ export class VideoComponent implements OnInit{
         }
         case 'X8jDJRDnlIc': {
           this.videoUrl = 'https://youtu.be/X8jDJRDnlIc',
-          this.img = 'assets/images/temp/youtube-planteamiento-matematico.png';
+          this.img = 'assets/images/temp/youtube-planteamiento-matematico-acoustic.png';
           break;
         }
       }
