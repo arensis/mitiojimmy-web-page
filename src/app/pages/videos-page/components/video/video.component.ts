@@ -58,6 +58,11 @@ export class VideoComponent implements OnInit{
           this.img = 'assets/images/temp/youtube-volarlotodo.png';
           break;
         }
+        case 'X8jDJRDnlIc': {
+          this.videoUrl = 'https://youtu.be/X8jDJRDnlIc',
+          this.img = 'assets/images/temp/youtube-planteamiento-matematico.png';
+          break;
+        }
       }
     }
 
