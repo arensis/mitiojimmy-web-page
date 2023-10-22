@@ -86,6 +86,13 @@ footer {
         width: 2rem;
        }
 
+       &.faTiktok {
+        svg {
+          width: 1.8rem !important;
+        }
+
+      }
+
       &.faSpotify:focus {
         svg {
           filter: $spotify-filter-dark !important;
@@ -122,6 +129,12 @@ footer {
         }
       }
 
+      &.faTiktok:focus {
+        svg {
+          filter: $tiktok-filter-dark !important;
+        }
+      }
+
       &.faSpotify:hover {
         svg {
           filter: $spotify-filter !important;
@@ -155,6 +168,12 @@ footer {
       &.faYoutube:hover {
         svg {
           filter: $youtube-filter !important;
+        }
+      }
+
+      &.faTiktok:hover {
+        svg {
+          filter: $tiktok-filter !important;
         }
       }
 
