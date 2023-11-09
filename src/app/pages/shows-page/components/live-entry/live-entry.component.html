@@ -20,7 +20,7 @@
       {{ ('live-entry.tickets-button.buy' | translate).toUpperCase() }}
     </a>
     <a
-      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() === '' && isNewShow"
+      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() === '' && isNewShow && !liveEntry.freeEntry"
       mat-button
       color="accent"
       class="coming-soon"
@@ -28,6 +28,16 @@
     >
       <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
       {{ ('live-entry.tickets-button.commin-soon' | translate).toUpperCase() }}
+    </a>
+    <a
+      *ngIf="liveEntry.freeEntry"
+      mat-button
+      color="accent"
+      class="coming-soon"
+      (click)="onTicketClick(liveEntry.concertHall.name, liveEntry.date, false)"
+    >
+      <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
+      {{ ('live-entry.tickets-button.free-entry' | translate).toUpperCase() }}
     </a>
     <a
       *ngIf="!isNewShow && containsShowChronicle"

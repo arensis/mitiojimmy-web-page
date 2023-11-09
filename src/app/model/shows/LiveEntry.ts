@@ -11,4 +11,5 @@ export interface LiveEntry {
   concertHall: ConcertHall;
   chronicle: Chronicle;
   guestArtists: GuestArtist[];
+  freeEntry: boolean;
 }

@@ -4,6 +4,7 @@
     "time": { "hours": 20, "minutes": 30 },
     "city": "Madrid",
     "province": "Madrid",
+    "freeEntry": false,
     "concertHall": {
       "name": "Búho Real",
       "ticketsLink": "https://entradium.com/es/events/davile-matellan-y-mi-tio-jimmy-en-el-buho-real",
@@ -15,6 +16,25 @@
       {
         "name": "Davile Matellán",
         "url": "https://spoti.fi/1mOyj77"
+      }
+    ]
+  },
+  {
+    "date": "12/15/2023",
+    "time": { "hours": 21, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": true,
+    "concertHall": {
+      "name": "Héroe Café Espectáculo",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://heroecafeespectaculo.com/"
+    },
+    "chronicle": null,
+    "guestArtists": [
+      {
+        "name": "Sumergente",
+        "url": "https://sumergente.com/"
       }
     ]
   }
