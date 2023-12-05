@@ -3,6 +3,15 @@
     "bandName": "Mi tío Jimmy",
     "albums": [
       {
+        "releaseDate": "12/03/2023",
+        "imageUrl": "assets/images/el-fin-es-gradual-album-cover.jpeg",
+        "id": "5TvefLeNamyzVSqHg4rBaK",
+        "artistPlaylist": false,
+        "isTrack": true,
+        "streamingService": "SPOTIFY",
+        "albumName": "El fin es gradual"
+      },
+      {
         "releaseDate": "09/10/2023",
         "imageUrl": "assets/images/planteamiento-matematico-album-cover.jpeg",
         "id": "6NqD2N7WF6akx1Mn0kZNIK",
