@@ -58,6 +58,10 @@ export abstract class AlbumPlayer implements OnInit {
           this.img = 'assets/images/temp/spotify-planteamiento-matematico.png';
           break;
         }
+        case 'El fin es gradual': {
+          this.img = 'assets/images/temp/spotify-elfinesgradual.png';
+          break;
+        }
       }
 
       this.saveAlbumImageUrl = this.sanitizer.bypassSecurityTrustUrl(this.album.imageUrl);
