@@ -1,13 +1,15 @@
 <div class="guest-artist">
-  <span class="more">
+  <span class="more" *ngIf="(guestArtists || []).length > 0">
     {{ ('live-entry.guest-artist' | translate ).toUpperCase() }}:
   </span>
-  <ul>
+  <span class="more" *ngIf="(nameEvent || '') !== ''">
+    EVENTO:
+  </span>
+  <ul *ngIf="(guestArtists || []).length > 0">
     <ng-container *ngFor="let artist of guestArtists; let i = index; trackBy: trackByFn">
       <li>
         <a
           [ngClass]="{'button-disabled': (artist.url || '').trim() === ''}"
-          class="secondary"
           [href]="artist.url"
           target="_blank"
           (click)="onGuestClick(artist.name)"
@@ -16,5 +18,10 @@
         </a>
       </li>
     </ng-container>
+  </ul>
+  <ul *ngIf="(nameEvent || '') !== ''">
+    <li>
+      <a class="button-disabled">{{ nameEvent }}</a>
+    </li>
   </ul>
 </div>

@@ -31,14 +31,14 @@ h3::after {
   content: '';
   width: 90%;
   height: 2px;
-  border-top: 2px solid #c9d0ff;
+  border-top: 2px solid $subtitle-primary-background;
   position: absolute;
   top: 50%;
-  margin-left: 5rem;
+  margin-left: 8rem;
 }
 
 h4 {
-  color: white;
+  color: $secondary-link-color;
   font-weight: 500;
   display: flex;
   font-size: 1.2rem;
@@ -47,7 +47,7 @@ h4 {
     height: 30px;
     width: 30px;
     overflow: hidden;
-    color: white;
+    color: $secondary-link-color;
     font-size: 30px;
   }
 }
@@ -80,7 +80,7 @@ ul {
   text-align: center;
   line-height: 33px;
   margin: 6px 0;
-  color: #fe4c72;
+  color: $primary-link-color;
   align-items: center;
 }
 
@@ -90,7 +90,7 @@ ul {
 }
 
 h1 {
-  background-color: #ffffff1f;
+  background-color: $background-overlay-light;
   border-radius: 9px;
   padding: 10px;
 }

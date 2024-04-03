@@ -4,43 +4,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 8vh;
+  min-height: 90px;
   background-size: cover;
   margin-bottom: 6vh;
-  margin-top: -110px;
+  margin-top: -65px;
 
   @include xs {
-    background-image: url(../../../assets/images/home-bg-360.jpg);
+    background-image: url(../../../assets/images/section-header/header-360.png);
   }
 
   @include sm {
-    background-image: url(../../../assets/images/home-bg-680.jpg);
+    background-image: url(../../../assets/images/section-header/header-680.png);
   }
 
   @include md {
-    background-image: url(../../../assets/images/home-bg-768.jpg);
+    background-image: url(../../../assets/images/section-header/header-768.png);
   }
 
   @include lg {
-    background-image: url(../../../assets/images/home-bg-1160.jpg);
+    background-image: url(../../../assets/images/section-header/header-1160.png);
   }
 
   @include xls {
-    background-image: url(../../../assets/images/home-bg-1560.jpg);
+    background-image: url(../../../assets/images/section-header/header-1560.png);
   }
 
   @include xl {
-    background-image: url(../../../assets/images/home-bg-2048.jpg);
+    background-image: url(../../../assets/images/section-header/header-2048.png);
   }
 
   @include xxl {
-    background-image: url(../../../assets/images/home-bg.jpg);
+    background-image: url(../../../assets/images/section-header/header.png);
   }
 
   .section-name {
     padding-top: 2rem;
     font-size: 3rem;
-    font-family: "PaytoneOne Regular";
+    font-family: "Stentiga";
     text-shadow: 3px 3px 12px rgb(0 0 0 / 70%);
   }
 }

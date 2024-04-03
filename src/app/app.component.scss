@@ -1,8 +1,20 @@
+@import '/src/variables.scss';
+
 .sidenav-close-button {
   position: relative;
   left: 86%;
   top: 2%;
   font-size: 2rem;
+
+  @include xs {
+    left: 80%;
+    top: 0%;
+  }
+
+  @include sm {
+    left: 80%;
+    top: 0%;
+  }
 }
 
 .sections {
@@ -14,4 +26,12 @@
   font-weight: 300;
   line-height: 5rem;
   height: 50%;
+
+  @include xs {
+    height: 70%;
+  }
+
+  @include sm {
+    height: 70%;
+  }
 }

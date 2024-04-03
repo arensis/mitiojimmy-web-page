@@ -14,6 +14,8 @@ export class LiveGuestArtistComponent {
   liveEntryDate!: Date;
   @Input()
   concertHallName!: string;
+  @Input()
+  nameEvent?: string;
 
   constructor(private googleAnalyticsService: GoogleAnalyticsService) {}
 

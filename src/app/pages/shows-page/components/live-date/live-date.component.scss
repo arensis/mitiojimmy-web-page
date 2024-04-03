@@ -1,3 +1,5 @@
+@import 'src/variables.scss';
+
 .date-sheet {
   display: flex;
   flex-direction: column;
@@ -14,21 +16,21 @@
     font-size: 2.4rem;
     padding-bottom: 0.5rem;
     padding-left: 0.1rem;
-    color: #a9a6a7;
+    color: $live-date-month-name-color;
   }
 
   .day {
     font-weight: bold;
     font-size: 4.3rem;
     margin: 6px 0;
-    color: #FE4C72;
+    color: $live-date-number-color;
   }
 
   .day-name {
     font-weight: bold;
     font-size: 1.9rem;
     letter-spacing: 0.45rem;
-    color: #76cfe1;
+    color: $live-date-day-name-color;
     padding-left: 0.4rem;
     padding-top: 0.4rem;
   }

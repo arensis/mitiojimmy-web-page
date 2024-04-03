@@ -4,43 +4,79 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 44vh;
+  height: 8vh;
+  min-height: 90px;
   background-size: cover;
   margin-bottom: 6vh;
   margin-top: -65px;
 
   @include xs {
-    background-image: url(../../../assets/images/trigomaduro-360.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include sm {
-    background-image: url(../../../assets/images/trigomaduro-680.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include md {
-    background-image: url(../../../assets/images/trigomaduro-768.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include lg {
-    background-image: url(../../../assets/images/trigomaduro-1160.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include xls {
-    background-image: url(../../../assets/images/trigomaduro-1560.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include xl {
-    background-image: url(../../../assets/images/trigomaduro-2048.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include xxl {
-    background-image: url(../../../assets/images/trigomaduro.jpeg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
+
+  // @include xs {
+  //   background-image: url(../../../assets/images/section-header/header-360.png);
+  // }
+
+  // @include sm {
+  //   background-image: url(../../../assets/images/section-header/header-680.png);
+  // }
+
+  // @include md {
+  //   background-image: url(../../../assets/images/section-header/header-768.png);
+  // }
+
+  // @include lg {
+  //   background-image: url(../../../assets/images/section-header/header-1160.png);
+  // }
+
+  // @include xls {
+  //   background-image: url(../../../assets/images/section-header/header-1560.png);
+  // }
+
+  // @include xl {
+  //   background-image: url(../../../assets/images/section-header/header-2048.png);
+  // }
+
+  // @include xxl {
+  //   background-image: url(../../../assets/images/section-header/header.png);
+  // }
 
   .section-bio-name {
     padding-top: 2rem;
     font-size: 3rem;
-    font-family: "PaytoneOne Regular";
+    font-family: "Stentiga";
     text-shadow: 3px 3px 12px rgb(0 0 0 / 70%);
   }
 }

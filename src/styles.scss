@@ -25,6 +25,11 @@
   src: local("RussoOne-Regular"), url(./assets/fonts/RussoOne-Regular.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Stentiga";
+  src: local("Stentiga"), url(./assets/fonts/stentiga.ttf) format("truetype");
+}
+
 html, body { height: 100%; }
 body {
   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -285,6 +290,12 @@ h2 {
 @media screen and (max-width: 800px) {
   .mat-drawer-container .mat-drawer {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mat-drawer-container .mat-drawer {
+    width: 70%;
   }
 }
 

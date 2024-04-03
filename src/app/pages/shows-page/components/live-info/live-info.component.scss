@@ -22,6 +22,7 @@
 
       .city {
         font-size: 1.3rem;
+        color: $primary-link-color;
         text-align: start !important;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -31,6 +32,7 @@
   }
 
   .show-time {
+    color: $primary-link-color;
     display: flex;
     margin-left: 2.8rem;
 
