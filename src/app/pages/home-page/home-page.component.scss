@@ -5,31 +5,38 @@ div.container {
   background-repeat: no-repeat;
 
   @include xs {
-    background-image: url(../../../assets/images/home-bg-360.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include sm {
-    background-image: url(../../../assets/images/home-bg-680.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include md {
-    background-image: url(../../../assets/images/home-bg-768.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include lg {
-    background-image: url(../../../assets/images/home-bg-1160.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include xls {
-    background-image: url(../../../assets/images/home-bg-1560.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include xl {
-    background-image: url(../../../assets/images/home-bg-2048.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   @include xxl {
-    background-image: url(../../../assets/images/home-bg.jpg);
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 }
 
@@ -38,16 +45,17 @@ h1 {
   justify-content: center;
   margin-top: 2rem;
   height: 20%;
-  font-family: 'Lexend Mega';
+  font-family: "Stentiga";
   font-size: 4rem;
-  color: $primary-text-color;
-  text-shadow: 1px 1px 2px #00000080;
+  color: #fff;
+  text-shadow: -3px 2px 3px rgb(0 0 0 / 58%);
 }
 
 // Very small sizes phone in portrait orientation
 @media screen and (max-width: 373px) and (orientation: portrait) {
   div.container {
-    background-image: url(../../../assets/images/home-bg-portrait.jpg) !important;
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
   }
 
   h1 {
@@ -58,7 +66,9 @@ h1 {
 // Small phones in portrait orientation
 @media screen and (min-width: 374px) and (max-width: 575px) and (orientation: portrait) {
   div.container {
-    background-image: url(../../../assets/images/home-bg-portrait.jpg) !important;
+    background: #FFFFFF;
+    background-image: url(../../../assets/images/section-header/noise.svg);
+    // background-image: url(../../../assets/images/home-bg-portrait.jpg) !important;
   }
 
   h1 {

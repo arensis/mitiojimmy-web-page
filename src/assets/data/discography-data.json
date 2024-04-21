@@ -4,7 +4,7 @@
     "albums": [
       {
         "releaseDate": "12/03/2023",
-        "imageUrl": "assets/images/el-fin-es-gradual-album-cover.jpeg",
+        "imageUrl": "assets/images/album-covers/el-fin-es-gradual-album-cover.jpeg",
         "id": "5TvefLeNamyzVSqHg4rBaK",
         "artistPlaylist": false,
         "isTrack": true,
@@ -13,7 +13,7 @@
       },
       {
         "releaseDate": "09/10/2023",
-        "imageUrl": "assets/images/planteamiento-matematico-album-cover.jpeg",
+        "imageUrl": "assets/images/album-covers/planteamiento-matematico-album-cover.jpeg",
         "id": "6NqD2N7WF6akx1Mn0kZNIK",
         "artistPlaylist": false,
         "isTrack": true,
@@ -22,7 +22,7 @@
       },
       {
         "releaseDate": "07/05/2023",
-        "imageUrl": "assets/images/dragons-son-album-cover.jpg",
+        "imageUrl": "assets/images/album-covers/dragons-son-album-cover.jpg",
         "id": "2PnAfx7MTAVHOAAFa5h0b3",
         "artistPlaylist": false,
         "isTrack": true,
@@ -31,7 +31,7 @@
       },
       {
         "releaseDate": "05/11/2023",
-        "imageUrl": "assets/images/los-elegidos-album-cover.jpg",
+        "imageUrl": "assets/images/album-covers/los-elegidos-album-cover.jpg",
         "id": "833973941",
         "artistPlaylist": false,
         "isTrack": true,
@@ -45,7 +45,7 @@
     "albums": [
       {
         "releaseDate": "03/01/2022",
-        "imageUrl": "assets/images/GBL-album-cover.jpg",
+        "imageUrl": "assets/images/album-covers/GBL-album-cover.jpg",
         "id": "7eAg2VNN0F5vkuwCLyGErH",
         "artistPlaylist": true,
         "isTrack": false,
@@ -59,7 +59,7 @@
     "albums": [
       {
         "releaseDate": "01/01/2014",
-        "imageUrl": "assets/images/perdita-mundi-album-cover.jpg",
+        "imageUrl": "assets/images/album-covers/perdita-mundi-album-cover.jpg",
         "id": "2407477905",
         "artistPlaylist": false,
         "isTrack": false,
@@ -68,7 +68,7 @@
       },
       {
         "releaseDate": "10/01/2013",
-        "imageUrl": "assets/images/de-musica-ligera-album-cover.jpg",
+        "imageUrl": "assets/images/album-covers/de-musica-ligera-album-cover.jpg",
         "id": "1022444437",
         "artistPlaylist": false,
         "isTrack": false,
@@ -77,7 +77,7 @@
       },
       {
         "releaseDate": "10/01/2012",
-        "imageUrl": "assets/images/friogenia-album-cover.jpg",
+        "imageUrl": "assets/images/album-covers/friogenia-album-cover.jpg",
         "id": "1387061987",
         "artistPlaylist": false,
         "isTrack": false,
@@ -86,7 +86,7 @@
       },
       {
         "releaseDate": "04/01/2010",
-        "imageUrl": "assets/images/maida-vale-album-cover.jpg",
+        "imageUrl": "assets/images/album-covers/maida-vale-album-cover.jpg",
         "id": "115197473",
         "artistPlaylist": false,
         "isTrack": false,

@@ -27,7 +27,7 @@
     "freeEntry": true,
     "concertHall": {
       "name": "Héroe Café Espectáculo",
-      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "location": "https://maps.app.goo.gl/FkjoMJ8KaLeHKH429",
       "url": "https://heroecafeespectaculo.com/"
     },
     "chronicle": null,
@@ -37,5 +37,20 @@
         "url": "https://sumergente.com/"
       }
     ]
+  },
+  {
+    "date": "05/25/2024",
+    "time": { "hours": 19, "minutes": 0 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": true,
+    "concertHall": {
+      "name": "Sonic Boom",
+      "location": "https://maps.app.goo.gl/tkATnzKnRmwss6TcA",
+      "url": "http://www.sonicboom.es/"
+    },
+    "chronicle": null,
+    "guestArtists": [],
+    "nameEvent": "Presentación de videclip"
   }
 ]

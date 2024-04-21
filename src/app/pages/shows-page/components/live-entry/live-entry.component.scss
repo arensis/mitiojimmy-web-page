@@ -7,7 +7,7 @@
   min-height: 150px;
   width: 100%;
   max-width: 35rem;
-  background: #00000020;
+  background: $background-overlay-dark;
   border-radius: 11px;
   padding: 10px;
   justify-content: flex-start;
@@ -31,7 +31,7 @@
 a {
   color: $secondary-link-color;
   &:hover {
-    color: $secondary-link-hover-color;
+    color: $primary-link-color;
   }
 
   &:focus {
@@ -40,10 +40,10 @@ a {
 }
 
 .faTwitter {
-  color: #fff !important;
+  color: $secondary-link-color !important;
   background-color: $twitter-color !important;
   &:hover {
-    color: rgb(13, 69, 106) !important;
+    color: $twitter-hover !important;
   }
 
   .label {
@@ -59,10 +59,10 @@ a {
 
 
 .faFacebook {
-  color: #fff !important;
+  color: $secondary-link-color !important;
   background-color: $facebook-color !important;
   &:hover {
-    color: #0c3a75 !important;
+    color: $facebook-hover !important;
   }
 
   .label {
@@ -76,10 +76,10 @@ a {
 }
 
 .faRadio {
-  color: #fff !important;
-  background-color: #e4c112 !important;
+  color: $secondary-link-color !important;
+  background-color: $media-chronicle-radio !important;
   &:hover {
-    color: #5b4d08 !important;
+    color: $media-chronicle-radio-hover !important;
   }
 
   .label {
@@ -93,7 +93,7 @@ a {
 }
 
 .faFeeds {
-  color: #fff !important;
+  color: $secondary-link-color !important;
   background-color: $primary-link-hover-color !important;
   &:hover {
     color: $primary-link-focus-color !important;

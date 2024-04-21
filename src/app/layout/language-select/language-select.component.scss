@@ -1,16 +1,21 @@
+@import 'src/variables.scss';
+
 a {
-  width: 80px !important;
+  width: 100px !important;
 }
 
 .language-button {
   display: flex;
   align-items: center;
+  background-color: $background-overlay-light;
+  border-radius: 6px;
+  padding: 4px 4px 4px 9px;
 
   mat-icon {
     border-radius: 0;
   }
   &:hover {
-    color:cornflowerblue;
+    color:$primary-link-hover-color;
   }
 }
 
