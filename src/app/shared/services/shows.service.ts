@@ -6,7 +6,7 @@ import { LiveEntry } from "src/app/model/shows/LiveEntry";
 export class ShowsService {
   getNewShowsGroupedByYearsAndMonths(shows: LiveEntry[]) {
     const newShowsList: LiveEntry[] = shows.filter(item =>
-      moment(item.date).isAfter(moment()));
+      moment(item.date).add(1, 'days').isAfter(moment()));
 
     return this.groupByYearsAndMonths(newShowsList);
   }

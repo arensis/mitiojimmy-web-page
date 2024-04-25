@@ -1,0 +1,115 @@
+@import '/src/variables.scss';
+
+a:hover, a:focus {
+  color: inherit;
+  filter: drop-shadow(2px 4px 6px gray);
+}
+
+.release-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 75px;
+  min-width: 319px;
+  height: 170px;
+  width: 90%;
+  max-width: 456px;
+  background: rgba(37, 37, 37, 0.34);
+  border-radius: 11px;
+  padding: 10px;
+
+  @include xs {
+    row-gap: 0.7rem;
+  }
+
+  @include sm {
+    row-gap: 0.7rem;
+  }
+
+  .release-news-title {
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Stentiga';
+    color: #fffdc6;
+    margin-bottom: 0.7rem;
+
+    @include xs {
+      justify-content: center;
+      margin-bottom: 0rem;
+    }
+
+    @include sm {
+      justify-content: center;
+      margin-bottom: 0rem;
+    }
+  }
+
+  .release-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .release-card-content {
+      display: flex;
+      flex-direction: row;
+      height: 118px;
+
+
+      .release-cover-container {
+        margin-right: 60px;
+        flex-grow: 1;
+      }
+
+      .release-info-container {
+        display: flex;
+        flex-grow: 14;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0.5rem;
+        justify-content: center;
+
+        .release-record-title {
+          font-size: 1.5rem;
+          letter-spacing: 0.2rem;
+
+          @include xs {
+            font-size: 1.3rem;
+            letter-spacing: 0.2rem;
+          }
+
+          @include sm {
+            font-size: 1.3rem;
+            letter-spacing: 0.2rem;
+          }
+        }
+
+        .release-record-date {
+          @include xs {
+            font-size: .7rem;
+          }
+
+          @include sm {
+            font-size: .7rem;
+          }
+        }
+      }
+    }
+
+    .presave {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      column-gap: 0.5rem;
+      justify-content: center;
+
+      fa-icon {
+        font-size: 1.2rem;
+        color: $spotify-color;
+      }
+
+      span {
+        letter-spacing: 0.2rem;
+      }
+    }
+  }
+}

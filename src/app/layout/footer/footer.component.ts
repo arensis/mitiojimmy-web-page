@@ -16,6 +16,7 @@ export class FooterComponent implements OnInit {
     {class: 'faSpotify', icon: faSpotify, link: 'https://open.spotify.com/artist/32WVgopB3xieUzzjOfOS85?si=z9hh-GyaShisFwkLp1SBXg'},
     {class: 'faBandcamp', icon: faBandcamp, link: 'https://mitiojimmy.bandcamp.com/'},
     {class: 'faYoutube', icon: faYoutube, link: 'https://www.youtube.com/@mitiojimmy'},
+    {class: 'faTiktok', icon: faTiktok, link: 'https://www.tiktok.com/@mitiojimmy'},
     {class: 'faFacebook', icon: faFacebook, link: 'https://www.facebook.com/mitiojimmy'},
     {class: 'faTwitter', icon: faTwitter, link: 'https://twitter.com/mitiojimmy'},
     {class: 'faSoundcloud', icon: faSoundcloud, link: 'https://soundcloud.com/mitiojimmy' },
@@ -23,7 +24,6 @@ export class FooterComponent implements OnInit {
     {class: 'faItunes', icon: faItunes, link: ''},
     {class: 'faDeezer', icon: faDeezer, link: ''},
     {class: 'faVimeo', icon: faVimeo, link: ''},
-    {class: 'faTiktok', icon: faTiktok, link: 'https://www.tiktok.com/@mitiojimmy'},
   ];
 
   ngOnInit(): void {

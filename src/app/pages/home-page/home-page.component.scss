@@ -40,6 +40,18 @@ div.container {
   }
 }
 
+.home-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-news {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  margin: 12vh 0 0 5vw;
+}
+
 h1 {
   display: flex;
   justify-content: center;

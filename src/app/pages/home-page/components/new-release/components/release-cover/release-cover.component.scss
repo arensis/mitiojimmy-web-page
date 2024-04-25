@@ -1,0 +1,55 @@
+.release-cover {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 7px;
+  border: 1px solid #878787;
+  border-radius: 3px;
+  box-shadow: 2px 1px 2px 0px #00000066;
+  z-index: 1;
+}
+
+.release-vinyl-LP, .release-vinyl-EP, .release-vinyl-SINGLE {
+  position: relative;
+  bottom: 94px;
+  left: 59px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, 0.85) 40%) no-repeat 100% 0, linear-gradient(60deg, rgba(42, 41, 40, 0.85) 60%, transparent 60%) no-repeat 0 100%, repeating-radial-gradient(#2a2928, #2a2928 4px, #ada9a0 5px, #2a2928 6px);
+  background-size: 50% 100%, 100% 50%, 100% 100%;
+  z-index: 0;
+}
+
+.release-vinyl-LP:after, .release-vinyl-EP:after, .release-vinyl-SINGLE:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: #b5ac9a;
+  content: "";
+}
+
+.release-vinyl-LP:after {
+  margin: -14px;
+  width: 26px;
+  height: 26px;
+  border: solid 1px #d9a388;
+  box-shadow: 0 0 0 4px #da5b33, inset 0 0 0 10px #da5b33;
+}
+
+.release-vinyl-EP:after {
+  margin: -20px;
+  width: 40px;
+  height: 40px;
+  border: solid 1px #da5b33;
+  box-shadow: 0 0 0 4px #d9d9d9, inset 0 0 0 10px #d9d9d9;
+}
+
+.release-vinyl-SINGLE:after {
+  margin: -25px;
+  width: 50px;
+  height: 50px;
+  border: solid 1px #f37a7a;
+  box-shadow: 0 0 0 4px #31813b, inset 0 0 0 10px #31813b;
+}

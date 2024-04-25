@@ -59,7 +59,6 @@ main {
 
 .app-container {
   min-height: 80%;
-  padding-bottom: 36px;
 }
 
 footer {
@@ -67,7 +66,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem 0 1.5rem;
   border-top: 8px solid $border-color;
   margin-top: -36px; // footer in index
 }
@@ -195,7 +194,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
+    margin-bottom: 2rem;
 
     .copyright, .web-maker, .legal-advisories {
       display: inline-flex;
@@ -282,7 +281,9 @@ h2 {
   footer {
     .social-icons a {
       font-size: 1.5rem !important;
-
+      svg {
+        width: 1.5rem !important;
+      }
     }
   }
 }
@@ -323,6 +324,6 @@ h2 {
   }
 }
 
-.robot-sections, .robot-header, .robot-description {
+.robot-sections, .robot-header, .robot-description, .robot-footer {
  display: none;
 }

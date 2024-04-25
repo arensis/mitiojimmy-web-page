@@ -14,11 +14,20 @@
   "live-entry": {
     "guest-artist": "Invitados",
     "concert-hall": "Sala",
+    "show": "Concierto",
     "tickets-button": {
       "commin-soon": "Próximamente",
       "buy": "Comprar entradas",
       "free-entry": "Entrada libre"
     }
+  },
+  "release": {
+    "new-release-message": "Estrenamos nuevo {{album_type}}!",
+    "latest-record-message": "Escucha nuestro último {{album_type}}!",
+    "available-from": "Disponible desde el {{day_number}} de {{month_name}}",
+    "available-on": "Disponible el {{day_number}} de {{month_name}}",
+    "click-presave": "Click para presave",
+    "click-listen": "Click para escuchar"
   },
   "biography": {
     "p1": "Mi tío Jimmy es el proyecto en solitario de Aksel Gil.",

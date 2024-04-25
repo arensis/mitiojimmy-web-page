@@ -1,0 +1,44 @@
+<a *ngIf="release" [href]="release.presaveLink">
+  <div class="release-card">
+    <div class="release-news-title">
+      <span *ngIf="!releaseIsPublished">
+        {{ ('release.new-release-message' | translate: { album_type: release.albumType}).toUpperCase() }}
+      </span>
+      <span *ngIf="releaseIsPublished">
+        {{ ('release.latest-record-message' | translate: { album_type: release.albumType}).toUpperCase() }}
+      </span>
+    </div>
+    <div class="release-card-container">
+      <div class="release-card-content">
+        <div class="release-cover-container">
+          <app-release-cover
+            [coverImage]="release.cover"
+            [releaseType]="release.albumType"
+          ></app-release-cover>
+        </div>
+        <div class="release-info-container">
+          <span class="release-record-title">
+            {{ release.recordName }}
+          </span>
+          <span *ngIf="!releaseIsPublished" class="release-record-date">
+            {{ ('release.available-on' | translate: { day_number: 1, month_name: monthName}).toUpperCase() }}
+          </span>
+          <span *ngIf="releaseIsPublished" class="release-record-date">
+            {{ ('release.available-from' | translate: { day_number: 1, month_name: monthName}).toUpperCase() }}
+          </span>
+        </div>
+      </div>
+      <div class="presave">
+        <fa-icon *ngIf="!releaseIsPublished" [icon]="spotifyIcon"></fa-icon>
+        <span *ngIf="!releaseIsPublished">
+          {{ ('release.click-presave' | translate ).toUpperCase() }}
+        </span>
+        <mat-icon *ngIf="releaseIsPublished">graphic_eq</mat-icon>
+        <span *ngIf="releaseIsPublished">
+          {{ ('release.click-listen' | translate ).toUpperCase() }}
+        </span>
+      </div>
+    </div>
+  </div>
+</a>
+

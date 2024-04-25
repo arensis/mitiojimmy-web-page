@@ -1,0 +1,30 @@
+<a *ngIf="existsNewShow" [routerLink]="['/shows']">
+  <div class="nearest-show-card">
+    <div class="date-container">
+      <div class="date">
+        <span class="month">{{ monthName }}</span>
+        <span class="day">{{ dayNumber }}</span>
+      </div>
+      <mat-divider vertical></mat-divider>
+      <div class="location">
+        <span class="city">{{ liveEntry.city.toUpperCase() }}</span>
+        <span class="hall">
+          {{ ('live-entry.concert-hall' | translate ).toUpperCase() }} {{ liveEntry.concertHall.name.toUpperCase() }}
+        </span>
+      </div>
+    </div>
+
+    <div class="additional-info-container">
+      <mat-divider vertical></mat-divider>
+      <div class="additional-info">
+        <span class="event-type">
+          {{ isEvent ? liveEntry.nameEvent.toUpperCase() : ('live-entry.show' | translate ).toUpperCase() }}
+        </span>
+        <div class="time">
+          <mat-icon>access_time</mat-icon>
+          <span>{{liveEntry.time.hours}}:{{minutes}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>

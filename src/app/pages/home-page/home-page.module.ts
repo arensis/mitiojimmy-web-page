@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { HomePageComponent } from './home-page.component';
 import { HomePageRoutingModule } from './home-page-routing.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from 'src/app/shared/shared.module';
+import * as Components from './components/index';
 
 @NgModule({
   declarations: [
-    HomePageComponent
+    HomePageComponent,
+    Components.NearestShowComponent,
+    Components.NewReleaseComponent,
+    Components.ReleaseCoverComponent
   ],
   imports: [
     HomePageRoutingModule,

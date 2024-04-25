@@ -32,4 +32,11 @@ export class DataService {
     return this.httpClient.get<any>(path)
         .pipe(map((result) => result));
   }
+
+  public getReleasesData(): Observable<any[]> {
+    const path = "assets/data/releases-data.json"
+
+    return this.httpClient.get<any>(path)
+      .pipe(map((result) => result));
+  }
 }

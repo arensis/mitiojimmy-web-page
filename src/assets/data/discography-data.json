@@ -9,7 +9,8 @@
         "artistPlaylist": false,
         "isTrack": true,
         "streamingService": "SPOTIFY",
-        "albumName": "El fin es gradual"
+        "albumName": "El fin es gradual",
+        "albumType": "SINGLE"
       },
       {
         "releaseDate": "09/10/2023",
@@ -18,7 +19,8 @@
         "artistPlaylist": false,
         "isTrack": true,
         "streamingService": "SPOTIFY",
-        "albumName": "Planteamiento matemático"
+        "albumName": "Planteamiento matemático",
+        "albumType": "SINGLE"
       },
       {
         "releaseDate": "07/05/2023",
@@ -27,7 +29,8 @@
         "artistPlaylist": false,
         "isTrack": true,
         "streamingService": "SPOTIFY",
-        "albumName": "Dragon's son"
+        "albumName": "Dragon's son",
+        "albumType": "SINGLE"
       },
       {
         "releaseDate": "05/11/2023",
@@ -36,7 +39,8 @@
         "artistPlaylist": false,
         "isTrack": true,
         "streamingService": "BANDCAMP",
-        "albumName": "Los Elegidos"
+        "albumName": "Los Elegidos",
+        "albumType": "SINGLE"
       }
     ]
   },
@@ -50,7 +54,8 @@
         "artistPlaylist": true,
         "isTrack": false,
         "streamingService": "SPOTIFY",
-        "albumName": "Singles Collection"
+        "albumName": "Singles Collection",
+        "albumType": "EP"
       }
     ]
   },
@@ -64,7 +69,8 @@
         "artistPlaylist": false,
         "isTrack": false,
         "streamingService": "BANDCAMP",
-        "albumName": "Perdita mundi"
+        "albumName": "Perdita mundi",
+        "albumType": "EP"
       },
       {
         "releaseDate": "10/01/2013",
@@ -73,7 +79,8 @@
         "artistPlaylist": false,
         "isTrack": false,
         "streamingService": "BANDCAMP",
-        "albumName": "De música ligera"
+        "albumName": "De música ligera",
+        "albumType": "SINGLE"
       },
       {
         "releaseDate": "10/01/2012",
@@ -82,7 +89,8 @@
         "artistPlaylist": false,
         "isTrack": false,
         "streamingService": "BANDCAMP",
-        "albumName": "Friogenia"
+        "albumName": "Friogenia",
+        "albumType": "LP"
       },
       {
         "releaseDate": "04/01/2010",
@@ -91,7 +99,8 @@
         "artistPlaylist": false,
         "isTrack": false,
         "streamingService": "BANDCAMP",
-        "albumName": "Maida Vale"
+        "albumName": "Maida Vale",
+        "albumType": "LP"
       }
     ]
   }

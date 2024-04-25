@@ -1,3 +1,4 @@
+import { AlbumType } from "../release/AlbumType";
 import { StreamingServiceType } from "./StreamingServiceType";
 
 export interface Album {
@@ -8,4 +9,6 @@ export interface Album {
   isTrack: boolean;
   streamingService: StreamingServiceType;
   albumName: string;
+  albumType: AlbumType;
+  presaveLink: string;
 }
