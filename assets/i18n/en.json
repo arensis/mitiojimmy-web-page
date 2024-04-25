@@ -14,11 +14,20 @@
   "live-entry": {
     "guest-artist": "Guests",
     "concert-hall": "Hall",
+    "show": "Live show",
     "tickets-button": {
       "commin-soon": "Comming soon",
       "buy": "Buy tickets",
       "free-entry": "Free Entry"
     }
+  },
+  "release": {
+    "new-release-message": "We release a new {{album_type}}!",
+    "latest-record-message": "Listen to our latest {{album_type}}!",
+    "available-from": "Available from {{month_name}} {{day_number}}",
+    "available-on": "Available {{month_name}} {{day_number}}",
+    "click-presave": "Click to presave",
+    "click-listen": "Click to listen"
   },
   "biography": {
     "p1": "Mi tío Jimmy Aksel Gil's solo project.",
