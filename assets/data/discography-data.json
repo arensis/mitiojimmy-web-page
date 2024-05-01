@@ -3,6 +3,16 @@
     "bandName": "Mi tío Jimmy",
     "albums": [
       {
+        "releaseDate": "05/01/2024",
+        "imageUrl": "assets/images/album-covers/mi-tio-jimmy-album-cover.png",
+        "id": "5mGDEP1KH03FmEUthrppl3",
+        "artistPlaylist": false,
+        "isTrack": false,
+        "streamingService": "SPOTIFY",
+        "albumName": "Mi tío jimmy",
+        "albumType": "LP"
+      },
+      {
         "releaseDate": "12/03/2023",
         "imageUrl": "assets/images/album-covers/el-fin-es-gradual-album-cover.jpeg",
         "id": "5TvefLeNamyzVSqHg4rBaK",
