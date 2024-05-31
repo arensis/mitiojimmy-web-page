@@ -3,6 +3,10 @@
     "bandName": "Mi tío Jimmy",
     "videos": [
       {
+        "releaseDate": "05/25/2024",
+        "id": "5D19tYQ5PF8"
+      },
+      {
         "releaseDate": "10/10/2023",
         "id": "X8jDJRDnlIc"
       }
