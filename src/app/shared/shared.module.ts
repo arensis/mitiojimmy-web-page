@@ -8,8 +8,12 @@ import SEOService from './services/seo.service';
 import { I18nService } from './services/i18n.service';
 import { GoogleAnalyticsService } from './services/google-analytics.service';
 import { DataService } from './services/data.service';
+import { HoverClassDirective } from './directives/hover-class.directive';
 
 @NgModule({
+  declarations: [
+    HoverClassDirective
+  ],
   imports: [
     CommonModule,
     MaterialModule,
@@ -27,7 +31,8 @@ import { DataService } from './services/data.service';
     MaterialModule,
     FontAwesomeModule,
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    HoverClassDirective
   ]
 })
 export class SharedModule { }

@@ -6,4 +6,5 @@ export interface Release {
   presaveLink: string;
   date: Date;
   recordName: string;
+  purchaseCDLink: string;
 }

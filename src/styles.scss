@@ -196,7 +196,7 @@ footer {
     justify-content: center;
     margin-bottom: 2rem;
 
-    .copyright, .web-maker, .legal-advisories {
+    .copyright, .legal-advisories {
       display: inline-flex;
       flex-wrap: nowrap;
       align-items: center;
@@ -218,7 +218,7 @@ footer {
       }
     }
 
-    .copyright::after, .legal-advisories::after {
+    .copyright::after {
       content: '|';
       margin: 4px;
     }

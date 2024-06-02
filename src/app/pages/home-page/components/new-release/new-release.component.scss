@@ -1,5 +1,15 @@
 @import '/src/variables.scss';
 
+.release-main-container div:has(.purchase-cd.actived) {
+  color: inherit;
+  filter: drop-shadow(2px 4px 6px rgb(147, 190, 147));
+}
+
+.release-main-container div:has(.presave.actived) {
+  color: inherit;
+  filter: drop-shadow(2px 4px 6px rgb(147, 157, 190));
+}
+
 a:hover, a:focus {
   color: inherit;
   filter: drop-shadow(2px 4px 6px gray);
@@ -9,7 +19,7 @@ a:hover, a:focus {
   display: flex;
   flex-direction: column;
   min-height: 75px;
-  height: 170px;
+  height: 200px;
   background: rgba(37, 37, 37, 0.34);
   border-radius: 11px;
   padding: 10px;
@@ -20,6 +30,7 @@ a:hover, a:focus {
 
   @include sm {
     row-gap: 0.6rem;
+    height: 190px;
   }
 
   .release-news-title {
@@ -37,6 +48,7 @@ a:hover, a:focus {
 
     @include sm {
       justify-content: center;
+      font-size: 1.2rem;
       margin-bottom: 0rem;
     }
   }
@@ -92,20 +104,36 @@ a:hover, a:focus {
       }
     }
 
-    .presave {
+    .action-buttons {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      column-gap: 0.5rem;
-      justify-content: center;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      margin-top: 1rem;
 
-      fa-icon {
-        font-size: 1.2rem;
-        color: $spotify-color;
+      .presave, .purchase-cd {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 0.5rem;
+        justify-content: center;
+
+        fa-icon {
+          font-size: 1.2rem;
+          color: $spotify-color;
+        }
+
+        span {
+          letter-spacing: 0.2rem;
+        }
       }
 
-      span {
-        letter-spacing: 0.2rem;
+      .presave.actived {
+        color: blue;
+      }
+
+      .purchase-cd.actived {
+        color: green;
       }
     }
   }

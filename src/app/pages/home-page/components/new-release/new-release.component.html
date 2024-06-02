@@ -1,4 +1,4 @@
-<a *ngIf="release" [href]="release.presaveLink">
+<div *ngIf="release" class="release-main-container">
   <div class="release-card">
     <div class="release-news-title">
       <span *ngIf="!releaseIsPublished">
@@ -28,17 +28,25 @@
           </span>
         </div>
       </div>
-      <div class="presave">
-        <fa-icon *ngIf="!releaseIsPublished" [icon]="spotifyIcon"></fa-icon>
-        <span *ngIf="!releaseIsPublished">
-          {{ ('release.click-presave' | translate ).toUpperCase() }}
-        </span>
-        <mat-icon *ngIf="releaseIsPublished">graphic_eq</mat-icon>
-        <span *ngIf="releaseIsPublished">
-          {{ ('release.click-listen' | translate ).toUpperCase() }}
-        </span>
+      <div class="action-buttons">
+        <a class="presave" hover-class="actived" [href]="release.presaveLink">
+          <fa-icon *ngIf="!releaseIsPublished" [icon]="spotifyIcon"></fa-icon>
+          <span *ngIf="!releaseIsPublished">
+            {{ ('release.click-presave' | translate ).toUpperCase() }}
+          </span>
+          <mat-icon *ngIf="releaseIsPublished">graphic_eq</mat-icon>
+          <span *ngIf="releaseIsPublished">
+            {{ ('release.click-listen' | translate ).toUpperCase() }}
+          </span>
+        </a>
+        <a class="purchase-cd" hover-class="actived" [href]="release.purchaseCDLink" *ngIf="releaseHasPurchasedCDLink">
+          <mat-icon>shopping_cart</mat-icon>
+          <span>
+            {{ ('release.click-purchase-cd' | translate ).toUpperCase() }}
+          </span>
+        </a>
       </div>
     </div>
   </div>
-</a>
+</div>
 

@@ -79,7 +79,7 @@ footer {
     align-items: center;
     justify-content: center;
 
-    .copyright, .web-maker, .legal-advisories {
+    .copyright, .legal-advisories {
       display: inline-flex;
       flex-wrap: nowrap;
       align-items: center;
@@ -101,7 +101,7 @@ footer {
       }
     }
 
-    .copyright::after, .legal-advisories::after {
+    .copyright::after {
       content: '|';
       margin: 4px;
     }

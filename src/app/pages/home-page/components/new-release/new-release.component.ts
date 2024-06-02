@@ -23,6 +23,7 @@ export class NewReleaseComponent implements OnInit, OnDestroy {
 
   release: Release | undefined;
   releaseIsPublished!: boolean;
+  releaseHasPurchasedCDLink!: boolean;
   languageSubscription!: Subscription;
   monthName!: string;
 
@@ -43,6 +44,7 @@ export class NewReleaseComponent implements OnInit, OnDestroy {
     this.dataService.getReleasesData().subscribe(releases => {
       this.release = this.releasesService.findLatestRelease(releases);
       this.releaseIsPublished = moment(this.release.date).isBefore(moment());
+      this.releaseHasPurchasedCDLink = (this.release.purchaseCDLink || '').length > 0;
       this.updateDateTranslations(language);
     });
   }
