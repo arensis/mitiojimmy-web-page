@@ -27,7 +27,8 @@
     "available-from": "Disponible desde el {{day_number}} de {{month_name}}",
     "available-on": "Disponible el {{day_number}} de {{month_name}}",
     "click-presave": "Click para presave",
-    "click-listen": "Click para escuchar"
+    "click-listen": "Streaming",
+    "click-purchase-cd": "Comprar CD"
   },
   "biography": {
     "p1": "Mi tío Jimmy es el proyecto en solitario de Aksel Gil.",
