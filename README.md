@@ -89,12 +89,48 @@ Se tiene que ejecutar en la raíz del proyecto (donde se encuentra el fichero pa
 npm start
 ```
 
-## Publicar cambios en la web
+## Actualizar contenido
 
-Una vez que se ha hecho commit de los cambios (recomendable también subir los cambios al repositorio con git push) ejecutar el comando
+Para actualizar contenido sólo necesitamos modificar los ficheros de la ruta:
+
+```bash
+src/assets/data
+```
+
+Ya existen ejemplos en los que fijarse para añadir una nueva entrada de datos en cada uno de los ficheros, una vez añadida la nueva entrada de datos guardamos y procedemos a añadir los datos al histórico de git y posteriormente publicaremos los cambios en la web:
+
+### Añadir los cambios al histórico de git
+
+Primero añadiremos al índice los cambios que queremos incluir, para añadir todos los cambios realizados utilizaremos el comando:
+
+```bash
+git add .
+```
+
+Comprobaremos si todos los cambios han sido indexados correctamente, para ello usaremos el comando:
+
+```bash
+git status
+```
+
+Si todo está correctamente indexado haremos commit de los cambios indexados añadiendo un mensaje que describa los cambios realizados entre comillas dobles:
+
+```bash
+git commit -m "Mensaje descriptivo de los cambios"
+```
+
+Y por último subiremos los cambios al repositorio remoto de github:
+
+```bash
+git push
+```
+
+### Publicar cambios en la web
+
+Una vez que se ha hecho commit de los cambios para publicar los cambios y que sean visibles en la web deberemos ejecutar el siguiente comando:
 
 ```bash
 npm run deploy
 ```
 
-Esto hará el build del proyecto y subirá los ficheros a la rama de despliegue gh-pages.
+Esto hará el build del proyecto y subirá los ficheros a la rama de despliegue gh-pages, podremos ver el avance de la publicación dentro de la pestaña del repositorio Actions.
