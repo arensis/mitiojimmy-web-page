@@ -2,7 +2,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { LiveEntry } from '../../../../model/shows/LiveEntry';
 import { Component, Input, OnInit } from '@angular/core';
 import { GoogleAnalyticsService } from 'src/app/shared/services/google-analytics.service';
-import { faTwitter, faFacebook, IconDefinition, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, IconDefinition, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faMicrophone, faRss } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 
@@ -32,7 +32,7 @@ export class LiveEntryComponent implements OnInit {
     {class: "faFeeds", icon: faRss}
   ];
 
-  chronicleStyle: { class: string, icon: IconDefinition } = this.chronicleIcons[3];
+  chronicleStyle: { class: string, icon: any } = this.chronicleIcons[3];
 
   ngOnInit(): void {
     this.guestArtist = this.liveEntry.guestArtists
