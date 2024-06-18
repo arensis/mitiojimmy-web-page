@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mitiojimmy-web-page:build:production"
+              "buildTarget": "mitiojimmy-web-page:build:production"
             },
             "development": {
-              "browserTarget": "mitiojimmy-web-page:build:development"
+              "buildTarget": "mitiojimmy-web-page:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mitiojimmy-web-page:build"
+            "buildTarget": "mitiojimmy-web-page:build"
           }
         },
         "test": {
