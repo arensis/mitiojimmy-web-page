@@ -15,12 +15,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/mitiojimmy-web-page",
+            "outputPath": {
+              "base": "dist/mitiojimmy-web-page"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "src/polyfills.ts"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -34,7 +37,13 @@
             "scripts": [],
             "allowedCommonJsDependencies": [
               "moment"
-           ]
+          ],
+          "browser": "src/main.ts",
+          "stylePreprocessorOptions": {
+            "includePaths": [
+              "."
+            ]
+          }
           },
           "configurations": {
             "production": {
@@ -59,9 +68,7 @@
               "outputHashing": "bundles"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true

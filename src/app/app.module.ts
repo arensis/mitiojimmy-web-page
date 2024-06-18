@@ -9,33 +9,27 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import * as PageModules from './pages';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FontAwesomeModule,
-    MaterialModule,
-    LayoutModule,
-    HttpClientModule,
-    PageModules.BioPageModule,
-    PageModules.ContactPageModule,
-    PageModules.HomePageModule,
-    PageModules.MusicPageModule,
-    PageModules.LegalAdvisoriesPageModule,
-    PageModules.HomePageModule,
-    PageModules.ShowsPageModule,
-    PageModules.VideosPageModule,
-    TranslateModule,
-    TranslateModule.forRoot(),
-    SharedModule
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FontAwesomeModule,
+        MaterialModule,
+        LayoutModule,
+        PageModules.BioPageModule,
+        PageModules.ContactPageModule,
+        PageModules.HomePageModule,
+        PageModules.MusicPageModule,
+        PageModules.LegalAdvisoriesPageModule,
+        PageModules.HomePageModule,
+        PageModules.ShowsPageModule,
+        PageModules.VideosPageModule,
+        TranslateModule,
+        TranslateModule.forRoot(),
+        SharedModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
