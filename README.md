@@ -45,10 +45,14 @@ En caso de que diga que no encuentra el comando nvm revisar la solución de erro
 Utilizaremos los siguientes comandos:
 
 ```bash
-nvm install 18.0.0
+nvm install 18
+
+nvm alias default 18
 
 nvm use 18.0.0
 ```
+
+Estos comandos instalarán la última versión de node 18 y la pondrán como la versión de node por defecto del sistema.
 
 Podremos comprobar si se ha instalado y la versión del mismo mediante el comando:
 
@@ -91,15 +95,29 @@ npm start
 
 ## Actualizar contenido
 
+### Datos
+
+Los datos es el contenido que puede ser representado por una lista, esto son la discografía, las releases, los conciertos y los vídeos.
+
 Para actualizar contenido sólo necesitamos modificar los ficheros de la ruta:
 
 ```bash
 src/assets/data
 ```
 
-Ya existen ejemplos en los que fijarse para añadir una nueva entrada de datos en cada uno de los ficheros, una vez añadida la nueva entrada de datos guardamos y procedemos a añadir los datos al histórico de git y posteriormente publicaremos los cambios en la web:
+### Traducciones
 
-### Añadir los cambios al histórico de git
+Las traducciones es el contenido que puede ser internacionalizado, esto se corresponde tanto con textos largos como la biografía o en un futuro los avisos legales, como títulos, subtítulos, etiquetas...
+
+Para actualizar este tipo de información tendríamos que modificar los ficheros del idioma correspondiente que se encuentran en la ruta:
+
+```bash
+src/assets/i18n
+```
+
+Ya existen ejemplos en los que fijarse para añadir una nueva entrada de datos en cada uno de los ficheros (tanto en la listas de elementos como en las traducciones), una vez añadida la nueva entrada de datos guardamos y procedemos a añadir los datos al histórico de git y posteriormente publicaremos los cambios en la web
+
+## Añadir los cambios al histórico de git
 
 Primero añadiremos al índice los cambios que queremos incluir, para añadir todos los cambios realizados utilizaremos el comando:
 
@@ -127,10 +145,8 @@ git push
 
 ### Publicar cambios en la web
 
-Una vez que se ha hecho commit de los cambios para publicar los cambios y que sean visibles en la web deberemos ejecutar el siguiente comando:
+Los cambios en la web son publicados a través de un workflow de github que se encarga del proceso. El fichero de configuración de este workflow se encuentra en el directorio .github/workflows. 
 
-```bash
-npm run deploy
-```
+El workflow se activará cada vez que se realice un push sobre la rama main, este workflow realizará el compilado de la aplicación y se encargará de publicar el compilado y empaquetado para que pueda ser publicado el artefacto en Github Pages.
 
-Esto hará el build del proyecto y subirá los ficheros a la rama de despliegue gh-pages, podremos ver el avance de la publicación dentro de la pestaña del repositorio Actions.
+Ahora ya no se dispone de una rama gh-pages como antes para publicar el contenido, en la configuración del respositorio se ha cambiado el modo de publicación para la integración con Github Actions.
