@@ -1,5 +1,20 @@
 [
   {
+    "date": "09/08/2024",
+    "time": { "hours": 12, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "https://www.notikumi.com/2024/9/8/concierto-de-mi-tio-jimmy-en-madrid-buho-real",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "chronicle": null,
+    "guestArtists": []
+  },
+  {
     "date": "05/04/2023",
     "time": { "hours": 20, "minutes": 30 },
     "city": "Madrid",
