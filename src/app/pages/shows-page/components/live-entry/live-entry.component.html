@@ -9,7 +9,7 @@
   </div>
   <div class="tickets">
     <a
-      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() !== '' && isNewShow "
+      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() !== '' && isNewShow && !liveEntry.canceled"
       mat-raised-button
       color="accent"
       [href]="liveEntry.concertHall.ticketsLink"
@@ -20,7 +20,7 @@
       {{ ('live-entry.tickets-button.buy' | translate).toUpperCase() }}
     </a>
     <a
-      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() === '' && isNewShow && !liveEntry.freeEntry"
+      *ngIf="(liveEntry.concertHall.ticketsLink || '').trim() === '' && isNewShow && !liveEntry.freeEntry && !liveEntry.canceled"
       mat-button
       color="accent"
       class="coming-soon"
@@ -30,7 +30,7 @@
       {{ ('live-entry.tickets-button.commin-soon' | translate).toUpperCase() }}
     </a>
     <a
-      *ngIf="liveEntry.freeEntry"
+      *ngIf="liveEntry.freeEntry && !liveEntry.canceled"
       mat-button
       color="accent"
       class="coming-soon"
@@ -40,7 +40,7 @@
       {{ ('live-entry.tickets-button.free-entry' | translate).toUpperCase() }}
     </a>
     <a
-      *ngIf="!isNewShow && containsShowChronicle"
+      *ngIf="!isNewShow && containsShowChronicle && !liveEntry.canceled"
       mat-raised-button
       [class]="chronicleStyle.class"
       [href]="liveEntry.chronicle.url"
@@ -50,6 +50,16 @@
         <fa-icon [icon]="chronicleStyle.icon"></fa-icon>
         <span>{{ liveEntry.chronicle.title.toUpperCase() }}</span>
       </div>
+    </a>
+    <a
+      *ngIf="liveEntry.canceled"
+      mat-button
+      color=""
+      class="canceled"
+      (click)="onTicketClick(liveEntry.concertHall.name, liveEntry.date, false)"
+    >
+      <mat-icon aria-hidden="false" fontIcon="event_busy"></mat-icon>
+      {{ ('live-entry.tickets-button.canceled' | translate).toUpperCase() }}
     </a>
   </div>
 </div>

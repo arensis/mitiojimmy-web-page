@@ -27,6 +27,25 @@ a:hover, a:focus {
   border-radius: 11px;
   padding: 10px;
   justify-content: space-between;
+
+  &.show-canceled {
+    padding-bottom: 25px;
+  }
+}
+
+.canceled {
+  background-color: #f49292;
+  position: relative;
+  bottom: 0.8rem;
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding: 0.3rem;
+  flex-wrap: nowrap;
 }
 
 

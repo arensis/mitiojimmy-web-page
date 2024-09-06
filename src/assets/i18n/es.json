@@ -18,7 +18,8 @@
     "tickets-button": {
       "commin-soon": "Próximamente",
       "buy": "Comprar entradas",
-      "free-entry": "Entrada libre"
+      "free-entry": "Entrada libre",
+      "canceled": "Cancelado"
     }
   },
   "release": {

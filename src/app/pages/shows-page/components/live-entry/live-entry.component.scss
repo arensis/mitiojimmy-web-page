@@ -28,6 +28,14 @@
   pointer-events: none;
 }
 
+.canceled {
+  background-color: $background-overlay-light;
+  color: $primary-link-focus-color !important;
+  &:hover {
+    color: $live-date-number-color !important;
+  }
+}
+
 a {
   color: $secondary-link-color;
   &:hover {

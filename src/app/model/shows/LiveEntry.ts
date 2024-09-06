@@ -13,4 +13,5 @@ export interface LiveEntry {
   guestArtists: GuestArtist[];
   nameEvent: string;
   freeEntry: boolean;
+  canceled: boolean;
 }
