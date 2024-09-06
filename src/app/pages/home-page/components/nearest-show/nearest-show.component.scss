@@ -1,3 +1,5 @@
+@import 'src/variables.scss';
+
 a:hover, a:focus {
   color: inherit;
   filter: drop-shadow(2px 4px 6px gray);
@@ -34,7 +36,7 @@ a:hover, a:focus {
 }
 
 .canceled {
-  background-color: #f49292;
+  background-color: $show-canceled;
   position: relative;
   bottom: 0.8rem;
   display: flex;

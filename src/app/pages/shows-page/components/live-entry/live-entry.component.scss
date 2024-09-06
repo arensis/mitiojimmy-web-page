@@ -29,11 +29,8 @@
 }
 
 .canceled {
-  background-color: $background-overlay-light;
-  color: $primary-link-focus-color !important;
-  &:hover {
-    color: $live-date-number-color !important;
-  }
+  background-color: $show-canceled;
+  color: $primary-link-color !important;
 }
 
 a {

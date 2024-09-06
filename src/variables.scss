@@ -55,6 +55,7 @@ $border-color: $secondary-link-color;
 $primary-text-color: $primary-link-color;
 $secondary-text-color: $secondary-background-color;
 $live-date-day-name-color: $primary-link-hover-color;
+$show-canceled: #f49292;
 
 @mixin xs {
   @media (max-width: #{$screen-xs-max}) {
