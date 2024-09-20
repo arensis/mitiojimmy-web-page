@@ -4,6 +4,7 @@ import { LiveEntry } from 'src/app/model/shows/LiveEntry';
 import moment from 'moment';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import 'moment/locale/es';
 
 @Component({
   selector: 'app-nearest-show',

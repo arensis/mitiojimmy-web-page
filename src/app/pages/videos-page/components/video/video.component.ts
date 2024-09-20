@@ -3,6 +3,7 @@ import { Video } from './../../../../model/videos/Video';
 import { Component, Input, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import moment, { Moment } from 'moment';
+import 'moment/locale/es';
 import { Subscription } from 'rxjs';
 
 @Component({

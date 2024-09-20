@@ -5,6 +5,7 @@ import { Subscription } from "rxjs";
 import SEOService from "../shared/services/seo.service";
 import { LocaleSpecifier } from "moment";
 import moment from "moment";
+import 'moment/locale/es';
 
 @Directive()
 export abstract class AbstractPage {

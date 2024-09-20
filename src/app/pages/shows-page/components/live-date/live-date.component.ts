@@ -2,6 +2,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import moment, { Moment } from 'moment';
+import 'moment/locale/es';
+
 
 @Component({
   selector: 'app-live-date',

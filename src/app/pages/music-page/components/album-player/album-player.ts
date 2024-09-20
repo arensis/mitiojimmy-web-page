@@ -1,7 +1,8 @@
 import { TranslateService } from '@ngx-translate/core';
-import { Component, Directive, Input, OnInit } from "@angular/core";
+import { Directive, Input, OnInit } from "@angular/core";
 import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
 import moment, { Moment } from "moment";
+import 'moment/locale/es';
 import { Album } from "src/app/model/discography/Album";
 import { Subscription } from 'rxjs';
 
