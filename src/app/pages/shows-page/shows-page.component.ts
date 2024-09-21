@@ -40,7 +40,7 @@ export class ShowsPageComponent extends AbstractPage implements OnInit, OnDestro
         this.newLiveEntriesGrouped = this.showsService.getNewShowsGroupedByYearsAndMonths(shows);
         this.newLiveEntryYears = Object.keys(this.newLiveEntriesGrouped);
         this.olderLiveEntriesGrouped = this.showsService.getOlderShowsGroupedByYearsAndMonths(shows);
-        this.olderLiveEntryYears = Object.keys(this.olderLiveEntriesGrouped);
+        this.olderLiveEntryYears = Object.keys(this.olderLiveEntriesGrouped).sort((a, b) => Number.parseInt(b) - Number.parseInt(a));;
         this.newLivesCount = Object.keys(this.newLiveEntriesGrouped).length;
       });
   }
