@@ -1,5 +1,21 @@
 @import 'src/variables.scss';
 
+.nearest-show-card, .canceled {
+  width: 436px;
+
+  @include xs {
+    width: 312px;
+  }
+
+  @include sm {
+    width: 323px;
+  }
+
+  @include md {
+    width: 346px;
+  }
+}
+
 a:hover, a:focus {
   color: inherit;
   filter: drop-shadow(2px 4px 6px gray);
