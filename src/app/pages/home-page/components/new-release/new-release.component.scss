@@ -34,13 +34,13 @@ a:hover, a:focus {
   @include sm {
     row-gap: 0.6rem;
     height: 190px;
-    width: 323px;
+    width: 350px;
   }
 
   @include md {
     row-gap: 0.6rem;
     height: 190px;
-    width: 346px;
+    width: 350px;
   }
 
   .release-news-title {
@@ -137,7 +137,7 @@ a:hover, a:focus {
       @include sm {
         position: relative;
         right: 10px;
-        width: 343px;
+        width: 370px;
         height: 33px;
       }
 
