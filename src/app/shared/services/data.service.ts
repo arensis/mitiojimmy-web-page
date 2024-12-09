@@ -7,30 +7,30 @@ import { environment } from "src/environments/environment";
 @Injectable()
 export class DataService {
   showsDataFileUrl: string;
+  discographyDataUrl: string;
+  videosDataUrl: string;
+  releasesDataUrl: string;
 
   constructor(private httpClient: HttpClient) {
     this.showsDataFileUrl =  environment.showsDataUrl;
+    this.discographyDataUrl =  environment.discographyDataUrl;
+    this.videosDataUrl =  environment.videosDataUrl;
+    this.releasesDataUrl =  environment.releasesDataUrl;
   }
 
   public getShowsData(): Observable<LiveEntry[]> {
-    const path = this.showsDataFileUrl;
-    return this.httpClient.get<any>(path)
-        .pipe(map((result) => result.slice().sort((a: LiveEntry, b: LiveEntry) => {
-          return new Date(a.date).getTime() - new Date(b.date).getTime()
-        })));
+    return this.httpClient.get<any>(this.showsDataFileUrl).pipe(map((result) => result));
   }
 
   public getDiscographyData(): Observable<any[]> {
-    const path = "assets/data/discography-data.json";
-
-    return this.httpClient.get<any>(path)
-        .pipe(map((result) => result));
+    return this.httpClient.get<any>(this.discographyDataUrl).pipe(map((result) => result));
   }
 
   public getVideosData(): Observable<any[]> {
-    const path = "assets/data/videos-data.json";
+    return this.httpClient.get<any>(this.videosDataUrl).pipe(map((result) => result));
+  }
 
-    return this.httpClient.get<any>(path)
-        .pipe(map((result) => result));
+  public getReleasesData(): Observable<any[]> {
+    return this.httpClient.get<any>(this.releasesDataUrl).pipe(map((result) => result));
   }
 }

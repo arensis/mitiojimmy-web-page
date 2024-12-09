@@ -28,6 +28,11 @@
   pointer-events: none;
 }
 
+.canceled {
+  background-color: $show-canceled;
+  color: $primary-link-color !important;
+}
+
 a {
   color: $secondary-link-color;
   &:hover {
@@ -36,6 +41,76 @@ a {
 
   &:focus {
     color: $secondary-link-focus-color;
+  }
+}
+
+.faTwitter {
+  color: $secondary-link-color !important;
+  background-color: $twitter-color !important;
+  &:hover {
+    color: $twitter-hover !important;
+  }
+
+  .label {
+    display: flex !important;
+  }
+
+  fa-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+}
+
+
+
+.faFacebook {
+  color: $secondary-link-color !important;
+  background-color: $facebook-color !important;
+  &:hover {
+    color: $facebook-hover !important;
+  }
+
+  .label {
+    display: flex !important;
+  }
+
+  fa-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+}
+
+.faRadio {
+  color: $secondary-link-color !important;
+  background-color: $media-chronicle-radio !important;
+  &:hover {
+    color: $media-chronicle-radio-hover !important;
+  }
+
+  .label {
+    display: flex !important;
+  }
+
+  fa-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+}
+
+.faFeeds {
+  color: $secondary-link-color !important;
+  background-color: $primary-link-hover-color !important;
+  &:hover {
+    color: $primary-link-focus-color !important;
+  }
+
+  .label {
+    display: flex !important;
+  }
+
+  fa-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
   }
 }
 

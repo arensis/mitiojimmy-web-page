@@ -1,7 +1,11 @@
+import { GuestArtist } from './../../model/shows/GuestArtist';
 import { TranslateService } from '@ngx-translate/core';
 import { Component, Input, OnInit } from '@angular/core';
-import { LiveEntry } from 'src/app/shared/model/shows/LiveEntry';
 import { GoogleAnalyticsService } from 'src/app/shared/services/google-analytics.service';
+import { faTwitter, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faMicrophone, faRss } from '@fortawesome/free-solid-svg-icons';
+import moment from 'moment';
+import { LiveEntry } from '../../model/shows/LiveEntry';
 
 @Component({
   selector: 'app-live-entry',
@@ -15,16 +19,36 @@ export class LiveEntryComponent implements OnInit {
   showBackofficeActions?: boolean = false;
 
   guestArtist?: string
+  isNewShow!: boolean;
+  containsShowChronicle!: boolean;
+  liveEntryId: string = '';
 
   constructor(
     private tranlsate: TranslateService,
     private googleAnalyticsService: GoogleAnalyticsService
   ) {}
 
+  chronicleIcons = [
+    {class: "faTwitter", icon: faTwitter},
+    {class: "faFacebook", icon: faFacebookSquare},
+    {class: "faRadio", icon: faMicrophone},
+    {class: "faFeeds", icon: faRss}
+  ];
+
+  chronicleStyle: { class: string, icon: any } = this.chronicleIcons[3];
+
   ngOnInit(): void {
     this.guestArtist = this.liveEntry.guestArtists
-      .map(guest => guest.name)
+      .map((guest: GuestArtist) => guest.name)
       .join(',');
+
+    this.isNewShow = moment(this.liveEntry.date).isAfter(moment());
+    this.containsShowChronicle = this.liveEntry.chronicle !== null;
+    this.liveEntryId = this.liveEntry.date.toString().split('/').join('-');
+    if (this.liveEntry.chronicle?.platform) {
+      this.chronicleStyle = this.chronicleIcons.find(item =>
+        item.class.toUpperCase().includes(this.liveEntry.chronicle.platform.toString())) || this.chronicleIcons[3];
+    }
   }
 
   trackByFn(index: number, item: any): number {

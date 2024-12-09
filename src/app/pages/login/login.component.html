@@ -1,0 +1,38 @@
+<header>
+  <div class="title">
+    <h1>
+      Mi tío Jimmy
+    </h1>
+    <p>BACKOFFICE</p>
+  </div>
+</header>
+<div class="login-container">
+  <div class="login-container-header">
+    <h2>Login</h2>
+  </div>
+
+  <div class="login-container-main">
+    <form class="form-container" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <mat-form-field class="mail-control" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+        <mat-error *ngIf="formGroup.get('email')!.hasError('email') && !formGroup.get('email')!.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="formGroup.get('email')!.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="password-control" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" [errorStateMatcher]="matcher">
+        <mat-error *ngIf="formGroup.get('email')!.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <button class="submit-button" mat-raised-button color="primary" type="submit">Iniciar sesión</button>
+    </form>
+  </div>
+</div>

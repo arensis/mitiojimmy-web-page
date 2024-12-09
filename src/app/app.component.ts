@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { I18nService } from './shared/services/i18n.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +6,4 @@ import { I18nService } from './shared/services/i18n.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private i18nService: I18nService, private translate: TranslateService) {
-    this.i18nService.init('es', ['es', 'en']);
-  }
 }

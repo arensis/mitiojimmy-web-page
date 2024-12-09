@@ -1,0 +1,7 @@
+<div class="live-entry" (click)="toggleLiveInfoExpaned()">
+  <div class="live-entry-info" [ngClass]="{ 'expanded': liveInfoExpanded }">
+    <app-live-date [date]="liveEntry.date"></app-live-date>
+    <app-live-info [liveEntry]="liveEntry"></app-live-info>
+  </div>
+</div>
+

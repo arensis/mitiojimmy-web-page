@@ -6,6 +6,7 @@ import { LiveEntry } from "../model/shows/LiveEntry";
 export class ShowsService {
   groupByYearsAndMonths(shows: LiveEntry[]) {
     const groupedByYears: any = {};
+
     shows.forEach(liveEntry => {
       const year = new Date(liveEntry.date).getFullYear().toString();
       const month = new Date(liveEntry.date).getMonth().toString();

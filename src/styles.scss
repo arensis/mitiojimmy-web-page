@@ -1,3 +1,23 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$primary: mat.define-palette(mat.$purple-palette, 600);
+$accent: mat.define-palette(mat.$green-palette, A700);
+$warn: mat.define-palette(mat.$red-palette, 900);
+
+$backoffice-theme: mat.define-dark-theme((
+  color: (
+    theme-type: light,
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+@include mat.all-component-themes($backoffice-theme);
+
 @import './variables.scss';
 
 @font-face {
@@ -25,8 +45,26 @@
   src: local("RussoOne-Regular"), url(./assets/fonts/RussoOne-Regular.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Stentiga";
+  src: local("Stentiga"), url(./assets/fonts/stentiga.ttf) format("truetype");
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$background-color-top: #4B4B7E;
+$background-color-bottom: #f690e1;
+
+body {
+  background-color: $background-color-top;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($background-color-top), to($background-color-bottom));
+  background-image: -webkit-linear-gradient(top,$background-color-top, $background-color-bottom);
+  background-image: -moz-linear-gradient(top, $background-color-top, $background-color-bottom);
+  background-image: -o-linear-gradient(top, $background-color-top, $background-color-bottom);
+  background-image: linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+  height: 100%;
+}
 
 header {
   position: relative;
@@ -105,7 +143,7 @@ h2 {
   background-color: $primary-background-color !important;
 
   .mat-drawer {
-    background-color: $secondary-background-color !important;
+    background-color: $primary-background-color !important;
 
     .mat-drawer-inner-container {
       display: flex;

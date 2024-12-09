@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  showsDataUrl: 'assets/data/shows-data-test.json'
+  showsDataUrl: 'assets/data/shows-data-test.json',
+  discographyDataUrl: 'assets/data/discography-data.json',
+  videosDataUrl: 'assets/data/videos-data.json',
+  releasesDataUrl: 'assets/data/releases-data.json'
 };
 
 /*

@@ -1,0 +1,52 @@
+<div *ngIf="release" class="release-main-container">
+  <div class="release-card">
+    <div class="release-news-title">
+      <span *ngIf="!releaseIsPublished">
+        {{ ('release.new-release-message' | translate: { album_type: release.albumType}).toUpperCase() }}
+      </span>
+      <span *ngIf="releaseIsPublished">
+        {{ ('release.latest-record-message' | translate: { album_type: release.albumType}).toUpperCase() }}
+      </span>
+    </div>
+    <div class="release-card-container">
+      <div class="release-card-content">
+        <div class="release-cover-container">
+          <app-release-cover
+            [coverImage]="release.cover"
+            [releaseType]="release.albumType"
+          ></app-release-cover>
+        </div>
+        <div class="release-info-container">
+          <span class="release-record-title">
+            {{ release.recordName }}
+          </span>
+          <span *ngIf="!releaseIsPublished" class="release-record-date">
+            {{ ('release.available-on' | translate: { day_number: 1, month_name: monthName}).toUpperCase() }}
+          </span>
+          <span *ngIf="releaseIsPublished" class="release-record-date">
+            {{ ('release.available-from' | translate: { day_number: 1, month_name: monthName}).toUpperCase() }}
+          </span>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <a class="presave" [ngClass]="{ 'purchase-cd-enabled': releaseHasPurchasedCDLink, 'purchase-cd-disabled': !releaseHasPurchasedCDLink }" hover-class="actived" [href]="release.presaveLink">
+          <fa-icon *ngIf="!releaseIsPublished" [icon]="spotifyIcon"></fa-icon>
+          <span *ngIf="!releaseIsPublished">
+            {{ ('release.click-presave' | translate ).toUpperCase() }}
+          </span>
+          <mat-icon *ngIf="releaseIsPublished">graphic_eq</mat-icon>
+          <span *ngIf="releaseIsPublished">
+            {{ ('release.click-listen' | translate ).toUpperCase() }}
+          </span>
+        </a>
+        <a class="purchase-cd" hover-class="actived" [href]="release.purchaseCDLink" *ngIf="releaseHasPurchasedCDLink">
+          <mat-icon>shopping_cart</mat-icon>
+          <span>
+            {{ ('release.click-purchase-cd' | translate ).toUpperCase() }}
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+

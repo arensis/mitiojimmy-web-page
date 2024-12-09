@@ -3,41 +3,60 @@ import { ShowsService } from './services/shows.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from 'src/app/material.module';
-import { LiveDateComponent } from './components/live-date/live-date.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LiveGuestArtistComponent } from './components/live-guest-artist/live-guest-artist.component';
-import { LiveInfoComponent } from './components/live-info/live-info.component';
-import { LiveEntryComponent } from './components/live-entry/live-entry.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
+import { ItemsService } from './services/items.service';
+import { I18nService } from './services/i18n.service';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import * as Components from './components';
 
 
 @NgModule({
   declarations: [
-    LiveDateComponent,
-    LiveGuestArtistComponent,
-    LiveInfoComponent,
-    LiveEntryComponent
+    Components.LiveDateComponent,
+    Components.LiveEntryComponent,
+    Components.LiveGuestArtistComponent,
+    Components.LiveInfoComponent,
+    Components.NearestShowComponent,
+    Components.NewReleaseComponent,
+    Components.ReleaseCoverComponent,
+    Components.LiveEntryWidgetComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
     FontAwesomeModule,
-    TranslateModule
+    TranslateModule,
+    RouterModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     ShowsService,
-    DataService
+    DataService,
+    AuthService,
+    ItemsService,
+    I18nService
   ],
   exports: [
-    LiveDateComponent,
-    LiveGuestArtistComponent,
-    LiveInfoComponent,
-    LiveEntryComponent,
+    Components.LiveDateComponent,
+    Components.LiveEntryComponent,
+    Components.LiveGuestArtistComponent,
+    Components.LiveInfoComponent,
+    Components.NearestShowComponent,
+    Components.NewReleaseComponent,
+    Components.ReleaseCoverComponent,
+    Components.LiveEntryWidgetComponent,
     MaterialModule,
+    RouterModule,
     FontAwesomeModule,
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

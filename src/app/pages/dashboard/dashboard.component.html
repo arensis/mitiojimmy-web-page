@@ -1,0 +1,23 @@
+<div class="card-container">
+  <div class="comming-shows">
+    <ng-container *ngFor="let liveEntry of liveEntries; let i = index; trackBy: trackFn">
+      <app-live-entry-widget [liveEntry]="liveEntry"></app-live-entry-widget>
+    </ng-container>
+  </div>
+
+  <app-new-release></app-new-release>
+
+  <ng-container *ngFor="let band of bandsDiscography; let i = index; trackBy: trackFn">
+    <div class="band-discography">
+      <span class="band-discography-title">{{ band.bandName }} - Discografía</span>
+      <div class="band-discography-container">
+        <ng-container *ngFor="let album of band.albums; let i = index; trackBy: trackFn">
+          <app-release-cover
+            [coverImage]="album.imageUrl"
+            [releaseType]="album.albumType"
+          ></app-release-cover>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</div>

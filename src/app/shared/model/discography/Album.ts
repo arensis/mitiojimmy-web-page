@@ -1,3 +1,4 @@
+import { AlbumType } from "../release/AlbumType";
 import { StreamingServiceType } from "./StreamingServiceType";
 
 export interface Album {
@@ -5,6 +6,8 @@ export interface Album {
   imageUrl: string;
   id: string;
   artistPlaylist: boolean;
+  isTrack: boolean;
   streamingService: StreamingServiceType;
   albumName: string;
+  albumType: AlbumType;
 }

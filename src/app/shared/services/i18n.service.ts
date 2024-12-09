@@ -1,6 +1,6 @@
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { Injectable } from "@angular/core";
-import { es, en } from 'src/assets/i18n/locales';
+import { es } from 'src/assets/i18n/locales';
 
 const languageKey = 'lang';
 
@@ -11,7 +11,6 @@ export class I18nService {
 
   constructor(private translateService: TranslateService) {
     translateService.setTranslation('es', es);
-    translateService.setTranslation('en', en);
   }
 
   public init(defaultLanguage: string, supportedLanguages: string[]) {
