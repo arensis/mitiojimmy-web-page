@@ -2,7 +2,6 @@ import { Subscription } from 'rxjs';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataService } from 'src/app/shared/services/data.service';
 import { BandDiscography } from 'src/app/shared/model/discography/BandDiscography';
-import { BandVideos } from 'src/app/shared/model/videos/BandVideos';
 import { LiveEntry } from 'src/app/shared/model/shows/LiveEntry';
 
 @Component({
@@ -13,11 +12,9 @@ import { LiveEntry } from 'src/app/shared/model/shows/LiveEntry';
 export class DashboardComponent implements OnInit, OnDestroy {
   bandsDiscographySubscription!: Subscription;
   showsSubscription!: Subscription;
-  videosSubscription!: Subscription;
 
   liveEntries: LiveEntry[] = [];
   bandsDiscography: BandDiscography[] = [];
-  videos: BandVideos[] = [];
 
 
   constructor(private dataService: DataService) {}
@@ -35,9 +32,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     this.bandsDiscographySubscription = this.dataService.getDiscographyData()
       .subscribe(bandsDiscography => this.bandsDiscography = bandsDiscography);
-
-    this.videosSubscription = this.dataService.getVideosData()
-      .subscribe(videos => this.videos = videos);
   }
   ngOnDestroy(): void {
     if (this.bandsDiscographySubscription) {
@@ -46,10 +40,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     if (this.showsSubscription) {
       this.showsSubscription.unsubscribe();
-    }
-
-    if (this.videosSubscription) {
-      this.videosSubscription.unsubscribe();
     }
   }
 

@@ -1,1 +1,14 @@
-<p>videos works!</p>
+<div class="band-video-container" *ngFor="let band of bands; let i = index; trackBy: trackFn">
+  <header>
+    <h2 class="band-name">{{ band.bandName }}</h2>
+    <button mat-raised-button color="accent">Añadir concierto</button>
+  </header>
+  <section>
+    <ul class="video-list">
+      <li *ngFor="let video of band.videos; let i = index; trackBy: trackFn">
+        <app-video-row [video]="video"></app-video-row>
+      </li>
+    </ul>
+  </section>
+</div>
+

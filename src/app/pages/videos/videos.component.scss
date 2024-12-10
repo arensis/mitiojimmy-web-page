@@ -1,0 +1,55 @@
+@import '/src/variables.scss';
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  h2 {
+    margin: 0;
+  }
+
+  button {
+    font-weight: bold;
+
+    @include xs {
+      width: 30%;
+      font-size: 0.5rem;
+    }
+
+    @include sm {
+      width: 30%;
+      font-size: 0.5rem;
+    }
+  }
+}
+
+.band-video-container {
+  padding: 2rem;
+  @include xs {
+    padding: 1rem !important;
+  }
+
+  @include sm {
+    padding: 1rem !important;
+  }
+
+  .band-name {
+    height: 20%;
+    font-family: "Stentiga";
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: -3px 2px 3px rgb(0 0 0 / 58%);
+  }
+
+  .video-list {
+    list-style-type: none;
+    padding-inline-start: 0px;
+
+    li {
+      margin: 1rem 0;
+    }
+  }
+}

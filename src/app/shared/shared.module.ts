@@ -23,7 +23,8 @@ import * as Components from './components';
     Components.NearestShowComponent,
     Components.NewReleaseComponent,
     Components.ReleaseCoverComponent,
-    Components.LiveEntryWidgetComponent
+    Components.LiveEntryWidgetComponent,
+    Components.VideoRowComponent
   ],
   imports: [
     CommonModule,
@@ -50,6 +51,7 @@ import * as Components from './components';
     Components.NewReleaseComponent,
     Components.ReleaseCoverComponent,
     Components.LiveEntryWidgetComponent,
+    Components.VideoRowComponent,
     MaterialModule,
     RouterModule,
     FontAwesomeModule,

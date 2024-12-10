@@ -1,0 +1,19 @@
+<div class="video-row">
+  <div class="video-data">
+    <a href="safeVideoUrl" target="_blank"><img [src]="safeImageUrl"/></a>
+    <mat-divider vertical></mat-divider>
+    <div class="info">
+      <span class="name">{{video.title.toUpperCase()}}</span>
+      <span class="release-date">{{monthName}} {{year}}</span>
+    </div>
+    <mat-divider vertical></mat-divider>
+    <div class="id">
+      <span class="label">ID</span>
+      <span class="value">{{ video.id }}</span>
+    </div>
+  </div>
+  <div class="action-buttons">
+    <button class="edit">Edit</button>
+    <button class="delete">Delete</button>
+  </div>
+</div>
