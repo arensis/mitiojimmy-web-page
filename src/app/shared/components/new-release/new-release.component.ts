@@ -1,12 +1,12 @@
 import { DataService } from 'src/app/shared/services/data.service';
-import { ReleasesService } from './../../../../shared/services/releases.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Release } from 'src/app/model/release/Release';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons';
 import moment from 'moment';
 import 'moment/locale/es';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { ReleasesService } from '../../services/releases.service';
+import { Release } from 'src/app/model/release/Release';
 
 @Component({
   selector: 'app-new-release',

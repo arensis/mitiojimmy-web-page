@@ -42,7 +42,8 @@ $primary-link-hover-color: #8e790e;
 $primary-link-focus-color: #372f05;
 $secondary-link-color: #2e2d2d;
 $subtitle-primary-background: #82817b;
-$background-overlay-dark: rgb(0 0 0 / 80%);
+$background-overlay-dark: rgb(0 0 0 / 69%);
+$background-overlay-darker: rgb(35, 35, 35);
 $live-date-number-color: #e17676;
 $live-date-month-name-color: #a9a6a7;
 $background-overlay-light: rgb(210 210 210);
@@ -54,7 +55,7 @@ $secondary-background-color: $secondary-link-color;
 $border-color: $secondary-link-color;
 $primary-text-color: $primary-link-color;
 $secondary-text-color: $secondary-background-color;
-$live-date-day-name-color: $primary-link-hover-color;
+$live-date-day-name-color: #76cfe1;
 $show-canceled: #f49292;
 
 @mixin xs {

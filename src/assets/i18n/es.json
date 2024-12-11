@@ -13,6 +13,7 @@
   },
   "live-entry": {
     "guest-artist": "Invitados",
+    "event": "Evento",
     "concert-hall": "Sala",
     "show": "Concierto",
     "tickets-button": {

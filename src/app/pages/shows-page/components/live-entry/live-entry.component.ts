@@ -14,6 +14,8 @@ import moment from 'moment';
 export class LiveEntryComponent implements OnInit {
   @Input()
   liveEntry!: LiveEntry;
+  @Input()
+  showBackofficeActions?: boolean = false;
 
   guestArtist?: string
   isNewShow!: boolean;

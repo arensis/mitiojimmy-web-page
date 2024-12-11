@@ -1,0 +1,104 @@
+@import 'src/variables.scss';
+
+.nearest-show-card, .canceled {
+  width: 436px;
+
+  @include xs {
+    width: 312px;
+  }
+
+  @include sm {
+    width: 350px;
+  }
+
+  @include md {
+    width: 346px;
+  }
+}
+
+a:hover, a:focus {
+  color: inherit;
+  filter: drop-shadow(2px 4px 6px gray);
+}
+
+.nearest-show-card, .date-container, .additional-info-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5rem;
+}
+
+.date, .location, .additional-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hall, .event-type {
+  font-size: 0.7rem;
+  line-height: 12px;
+}
+
+.nearest-show-card {
+  min-height: 50px;
+  background: rgb(0 0 0 / 53%);
+  border-radius: 11px;
+  padding: 10px;
+  justify-content: space-between;
+
+  &.show-canceled {
+    padding-bottom: 25px;
+  }
+}
+
+.canceled {
+  background-color: $show-canceled;
+  position: relative;
+  bottom: 0.8rem;
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding: 0.62rem;
+  flex-wrap: nowrap;
+}
+
+
+.date {
+  margin-left: 0.5rem;
+
+  .month {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    color: #ff7f7f;
+    margin-bottom: 0.4rem;
+  }
+  .day {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.24rem;
+  }
+}
+
+.location {
+  row-gap: 0.1rem;
+  min-width: 40%;
+  .city {
+    font-size: 1.2rem;
+  }
+}
+
+.additional-info {
+  row-gap: 0.2rem;
+
+  .time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}

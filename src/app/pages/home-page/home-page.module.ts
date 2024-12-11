@@ -7,9 +7,7 @@ import * as Components from './components/index';
 @NgModule({
   declarations: [
     HomePageComponent,
-    Components.NearestShowComponent,
-    Components.NewReleaseComponent,
-    Components.ReleaseCoverComponent
+    Components.NearestShowComponent
   ],
   imports: [
     HomePageRoutingModule,

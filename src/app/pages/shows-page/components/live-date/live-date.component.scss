@@ -12,12 +12,23 @@
   max-width: 3rem;
   max-height: 9rem;
 
+  @include sm {
+    max-width: 2rem  !important;
+    max-height: 8rem  !important;
+  }
+
   .month {
     font-weight: bold;
     font-size: 2.4rem;
     padding-bottom: 0.5rem;
     padding-left: 0.1rem;
     color: $live-date-month-name-color;
+
+    @include sm {
+      font-size: 2rem !important;
+      padding-bottom: 0.5rem !important;
+      padding-left: 0.1rem !important;
+    }
   }
 
   .day {
@@ -25,6 +36,11 @@
     font-size: 4.3rem;
     margin: 6px 0;
     color: $live-date-number-color;
+
+    @include sm {
+      font-size: 3.9rem !important;
+      margin: 6px 0 !important;
+    }
   }
 
   .day-name {
@@ -34,30 +50,12 @@
     color: $live-date-day-name-color;
     padding-left: 0.4rem;
     padding-top: 0.4rem;
-  }
-}
 
-@media screen and (max-width: 605px) {
-  .date-sheet {
-    max-width: 2rem  !important;
-    max-height: 8rem  !important;
-
-  }
-  .month {
-    font-size: 2rem !important;
-    padding-bottom: 0.5rem !important;
-    padding-left: 0.1rem !important;
-  }
-
-  .day {
-    font-size: 3.9rem !important;
-    margin: 6px 0 !important;
-  }
-
-  .day-name {
-    font-size: 1.5rem !important;
-    letter-spacing: 0.45rem !important;
-    padding-left: 0.4rem !important;
-    padding-top: 0.4rem !important;
+    @include sm {
+      font-size: 1.5rem !important;
+      letter-spacing: 0.45rem !important;
+      padding-left: 0.4rem !important;
+      padding-top: 0.4rem !important;
+    }
   }
 }

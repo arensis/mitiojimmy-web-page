@@ -1,12 +1,13 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
+import { LiveEntry } from "src/app/model/shows/LiveEntry";
 
 @Injectable()
 export class DataService {
   constructor(private httpClient: HttpClient) {}
 
-  public getShowsData(): Observable<any[]> {
+  public getShowsData(): Observable<LiveEntry[]> {
     const path = "assets/data/shows-data.json";
     return this.httpClient.get<any>(path)
         .pipe(map((result) => result));

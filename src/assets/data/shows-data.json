@@ -1,5 +1,25 @@
 [
   {
+    "date": "03/15/2025",
+    "time": { "hours": 21, "minutes": 0 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "Cadavraclub",
+      "location": "https://maps.app.goo.gl/ZEweRp23HMewRCf98",
+      "url": "https://cadavraclub.com/",
+      "ticketsLink": "https://dice.fm/event/pylvpw-los-marcianos-mi-to-jimmy-15th-mar-cadavra-madrid-tickets?lng=es"
+    },
+    "chronicle": null,
+    "guestArtists": [{
+      "name": "Los Marcianos",
+      "url": "https://losmarcianos.com/"
+    }],
+    "nameEvent": "Concierto compartido con Los Marcianos",
+    "canceled": false
+  },
+  {
     "date": "01/12/2025",
     "time": { "hours": 13, "minutes": 0 },
     "city": "Madrid",

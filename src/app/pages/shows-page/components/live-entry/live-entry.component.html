@@ -62,6 +62,16 @@
       {{ ('live-entry.tickets-button.canceled' | translate).toUpperCase() }}
     </a>
   </div>
+  <div *ngIf="showBackofficeActions" class="backoffice-actions">
+    <button mat-button color="accent">
+      <mat-icon>edit</mat-icon>
+      EDITAR
+    </button>
+    <button mat-button color="warn">
+      <mat-icon>delete</mat-icon>
+      ELIMINAR
+    </button>
+  </div>
 </div>
 
 

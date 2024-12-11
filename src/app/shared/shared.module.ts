@@ -9,14 +9,20 @@ import { I18nService } from './services/i18n.service';
 import { GoogleAnalyticsService } from './services/google-analytics.service';
 import { DataService } from './services/data.service';
 import { HoverClassDirective } from './directives/hover-class.directive';
+import { RouterModule } from '@angular/router';
+import * as Components from './components';
 
 @NgModule({
   declarations: [
-    HoverClassDirective
+    HoverClassDirective,
+    Components.LiveEntryWidgetComponent,
+    Components.NewReleaseComponent,
+    Components.ReleaseCoverComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
+    RouterModule,
     FontAwesomeModule,
     TranslateModule
   ],
@@ -32,7 +38,11 @@ import { HoverClassDirective } from './directives/hover-class.directive';
     FontAwesomeModule,
     CommonModule,
     TranslateModule,
-    HoverClassDirective
+    RouterModule,
+    HoverClassDirective,
+    Components.LiveEntryWidgetComponent,
+    Components.NewReleaseComponent,
+    Components.ReleaseCoverComponent
   ]
 })
 export class SharedModule { }

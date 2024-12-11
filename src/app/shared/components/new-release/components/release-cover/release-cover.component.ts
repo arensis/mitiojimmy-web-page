@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { AlbumType } from 'src/app/model/release/AlbumType';
 
 
-
 @Component({
   selector: 'app-release-cover',
   templateUrl: './release-cover.component.html',

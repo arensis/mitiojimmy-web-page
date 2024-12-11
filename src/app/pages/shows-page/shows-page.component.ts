@@ -37,12 +37,20 @@ export class ShowsPageComponent extends AbstractPage implements OnInit, OnDestro
 
     this.showsSubscription = this.dataService.getShowsData()
       .subscribe(shows => {
-        this.newLiveEntriesGrouped = this.showsService.getNewShowsGroupedByYearsAndMonths(shows);
-        this.newLiveEntryYears = Object.keys(this.newLiveEntriesGrouped);
+        this.buildNewLiveEntries(shows);
         this.olderLiveEntriesGrouped = this.showsService.getOlderShowsGroupedByYearsAndMonths(shows);
         this.olderLiveEntryYears = Object.keys(this.olderLiveEntriesGrouped).sort((a, b) => Number.parseInt(b) - Number.parseInt(a));;
         this.newLivesCount = Object.keys(this.newLiveEntriesGrouped).length;
       });
+  }
+
+  private buildNewLiveEntries(shows: LiveEntry[]): void {
+    const newLiveEntries = this.showsService.getNewShowsGroupedByYearsAndMonths(shows);
+    this.newLiveEntryYears = Object.keys(newLiveEntries);
+    this.newLiveEntryYears.forEach(year => {
+      newLiveEntries[year]["months"].sort((a: number, b: number) => a - b)
+    })
+    this.newLiveEntriesGrouped = newLiveEntries;
   }
 
   ngOnDestroy(): void {

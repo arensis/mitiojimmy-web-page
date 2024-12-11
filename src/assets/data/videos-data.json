@@ -4,15 +4,18 @@
     "videos": [
       {
         "releaseDate": "11/27/2024",
-        "id": "CCjrWlgHKq4"
+        "id": "CCjrWlgHKq4",
+        "title": "La cometa"
       },
       {
         "releaseDate": "05/25/2024",
-        "id": "5D19tYQ5PF8"
+        "id": "5D19tYQ5PF8",
+        "title": "Los elegidos"
       },
       {
         "releaseDate": "10/10/2023",
-        "id": "X8jDJRDnlIc"
+        "id": "X8jDJRDnlIc",
+        "title": "Planteamiento matemático"
       }
     ]
   }

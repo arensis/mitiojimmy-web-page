@@ -7,11 +7,23 @@
   min-height: 150px;
   width: 100%;
   max-width: 35rem;
-  background: $background-overlay-dark;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($background-overlay-darker), to($background-overlay-dark));
+  background-image: -webkit-linear-gradient(top, $background-overlay-darker, $background-overlay-dark);
+  background-image: -moz-linear-gradient(top, $background-overlay-darker, $background-overlay-dark);
+  background-image: -o-linear-gradient(top, $background-overlay-darker, $background-overlay-dark);
+  background-image: linear-gradient(to bottom, $background-overlay-darker, $background-overlay-dark);
   border-radius: 11px;
   padding: 10px;
   justify-content: flex-start;
+
+  &.transparent {
+    background: rgba(0, 0, 0, 0.21);
+    background-image: none;
+
+  }
 }
+
+
 
 .show-info {
   display: flex;
@@ -114,6 +126,22 @@ a {
   }
 }
 
+.backoffice-actions {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.6rem;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -10px;
+  border-bottom-right-radius: 11px;
+  border-bottom-left-radius: 11px;
+  background-color: #00000073;
+  padding-bottom: 10px;
+
+  button {
+    width: 40%;
+  }
+}
 
 
 

@@ -8,13 +8,13 @@
         </div>
       </li>
       <li *ngFor="let newLiveEntryYear of newLiveEntryYears; let i = index; trackBy: trackFn">
-        <h3>{{newLiveEntryYear}}</h3>
+        <h2>{{newLiveEntryYear}}</h2>
         <ul>
           <li *ngFor="let month of newLiveEntriesGrouped[newLiveEntryYear].months; let i = index; trackBy: trackFn">
-            <h4>
+            <h3>
               <mat-icon>calendar_month</mat-icon>
               {{translateMonth(month)}}
-            </h4>
+            </h3>
             <ul class="live-entries-backoffice">
               <li
                 class="live-entry-backoffice"

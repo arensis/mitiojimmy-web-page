@@ -2,9 +2,6 @@
   <span class="more" *ngIf="(guestArtists || []).length > 0">
     {{ ('live-entry.guest-artist' | translate ).toUpperCase() }}:
   </span>
-  <span class="more" *ngIf="(nameEvent || '') !== ''">
-    EVENTO:
-  </span>
   <ul *ngIf="(guestArtists || []).length > 0">
     <ng-container *ngFor="let artist of guestArtists; let i = index; trackBy: trackByFn">
       <li>
@@ -19,6 +16,9 @@
       </li>
     </ng-container>
   </ul>
+  <span class="more" *ngIf="(nameEvent || '') !== ''">
+    {{ ('live-entry.event' | translate ).toUpperCase() }}:
+  </span>
   <ul *ngIf="(nameEvent || '') !== ''">
     <li>
       <a class="button-disabled">{{ nameEvent }}</a>
