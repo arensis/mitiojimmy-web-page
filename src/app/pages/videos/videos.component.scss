@@ -14,14 +14,35 @@ header {
   button {
     font-weight: bold;
 
+    mat-icon {
+      font-weight: bold;
+
+      @include xs {
+        font-size: 0.9rem;
+        height: 0.9rem;
+        width: 0.9rem;
+        margin-right: 2px;
+      }
+
+      @include sm {
+        font-size: 0.9rem;
+        height: 0.9rem;
+        width: 0.9rem;
+        margin-right: 2px;
+      }
+    }
+
     @include xs {
       width: 30%;
-      font-size: 0.5rem;
+      font-size: 0.6rem;
+      padding: 0 8px 0 8px;
+
     }
 
     @include sm {
       width: 30%;
-      font-size: 0.5rem;
+      font-size: 0.6rem;
+      padding: 0 8px 0 8px;
     }
   }
 }

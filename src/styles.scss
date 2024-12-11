@@ -2,7 +2,7 @@
 @include mat.core();
 
 $primary: mat.define-palette(mat.$purple-palette, 600);
-$accent: mat.define-palette(mat.$green-palette, A700);
+$accent: mat.define-palette(mat.$green-palette, A400);
 $warn: mat.define-palette(mat.$red-palette, 900);
 
 $backoffice-theme: mat.define-dark-theme((

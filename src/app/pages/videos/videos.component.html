@@ -1,7 +1,10 @@
 <div class="band-video-container" *ngFor="let band of bands; let i = index; trackBy: trackFn">
   <header>
     <h2 class="band-name">{{ band.bandName }}</h2>
-    <button mat-raised-button color="accent">Añadir concierto</button>
+    <button mat-raised-button mat-accent color="accent">
+      <mat-icon>add</mat-icon>
+      NUEVO VIDEO
+    </button>
   </header>
   <section>
     <ul class="video-list">

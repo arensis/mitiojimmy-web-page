@@ -1,6 +1,6 @@
 <div class="video-row">
   <div class="video-data">
-    <a href="safeVideoUrl" target="_blank"><img [src]="safeImageUrl"/></a>
+    <a [href]="safeVideoUrl" target="_blank"><img [src]="safeImageUrl"/></a>
     <mat-divider vertical></mat-divider>
     <div class="info">
       <span class="name">{{video.title.toUpperCase()}}</span>
@@ -13,7 +13,13 @@
     </div>
   </div>
   <div class="action-buttons">
-    <button class="edit">Edit</button>
-    <button class="delete">Delete</button>
+    <button mat-button mat-accent color="accent" class="edit">
+      <mat-icon>edit</mat-icon>
+      Edit
+    </button>
+    <button mat-button mat-accent color="warn" class="delete">
+      <mat-icon>delete</mat-icon>
+      Delete
+    </button>
   </div>
 </div>
