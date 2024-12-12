@@ -6,6 +6,35 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  padding: 0 20%;
+
+  @include xs {
+    padding: 0;
+  }
+
+  @include sm {
+    padding: 0;
+  }
+
+  @include md {
+    padding: 0;
+  }
+
+  @include lg {
+    padding: 0;
+  }
+
+  @include xls {
+    padding: 0 10%;
+  }
+
+  @include xl {
+    padding: 0 20%;
+  }
+
+  @include xxl {
+    padding: 0 25%;
+  }
 
   h2 {
     margin: 0;
