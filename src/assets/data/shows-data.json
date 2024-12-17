@@ -1,128 +1,127 @@
 [
   {
+    "date": "03/15/2025",
+    "time": { "hours": 21, "minutes": 0 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "Cadavraclub",
+      "location": "https://maps.app.goo.gl/ZEweRp23HMewRCf98",
+      "url": "https://cadavraclub.com/",
+      "ticketsLink": "https://dice.fm/event/pylvpw-los-marcianos-mi-to-jimmy-15th-mar-cadavra-madrid-tickets?lng=es"
+    },
+    "chronicle": null,
+    "guestArtists": [{
+      "name": "Los Marcianos",
+      "url": "https://losmarcianos.com/"
+    }],
+    "nameEvent": "Concierto compartido con Los Marcianos",
+    "canceled": false
+  },
+  {
+    "date": "01/12/2025",
+    "time": { "hours": 13, "minutes": 0 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "https://www.notikumi.com/2024/9/8/concierto-de-mi-tio-jimmy-en-madrid-buho-real",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "chronicle": null,
+    "guestArtists": [],
+    "canceled": false
+  },
+  {
+    "date": "11/27/2024",
+    "time": { "hours": 21, "minutes": 0 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "Café La Palma",
+      "ticketsLink": "https://www.passline.com/eventos/mi-tio-jimmy",
+      "location": "https://maps.app.goo.gl/VRSZbE3EbRTmu4a68",
+      "url": "https://www.cafelapalma.com/"
+    },
+    "chronicle": null,
+    "guestArtists": [],
+    "canceled": false
+  },
+  {
+    "date": "09/08/2024",
+    "time": { "hours": 12, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "Búho Real",
+      "ticketsLink": "https://www.notikumi.com/2024/9/8/concierto-de-mi-tio-jimmy-en-madrid-buho-real",
+      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
+      "url": "https://linktr.ee/SalaBuhoRealBar"
+    },
+    "chronicle": null,
+    "guestArtists": [],
+    "canceled": true
+  },
+  {
     "date": "05/04/2023",
     "time": { "hours": 20, "minutes": 30 },
     "city": "Madrid",
     "province": "Madrid",
+    "freeEntry": false,
     "concertHall": {
       "name": "Búho Real",
       "ticketsLink": "https://entradium.com/es/events/davile-matellan-y-mi-tio-jimmy-en-el-buho-real",
       "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
       "url": "https://linktr.ee/SalaBuhoRealBar"
     },
+    "chronicle": null,
     "guestArtists": [
       {
         "name": "Davile Matellán",
         "url": "https://spoti.fi/1mOyj77"
       }
-    ]
+    ],
+    "canceled": false
   },
   {
-    "date": "05/04/2023",
-    "time": { "hours": 20, "minutes": 30 },
+    "date": "12/15/2023",
+    "time": { "hours": 21, "minutes": 30 },
     "city": "Madrid",
     "province": "Madrid",
+    "freeEntry": true,
     "concertHall": {
-      "name": "Búho Real",
-      "ticketsLink": "",
-      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
-      "url": "https://linktr.ee/SalaBuhoRealBar"
+      "name": "Héroe Café Espectáculo",
+      "location": "https://maps.app.goo.gl/FkjoMJ8KaLeHKH429",
+      "url": "https://heroecafeespectaculo.com/"
     },
+    "chronicle": null,
     "guestArtists": [
       {
-        "name": "Davile Matellán",
-        "url": "https://spoti.fi/1mOyj77"
+        "name": "Sumergente",
+        "url": "https://sumergente.com/"
       }
-    ]
+    ],
+    "canceled": false
   },
   {
-    "date": "05/04/2023",
-    "time": { "hours": 20, "minutes": 30 },
+    "date": "05/25/2024",
+    "time": { "hours": 19, "minutes": 0 },
     "city": "Madrid",
     "province": "Madrid",
+    "freeEntry": true,
     "concertHall": {
-      "name": "Búho Real",
-      "ticketsLink": "",
-      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
-      "url": "https://linktr.ee/SalaBuhoRealBar"
+      "name": "Sonic Boom",
+      "location": "https://maps.app.goo.gl/tkATnzKnRmwss6TcA",
+      "url": "http://www.sonicboom.es/"
     },
-    "guestArtists": [
-      {
-        "name": "Davile Matellán",
-        "url": "https://spoti.fi/1mOyj77"
-      }
-    ]
-  },
-  {
-    "date": "05/04/2023",
-    "time": { "hours": 20, "minutes": 30 },
-    "city": "Madrid",
-    "province": "Madrid",
-    "concertHall": {
-      "name": "Búho Real",
-      "ticketsLink": "",
-      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
-      "url": "https://linktr.ee/SalaBuhoRealBar"
-    },
-    "guestArtists": [
-      {
-        "name": "Davile Matellán",
-        "url": "https://spoti.fi/1mOyj77"
-      }
-    ]
-  },
-  {
-    "date": "05/04/2023",
-    "time": { "hours": 20, "minutes": 30 },
-    "city": "Madrid",
-    "province": "Madrid",
-    "concertHall": {
-      "name": "Búho Real",
-      "ticketsLink": "",
-      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
-      "url": "https://linktr.ee/SalaBuhoRealBar"
-    },
-    "guestArtists": [
-      {
-        "name": "Davile Matellán",
-        "url": "https://spoti.fi/1mOyj77"
-      }
-    ]
-  },
-  {
-    "date": "05/04/2023",
-    "time": { "hours": 20, "minutes": 30 },
-    "city": "Madrid",
-    "province": "Madrid",
-    "concertHall": {
-      "name": "Búho Real",
-      "ticketsLink": "",
-      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
-      "url": "https://linktr.ee/SalaBuhoRealBar"
-    },
-    "guestArtists": [
-      {
-        "name": "Davile Matellán",
-        "url": "https://spoti.fi/1mOyj77"
-      }
-    ]
-  },
-  {
-    "date": "05/04/2023",
-    "time": { "hours": 20, "minutes": 30 },
-    "city": "Madrid",
-    "province": "Madrid",
-    "concertHall": {
-      "name": "Búho Real",
-      "ticketsLink": "",
-      "location": "https://goo.gl/maps/pFRY4gktYugCQeBe9",
-      "url": "https://linktr.ee/SalaBuhoRealBar"
-    },
-    "guestArtists": [
-      {
-        "name": "Davile Matellán",
-        "url": "https://spoti.fi/1mOyj77"
-      }
-    ]
+    "chronicle": null,
+    "guestArtists": [],
+    "nameEvent": "Presentación de videoclip",
+    "canceled": false
   }
 ]

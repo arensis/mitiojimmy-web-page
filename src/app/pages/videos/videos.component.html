@@ -1,17 +1,12 @@
-<div class="band-video-container" *ngFor="let band of bands; let i = index; trackBy: trackFn">
-  <header>
-    <h2 class="band-name">{{ band.bandName }}</h2>
-    <button mat-raised-button mat-accent color="accent">
-      <mat-icon>add</mat-icon>
-      NUEVO VIDEO
-    </button>
-  </header>
-  <section>
-    <ul class="video-list">
-      <li *ngFor="let video of band.videos; let i = index; trackBy: trackFn">
-        <app-video-row [video]="video"></app-video-row>
-      </li>
-    </ul>
-  </section>
-</div>
+<app-edition-list-container
+  *ngFor="let band of bands; let i = index; trackBy: trackFn"
+  [items]="band.videos"
+  [title]="band.bandName"
+  [addItemText]="('new-video' | translate)"
+  (onCreate)="openFormDialog()"
+>
+  <ng-template let-item>
+    <app-video-row [video]="item" (onEdit)="openFormDialog(item)" (onDelete)="deleteVideo(item)"></app-video-row>
+  </ng-template>
+</app-edition-list-container>
 

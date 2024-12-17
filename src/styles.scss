@@ -100,6 +100,17 @@ footer {
   border-top: 8px solid $border-color;
 }
 
+//Material dialog
+.cdk-overlay-pane {
+  left: 10%;
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-image: linear-gradient(to bottom, #4b4b7e, #f690e1);
+}
+.mat-h2, .mat-headline-6, .mat-typography .mat-h2, .mat-typography .mat-headline-6, .mat-typography h2 {
+  margin: 16px 0 8px;
+}
+
 //Links
 a, button, button.mat-icon-button {
   color: $primary-link-color;

@@ -1,47 +1,179 @@
-h2 {
-  overflow: hidden;
-  position: relative;
+@import '/src/variables.scss';
+
+.nearest-show-card, .canceled {
+  width: 100%;
 }
 
-h2::after {
-  content: '';
-  width: 90%;
-  height: 2px;
-  border-top: 2px solid #c9d0ff;
-  position: absolute;
-  top: 50%;
-  margin-left: 1rem;
+.nearest-show-card {
+  background-color: #ffffff08;
+  border-radius: 6px;
+  padding: 8px;
 }
 
-h3 {
-  color: white;
-  font-weight: 500;
+.nearest-show-card, .date-container, .additional-info-container {
   display: flex;
-  font-size: 1.2rem;
-  align-items: flex-end;
-  mat-icon {
-    height: 30px;
-    width: 30px;
-    overflow: hidden;
-    color: white;
-    font-size: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.date-container {
+  width: 40%;
+  flex-wrap: nowrap;
+
+  @include xs {
+    width: 100%;
+  }
+
+  @include sm {
+    width: 100%;
   }
 }
 
-.live-entries-backoffice {
+.date, .additional-info {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.live-entry-backoffice {
-  max-width: 300px;
-  margin: 2rem;
+.hall, .event-type {
+  font-size: 0.7rem;
+  line-height: 12px;
 }
 
-li {
-  list-style: none;
+.nearest-show-card {
+  min-height: 50px;
+  justify-content: space-between;
 }
 
-ul {
-  padding-inline-start: 1.2rem;
+.tickets-info-button {
+  position: relative;
+  bottom: 0.3rem;
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0.3rem;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  &.canceled {
+    background-color: $show-canceled;
+  }
+
+  &.free-entry {
+    background-color: $spotify-color;
+  }
+
+  &.buy {
+    background-color: $bandcamp-color;
+  }
+
+  &.commin-soon {
+    background-color: $media-chronicle-radio;
+  }
+}
+
+
+.date {
+  margin-left: 0.5rem;
+
+  .year {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #76cfe1;
+    margin-bottom: 0;
+  }
+
+  .month {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    color: #ff7f7f;
+    margin-bottom: 0.4rem;
+  }
+  .day {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.24rem;
+  }
+}
+
+.location-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.1rem;
+  min-width: 40%;
+  .city {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .location-point {
+    font-size: 33px;
+    height: 33px;
+    width: 33px;
+  }
+}
+
+
+
+.guest-artists {
+  display: flex;
+  width: 30%;
+  min-width: 120px;
+  row-gap: 0.2rem;
+  flex-direction: column;
+  justify-content: center;
+
+  @include xs {
+    width: 45%;
+  }
+
+  @include sm {
+    width: 45%;
+  }
+
+  .artist-label {
+    font-size: 0.7rem;
+  }
+
+  ul {
+    padding-inline-start: 12px;
+    list-style-type: disc;
+    li {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+
+
+.additional-info {
+  row-gap: 0.2rem;
+  width: 20%;
+  min-width: 120px;
+
+  @include xs {
+    width: 45%;
+  }
+
+  @include sm {
+    width: 45%;
+  }
+
+  .time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }

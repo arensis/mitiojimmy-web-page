@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Video } from '../../model/videos/Video';
 import { Moment } from 'moment';
 import moment from 'moment';
@@ -13,6 +13,10 @@ import { TranslateService } from '@ngx-translate/core';
 export class VideoRowComponent {
   @Input()
   video!: Video;
+  @Output()
+  onDelete = new EventEmitter<Video>();
+  @Output()
+  onEdit = new EventEmitter<Video>();
 
   monthName!: string;
   year!: string;
@@ -30,6 +34,14 @@ export class VideoRowComponent {
     this.safeVideoUrl = this.buildVideoUrl(this.video.id);
     this.safeImageUrl = this.buildImageUrl(this.video.id);
 
+  }
+
+  deleteRow() {
+    this.onDelete.emit(this.video);
+  }
+
+  editRow() {
+    this.onEdit.emit(this.video);
   }
 
   private buildVideoUrl(videoId: string): SafeUrl {

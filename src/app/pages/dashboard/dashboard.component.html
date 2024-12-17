@@ -9,7 +9,7 @@
 
   <ng-container *ngFor="let band of bandsDiscography; let i = index; trackBy: trackFn">
     <div class="band-discography">
-      <span class="band-discography-title">{{ band.bandName }} - Discografía</span>
+      <span class="band-discography-title">{{ band.bandName }} - {{('sections.discography' | translate).toUpperCase()}}</span>
       <div class="band-discography-container">
         <ng-container *ngFor="let album of band.albums; let i = index; trackBy: trackFn">
           <app-release-cover

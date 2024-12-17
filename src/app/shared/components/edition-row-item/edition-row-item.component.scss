@@ -1,0 +1,100 @@
+@import 'src/styles.scss';
+
+:host {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.item-data, .edit-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.edit-row {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 323px;
+  min-height: 50px;
+  background: #00000087;
+  border-radius: 11px;
+  padding: 10px;
+  justify-content: space-between;
+
+  @include xs {
+    flex-direction: column !important;
+    row-gap: 1rem;
+  }
+
+  @include sm {
+    flex-direction: column !important;
+    row-gap: 1rem;
+  }
+
+  .item-data {
+    column-gap: 1rem;
+    align-items: center;
+    width: 80%;
+
+    @include xs {
+      width: 100%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    @include xs {
+      background-color: #00000052;
+      margin: -10px -10px;
+      border-radius: 0 0 12px 12px;
+    }
+
+    @include sm {
+      background-color: #00000052;
+      margin: -10px -10px;
+      border-radius: 0 0 12px 12px;
+    }
+
+    button {
+      @include xs {
+        width: 100%;
+
+        &.edit {
+          border-right: 1px solid #ffffff66;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 12px;
+        }
+
+        &.delete {
+          border-bottom-right-radius: 12px;
+        }
+      }
+
+      @include sm {
+        width: 100%;
+
+        &.edit {
+          border-right: 1px solid #ffffff66;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 12px;
+        }
+
+        &.delete {
+          border-bottom-right-radius: 12px;
+        }
+      }
+
+    }
+  }
+}

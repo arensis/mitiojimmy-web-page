@@ -1,0 +1,16 @@
+<div class="edit-list-container">
+  <header>
+    <h2 class="title">{{ title }}</h2>
+    <button mat-raised-button mat-accent color="accent" (click)="createItem()">
+      <mat-icon>add</mat-icon>
+      {{ addItemText }}
+    </button>
+  </header>
+  <section>
+    <ul class="list">
+      <li *ngFor="let item of items; let i = index; trackBy: trackFn">
+        <ng-container *ngTemplateOutlet="itemTemplate; context: { $implicit: item  }"></ng-container>
+      </li>
+    </ul>
+  </section>
+</div>

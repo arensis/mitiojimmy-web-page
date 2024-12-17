@@ -1,0 +1,86 @@
+@import '/src/variables.scss';
+
+app-release-cover {
+  margin: 0 3rem 7px 7px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  width: 80%;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+  row-gap: 0.8rem;
+
+  .album-data {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    @include xs {
+      width: 100%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  .streaming-service {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    @include xs {
+      width: 100%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+  }
+}
+
+.album-data_name, .streaming-service .label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ff7f7f;
+
+  @include xs {
+    font-size: 0.8rem;
+  }
+
+  @include sm {
+    font-size: 0.8rem;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+  text-wrap: nowrap;
+}
+
+.album-data_release-date, .streaming-service .value {
+  font-size: 0.7rem;
+
+  @include xs {
+    font-size: 0.6rem;
+  }
+
+  @include sm {
+    font-size: 0.6rem;
+  }
+}
+
+.faSpotify {
+  color: $spotify-color !important;
+  font-weight: bold;
+}
+
+.faBandcamp {
+  color: $bandcamp-color !important;
+  font-weight: bold;
+}

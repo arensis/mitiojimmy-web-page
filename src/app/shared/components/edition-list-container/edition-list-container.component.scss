@@ -1,0 +1,105 @@
+@import '/src/variables.scss';
+
+.edit-list-container {
+  padding: 2rem;
+  @include xs {
+    padding: 1rem !important;
+  }
+
+  @include sm {
+    padding: 1rem !important;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 20%;
+
+    @include xs {
+      padding: 0;
+    }
+
+    @include sm {
+      padding: 0;
+    }
+
+    @include md {
+      padding: 0;
+    }
+
+    @include lg {
+      padding: 0;
+    }
+
+    @include xls {
+      padding: 0;
+    }
+
+    @include xl {
+      padding: 0 20%;
+    }
+
+    @include xxl {
+      padding: 0 25%;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    button {
+      font-weight: bold;
+
+      mat-icon {
+        font-weight: bold;
+
+        @include xs {
+          font-size: 0.9rem;
+          height: 0.9rem;
+          width: 0.9rem;
+          margin-right: 2px;
+        }
+
+        @include sm {
+          font-size: 0.9rem;
+          height: 0.9rem;
+          width: 0.9rem;
+          margin-right: 2px;
+        }
+      }
+
+      @include xs {
+        width: 30%;
+        font-size: 0.6rem;
+        padding: 0 8px 0 8px;
+
+      }
+
+      @include sm {
+        width: 30%;
+        font-size: 0.6rem;
+        padding: 0 8px 0 8px;
+      }
+    }
+  }
+
+  .title {
+    height: 20%;
+    font-family: "Stentiga";
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: -3px 2px 3px rgb(0 0 0 / 58%);
+  }
+
+  .list {
+    list-style-type: none;
+    padding-inline-start: 0px;
+
+    li {
+      margin: 1rem 0;
+    }
+  }
+}

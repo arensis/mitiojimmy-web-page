@@ -1,24 +1,69 @@
-<ul>
-  <li *ngFor="let liveEntryYear of liveEntryYears; let i = index; trackBy: trackFn">
-    <h2>{{liveEntryYear}}</h2>
-    <ul>
-      <li *ngFor="let month of liveEntriesGrouped[liveEntryYear].months; let i = index; trackBy: trackFn">
-        <h3>
-          <mat-icon>calendar_month</mat-icon>
-          {{translateMonth(month)}}
-        </h3>
-        <ul class="live-entries-backoffice">
-          <li
-            class="live-entry-backoffice"
-            *ngFor="let liveEntry of liveEntriesGrouped[liveEntryYear][month]; let i = index; trackBy: trackFn"
-          >
-            <app-live-entry
-              [liveEntry]="liveEntry"
-              [showBackofficeActions]="true"
-            ></app-live-entry>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<app-edition-list-container [items]="shows" [title]="'Conciertos'" [addItemText]="('new-show' | translate)">
+  <ng-template let-item>
+    <app-edition-row-item>
+      <div class="nearest-show-card">
+        <div class="date-container">
+          <div class="date">
+            <span class="month">{{ getMontName(item.date) }}</span>
+            <span class="day">{{ getDayNumber(item.date) }}</span>
+            <span class="year">{{ getYear(item.date) }}</span>
+          </div>
+          <div class="location-container">
+            <a [href]="item.concertHall.location" target="_blank">
+              <mat-icon class="location-point">location_on</mat-icon>
+            </a>
+            <div class="location-info">
+              <span class="city">
+                {{ item.city.toUpperCase() }}
+              </span>
+              <a [href]="item.concertHall.url" target="_blank" class="hall">
+                {{ ('live-entry.concert-hall' | translate ).toUpperCase() }} {{ item.concertHall.name.toUpperCase() }}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <ng-container>
+          <div class="guest-artists">
+            <span class="artist-label" *ngIf="item.guestArtists.length > 0">
+              {{('live-entry.guest-artist' | translate).toUpperCase()}}
+            </span>
+            <ul>
+              <li *ngFor="let guest of item.guestArtists;  let i = index; trackBy: trackFn">
+                <a [href]="guest.url">{{ guest.name.toUpperCase() }}</a>
+              </li>
+            </ul>
+          </div>
+        </ng-container>
+
+        <div class="additional-info">
+          <span class="event-type">
+            {{ isEvent(item) ? item.nameEvent.toUpperCase() : ('live-entry.show' | translate ).toUpperCase() }}
+          </span>
+          <div class="time">
+            <mat-icon>access_time</mat-icon>
+            <span>{{item.time.hours}}:{{getMinutes(item.time)}}</span>
+          </div>
+        </div>
+
+        <div class="tickets-info-button" *ngIf="!showBuyButton(item) && !showCancelButtonWithLink(item)" [ngClass]="{ 'canceled': item.canceled, 'free-entry': showFreeEntryButton(item), 'commin-soon': showCommingSoonButton(item), 'buy': showBuyButton(item) }">
+          <mat-icon aria-hidden="false" fontIcon="event_busy" *ngIf="item.canceled"></mat-icon>
+          <mat-icon aria-hidden="false" fontIcon="shopping_cart" *ngIf="!item.canceled"></mat-icon>
+          <span *ngIf="item.canceled && (item.concertHall.ticketsLink || '').trim() === ''">{{ ('live-entry.tickets-button.canceled').toUpperCase() }}</span>
+          <span *ngIf="showFreeEntryButton(item)">{{ ('live-entry.tickets-button.free-entry' | translate).toUpperCase() }}</span>
+          <span *ngIf="showCommingSoonButton(item)">{{ ('live-entry.tickets-button.commin-soon' | translate).toUpperCase() }}</span>
+        </div>
+
+        <a class="tickets-info-button" [href]="item.concertHall.ticketsLink" *ngIf="showCancelButtonWithLink(item)" [ngClass]="{ 'canceled': item.canceled, 'free-entry': showFreeEntryButton(item), 'commin-soon': showCommingSoonButton(item), 'buy': showBuyButton(item) }">
+          <mat-icon aria-hidden="false" fontIcon="event_busy"></mat-icon>
+          <span>{{ ('live-entry.tickets-button.canceled' | translate).toUpperCase() }}</span>
+        </a>
+
+        <a [href]="item.concertHall.ticketsLink" *ngIf="showBuyButton(item)" class="tickets-info-button" [ngClass]="{ 'canceled': item.canceled, 'free-entry': showFreeEntryButton(item), 'commin-soon': showCommingSoonButton(item), 'buy': showBuyButton(item) }">
+          <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
+          <span>{{ ('live-entry.tickets-button.buy' | translate).toUpperCase() }}</span>
+        </a>
+      </div>
+    </app-edition-row-item>
+  </ng-template>
+</app-edition-list-container>

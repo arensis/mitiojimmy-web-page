@@ -6,7 +6,7 @@ const languageKey = 'lang';
 
 @Injectable()
 export class I18nService {
-  defaultLanguage: string = '';
+  defaultLanguage: string = 'es';
   supportedLanguages: string[] = [];
 
   constructor(private translateService: TranslateService) {
@@ -14,17 +14,13 @@ export class I18nService {
   }
 
   public init(defaultLanguage: string, supportedLanguages: string[]) {
-    this.defaultLanguage = defaultLanguage;
+    this.defaultLanguage = 'es';
     this.supportedLanguages = supportedLanguages;
-    this.language = '';
-
-    this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
-      localStorage.setItem(languageKey, event.lang)
-    });
+    this.language = 'es';
   }
 
   set language(language: string) {
-    language = language || localStorage.getItem(languageKey) || this.translateService.getBrowserCultureLang() || '';
+    language = 'es';
     let isSupportedLanguage = this.supportedLanguages.includes(language);
 
     if (language && !isSupportedLanguage) {
@@ -36,7 +32,7 @@ export class I18nService {
       language = this.defaultLanguage;
     }
 
-    localStorage.setItem(languageKey, language);
+    // localStorage.setItem(languageKey, language);
     document.documentElement.setAttribute("lang", language);
     this.translateService.use(language);
   }

@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>{{ modalTitle }}</h2>
+<mat-divider></mat-divider>
+<mat-dialog-content class="mat-typography">
+  <form class="form-container" [formGroup]="formGroup">
+    <mat-form-field appearance="outline">
+      <mat-label>ID de Youtube</mat-label>
+      <input type="text" matInput formControlName="id" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="formGroup.get('id')!.hasError('required')">
+        El ID de Youtube es <strong>requerida</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Título</mat-label>
+      <input type="text" matInput formControlName="title" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="formGroup.get('title')!.hasError('required')">
+        El título es <strong>requerido</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Fecha de lanzamiento</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="releaseDate" [errorStateMatcher]="matcher">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="formGroup.get('releaseDate')!.hasError('required')">
+        La fecha de lanzamiento es <strong>requerida</strong>
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-button [mat-dialog-close]="item">Guardar</button>
+  <button mat-button mat-dialog-close>Cancelar</button>
+</mat-dialog-actions>

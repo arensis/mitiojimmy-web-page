@@ -12,6 +12,8 @@ import { I18nService } from './services/i18n.service';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import * as Components from './components';
+import * as Directives from './directives';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -24,7 +26,11 @@ import * as Components from './components';
     Components.NewReleaseComponent,
     Components.ReleaseCoverComponent,
     Components.LiveEntryWidgetComponent,
-    Components.VideoRowComponent
+    Components.VideoRowComponent,
+    Components.EditionListContainerComponent,
+    Components.EditionRowItemComponent,
+    Directives.HoverClassDirective,
+    Directives.ModalDirective
   ],
   imports: [
     CommonModule,
@@ -40,7 +46,12 @@ import * as Components from './components';
     DataService,
     AuthService,
     ItemsService,
-    I18nService
+    I18nService,
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {
+      minWidth: 300,
+      width: '80%',
+      maxWidth: 1000
+    }}
   ],
   exports: [
     Components.LiveDateComponent,
@@ -52,6 +63,10 @@ import * as Components from './components';
     Components.ReleaseCoverComponent,
     Components.LiveEntryWidgetComponent,
     Components.VideoRowComponent,
+    Components.EditionListContainerComponent,
+    Components.EditionRowItemComponent,
+    Directives.HoverClassDirective,
+    Directives.ModalDirective,
     MaterialModule,
     RouterModule,
     FontAwesomeModule,

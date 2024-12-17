@@ -1,1 +1,35 @@
-<p>albums works!</p>
+<app-edition-list-container
+  *ngFor="let band of bands; let i = index; trackBy: trackFn"
+  [items]="band.albums"
+  [title]="band.bandName"
+  [addItemText]="('new-album' | translate).toUpperCase()"
+>
+  <ng-template let-item>
+    <app-edition-row-item>
+      <app-release-cover
+        [coverImage]="item.imageUrl"
+        [releaseType]="item.albumType"
+      ></app-release-cover>
+      <div class="info-container">
+        <div class="album-data">
+          <div class="album-data_name">
+            <span>{{ item.albumName.toUpperCase() }}</span>
+          </div>
+          <span class="album-data_release-date">
+            {{ item.releaseDate }}
+          </span>
+          <span class="album-data_album-type">
+            {{ item.albumType }}
+          </span>
+        </div>
+        <div class="streaming-service">
+          <div class="label" [ngClass]="findStreaminServiceClassName(item.streamingService).class">
+            <fa-icon [icon]="findStreaminServiceClassName(item.streamingService).icon"></fa-icon>
+            <span>{{ item.streamingService }} ID</span>
+          </div>
+          <span class="value">{{ item.id }}</span>
+        </div>
+      </div>
+    </app-edition-row-item>
+  </ng-template>
+</app-edition-list-container>

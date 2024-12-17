@@ -3,6 +3,9 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
 import { environment } from "src/environments/environment";
+import { BandDiscography } from '../model/discography/BandDiscography';
+import { BandVideos } from '../model/videos/BandVideos';
+import { Release } from '../model/release/Release';
 
 @Injectable()
 export class DataService {
@@ -22,15 +25,15 @@ export class DataService {
     return this.httpClient.get<any>(this.showsDataFileUrl).pipe(map((result) => result));
   }
 
-  public getDiscographyData(): Observable<any[]> {
+  public getDiscographyData(): Observable<BandDiscography[]> {
     return this.httpClient.get<any>(this.discographyDataUrl).pipe(map((result) => result));
   }
 
-  public getVideosData(): Observable<any[]> {
+  public getVideosData(): Observable<BandVideos[]> {
     return this.httpClient.get<any>(this.videosDataUrl).pipe(map((result) => result));
   }
 
-  public getReleasesData(): Observable<any[]> {
+  public getReleasesData(): Observable<Release[]> {
     return this.httpClient.get<any>(this.releasesDataUrl).pipe(map((result) => result));
   }
 }

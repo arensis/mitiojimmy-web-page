@@ -1,156 +1,57 @@
 @import 'src/styles.scss';
 
-:host {
+a {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
+  align-items: center;
+
+  img {
+    border-radius: 7px;
+    border: 2px solid rgba(255, 255, 255, 0.6392156863);
+    width: 80px;
+    height: auto;
+  }
 }
 
-.video-row {
-  width: 100%;
-  max-width: 1000px;
-  min-width: 323px;
-  min-height: 50px;
-  background: #00000087;
-  border-radius: 11px;
-  padding: 10px;
-  justify-content: space-between;
-
-  @include xs {
-    flex-direction: column !important;
-    row-gap: 1rem;
-  }
-
-  @include sm {
-    flex-direction: column !important;
-    row-gap: 1rem;
-  }
-
-  .video-data {
-    column-gap: 1rem;
-    align-items: center;
-    width: 80%;
-
-    @include xs {
-      width: 100%;
-    }
-
-    @include sm {
-      width: 100%;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-
-      img {
-        border-radius: 7px;
-        border: 2px solid rgba(255, 255, 255, 0.6392156863);
-        width: 80px;
-        height: auto;
-      }
-    }
-
-    .info-container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 80%;
-      column-gap: 1rem;
+.info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  column-gap: 1rem;
 
 
-      .info, .id {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        column-gap: 1rem;
-        row-gap: 2px;
-        width: 50%;
-      }
-
-      .name, .label {
-        font-size: 0.9rem;
-        font-weight: bold;
-        color: #ff7f7f;
-
-        @include xs {
-          font-size: 0.8rem;
-        }
-
-        @include sm {
-          font-size: 0.8rem;
-        }
-      }
-
-      .release-date, .value {
-        font-size: 0.7rem;
-
-        @include xs {
-          font-size: 0.6rem;
-        }
-
-        @include sm {
-          font-size: 0.6rem;
-        }
-      }
-    }
-  }
-
-  .action-buttons {
+  .info, .id {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    column-gap: 1rem;
+    row-gap: 2px;
+    width: 50%;
+  }
+
+  .name, .label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ff7f7f;
 
     @include xs {
-      background-color: #00000052;
-      margin: -10px -10px;
-      border-radius: 0 0 12px 12px;
+      font-size: 0.8rem;
     }
 
     @include sm {
-      background-color: #00000052;
-      margin: -10px -10px;
-      border-radius: 0 0 12px 12px;
-    }
-
-    button {
-      @include xs {
-        width: 100%;
-
-        &.edit {
-          border-right: 1px solid #ffffff66;
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-          border-bottom-left-radius: 12px;
-        }
-
-        &.delete {
-          border-bottom-right-radius: 12px;
-        }
-      }
-
-      @include sm {
-        width: 100%;
-
-        &.edit {
-          border-right: 1px solid #ffffff66;
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-          border-bottom-left-radius: 12px;
-        }
-
-        &.delete {
-          border-bottom-right-radius: 12px;
-        }
-      }
-
+      font-size: 0.8rem;
     }
   }
-}
 
-.video-data, .video-row {
-  display: flex;
-  flex-direction: row;
+  .release-date, .value {
+    font-size: 0.7rem;
+
+    @include xs {
+      font-size: 0.6rem;
+    }
+
+    @include sm {
+      font-size: 0.6rem;
+    }
+  }
 }
