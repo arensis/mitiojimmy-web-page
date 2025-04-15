@@ -1,5 +1,21 @@
 [
   {
+    "date": "06/14/2025",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "La Corriente del Golfo",
+      "location": "https://maps.app.goo.gl/JPnerZEhUoxrZDY66",
+      "url": "https://www.privateaser.es/local/4875-la-corriente-del-golfo",
+      "ticketsLink": "https://www.fourvenues.com/es/la-corriente-del-golfo/events/concierto-mi-tio-jimmy-14-06-2025-DOR0"
+    },
+    "chronicle": null,
+    "guestArtists": [],
+    "canceled": false
+  },
+  {
     "date": "03/15/2025",
     "time": { "hours": 21, "minutes": 0 },
     "city": "Madrid",
