@@ -19,7 +19,6 @@ export class NearestShowComponent implements OnInit {
   ngOnInit() {
     this.dataService.getShowsData().subscribe((shows: LiveEntry[]) => {
       const latestShows = shows.filter(show => moment().isBefore(moment(show.date)));
-      console.log('latestShows', latestShows);
       latestShows.sort((a, b) => {
         if (moment(a.date).isAfter(moment(b.date))) {
           return 1
