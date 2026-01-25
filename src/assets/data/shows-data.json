@@ -1,5 +1,21 @@
 [
   {
+    "date": "02/22/2026",
+    "time": { "hours": 13, "minutes": 00 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "Jqzzville",
+      "location": "https://maps.app.goo.gl/oHDSXTrDcRrMvrhNA",
+      "url": "https://www.instagram.com/salajazzville/reels/?__d=1%3Futm_source%3Dig_embed",
+      "ticketsLink": "https://ticketandroll.com/evento/mi-tio-jimmy-en-jazzville-sesion-vermu"
+    },
+    "chronicle": null,
+    "guestArtists": [],
+    "canceled": false
+  },
+  {
     "date": "06/14/2025",
     "time": { "hours": 20, "minutes": 30 },
     "city": "Madrid",
