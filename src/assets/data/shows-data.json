@@ -1,5 +1,21 @@
 [
   {
+    "date": "04/18/2026",
+    "time": { "hours": 21, "minutes": 0 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "Vesta",
+      "location": "https://maps.app.goo.gl/PJ2pLazNr6Jz39VJA?g_st=ic",
+      "url": "https://salavesta.com/",
+      "ticketsLink": "https://entradas.grupofulanita.com/events/mi-tio-jimmy-en-madrid"
+    },
+    "chronicle": null,
+    "guestArtists": [],
+    "canceled": false
+  },
+  {
     "date": "02/22/2026",
     "time": { "hours": 13, "minutes": 0 },
     "city": "Madrid",
