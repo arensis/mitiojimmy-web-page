@@ -1,5 +1,21 @@
 [
   {
+    "date": "04/11/2026",
+    "time": { "hours": 20, "minutes": 30 },
+    "city": "Pilar de la Horadada",
+    "province": "Alicante",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "El Farico",
+      "location": "https://maps.app.goo.gl/ENWk9s9c83TCZZRw8",
+      "url": "https://www.elfarico.com/",
+      "ticketsLink": "https://entradium.com/events/concierto-en-el-farico-mi-tio-jimmy"
+    },
+    "chronicle": null,
+    "guestArtists": [],
+    "canceled": false
+  },
+  {
     "date": "04/18/2026",
     "time": { "hours": 21, "minutes": 0 },
     "city": "Madrid",
