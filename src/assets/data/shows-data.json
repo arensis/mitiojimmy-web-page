@@ -1,5 +1,21 @@
 [
   {
+    "date": "10/25/2026",
+    "time": { "hours": 13, "minutes": 0 },
+    "city": "Madrid",
+    "province": "Madrid",
+    "freeEntry": false,
+    "concertHall": {
+      "name": "Jazzville",
+      "location": "https://maps.app.goo.gl/np62omPCGEuoayzL6?g_st=ic",
+      "url": "https://www.instagram.com/salajazzville?stkn=MjUzeWFvdWpqbW4z",
+      "ticketsLink": "https://ticketandroll.com/evento/facturado-mi-tio-jimmy-en-jazzville-sesion-vermu"
+    },
+    "chronicle": null,
+    "guestArtists": [],
+    "canceled": false
+   },
+   {
     "date": "04/11/2026",
     "time": { "hours": 20, "minutes": 30 },
     "city": "Pilar de la Horadada",
